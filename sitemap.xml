@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://mordsith.github.io/2017/testing-theme/</loc>
+    <lastmod>2017-01-28T00:06:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mordsith.github.io/about/</loc>
+    <lastmod>2017-01-27T23:12:42+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mordsith.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mordsith.github.io/tags/main/</loc>
+    <lastmod>2017-01-28T00:06:02+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mordsith.github.io/categories/main/</loc>
+    <lastmod>2017-01-28T00:06:02+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mordsith.github.io/</loc>
+    <lastmod>2017-01-28T00:06:02+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mordsith.github.io/post/</loc>
+    <lastmod>2017-01-28T00:06:02+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mordsith.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
