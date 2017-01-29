@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.18.1" />
+    <title>Crystal Tutorial The Basics - Puts</title>
+    
+    
+    
+    <meta name="description" content="This is about the Crystal Programming Language and how to output - puts - text and basic information about the language. The Compiled languages rule!" />
+    <meta name="keywords" content='Crystal,Programming' />
+    
+        <meta name="author" content="Sam Ashkan" />
+    
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Mordsith - Tech Docs" />
+
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css" rel="stylesheet" integrity="sha384-RpX8okQqCyUNG7PlOYNybyJXYTtGQH+7rIKiVvg1DLg6jahLEk47VvpUyS+E2/uJ" crossorigin="anonymous">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="https://mordsith.github.io/css/custom.css"  media="none" onload="if(media!='all')media='all'" />
+
+
+</head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+      
+<div class="col-md-12">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Mordsith - Tech Docs</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li><a href="/">Home</a></li>
+                
+                <li><a href="/about/">About</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+</nav>
+
+      <div id="top" class="container-fluid">
+        <div class="row" id="content-main">
+          <div class="col-md-8">
+          <div class="row">
+  <div class="col-md-12 ">
+  <h1>Crystal Tutorial The Basics - Puts</h1><br>
+    
+    
+    <ul class="list-inline meta">
+    <li><i class="fa fa-calendar"></i> January 29, 2017</li>
+    <li><i class="fa fa-font"></i> 867 words</li>
+    <li><i class="fa fa-user"></i> Sam Ashkan</li>
+      
+      
+        <li><i class="fa fa-folder"></i> <a href="https://mordsith.github.io/categories/crystal">Crystal</a></li><br>
+      
+    </ul>
+    
+  
+<div class="container">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+  <a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet"><i class="fa fa-twitter-square fa-2x"></i></a>
+  <a href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square fa-2x"></i></a>
+  <a href="http://pinterest.com/pin/create/button/?url=&description=" target="_blank" title="Pin it"><i class="fa fa-pinterest-square fa-2x"></i></a>
+  <a href="http://www.reddit.com/submit?url=&title=" target="_blank" title="Submit to Reddit"><i class="fa fa-reddit-square fa-2x"></i></a>
+  <a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>
+</div>
+
+
+  <br>
+
+<p>I really like these new programming languages like Go and Rust. I found a relatively new language called Crystal. I am really amazed by its performance and how easy it is to use. Crystal has similar syntax as Ruby but compared to Ruby it is a compiled language and not interpreted, making it perform really well and leave a low memory footprint.</p>
+
+<p><strong>Note:</strong></p>
+
+<ul>
+<li>Crystal is Alpha stage at the moment.</li>
+<li>Crystal does not work on Windows, but it will sometime in 2017.</li>
+</ul>
+
+<p>To install Crystal you should take a look at the official documents called <a href="https://crystal-lang.org/docs/installation/">The Crystal Book!</a> It is also a great way to learn more about the language.</p>
+
+<p>To create a Crystal project type:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">init</span> <span style="color: #f8f8f2">app</span> <span style="color: #f8f8f2">casual</span>
+</pre></div>
+</p>
+
+<p><strong>crystal</strong> is the name of the compiler. The <strong>init</strong> command creates the default project structure. The <strong>app</strong> commands creates an app skeleton, to create a library change it to <strong>lib</strong>. <strong>casual</strong> is just the name i picked, you may change that to whatever you like.</p>
+
+<p>to run the app type:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">cd</span> <span style="color: #f8f8f2">casual</span>
+<span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">src/casual.cr</span>
+</pre></div>
+</p>
+
+<p>And nothing will happen since we haven&rsquo;t put anything in the file.</p>
+
+<p>Open the <strong>casual.cr</strong> file with your favorite editor located inside the src folder. Remove everything inside and type:</p>
+
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Hello, World!&quot;</span>
+</pre></div>
+
+
+<p>Save the file and return to the terminal and run it!</p>
+
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">src/casual.cr</span>
+<span style="color: #f8f8f2">Hello,</span> <span style="color: #f8f8f2">World!</span>
+</pre></div>
+
+
+<p>And congrats! You&rsquo;r first Crystal application. Totally worthless but still pretty cool.</p>
+
+<p>To build the app type:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">build</span> <span style="color: #f8f8f2">src/casual.cr</span> <span style="color: #f8f8f2">--release</span>
+<span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">./casual</span>
+<span style="color: #f8f8f2">Hello,</span> <span style="color: #f8f8f2">World!</span>
+</pre></div>
+</p>
+
+<p>Lets have a look at the file we just created.
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">ls</span> <span style="color: #f8f8f2">-shR</span> <span style="color: #f8f8f2">casual</span>
+<span style="color: #f8f8f2">104K</span> <span style="color: #f8f8f2">casual</span>
+</pre></div>
+</p>
+
+<p>104 kilobytes! That is really amazing for such a new complex language.. specially if you compare it to other new languages. I got it down to 80kb&rsquo;s with strip. Thats like C small! I am not sure how Crystal manages this but i will try to find out.</p>
+
+<h2 id="back-to-programming">Back to Programming</h2>
+
+<p>Here are some simple output commands. It is good to remember that&hellip;</p>
+
+<ul>
+<li>puts # adds a new line after the end.</li>
+<li>print # does not add a new line.</li>
+</ul>
+
+<p>btw hashtag means that it is a comment.</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Hello,&quot;</span>                     <span style="color: #75715e"># simple output with new line</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;World!&quot;</span>                     
+
+<span style="color: #f8f8f2">print</span> <span style="color: #e6db74">&quot;Hello, &quot;</span>                   <span style="color: #75715e"># without new line</span>
+<span style="color: #f8f8f2">print</span> <span style="color: #e6db74">&quot;World!</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>                  <span style="color: #75715e"># \n = newline like in most C langs</span>
+
+<span style="color: #f8f8f2">my_name</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;Sam&quot;</span>                   <span style="color: #75715e"># declaring a string variable</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;My name is: #{</span><span style="color: #f8f8f2">my_name</span><span style="color: #e6db74">}&quot;</span>     <span style="color: #75715e"># output with a placeholder for the variable</span>
+</pre></div>
+</p>
+
+<p>Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">src/casual.cr</span>
+<span style="color: #f8f8f2">Hello,</span>
+<span style="color: #f8f8f2">World!</span>
+<span style="color: #f8f8f2">Hello,</span> <span style="color: #f8f8f2">World!</span>
+<span style="color: #f8f8f2">My</span> <span style="color: #f8f8f2">name</span> <span style="color: #f8f8f2">is</span><span style="color: #960050; background-color: #1e0010">:</span> <span style="color: #f8f8f2">Sam</span>
+</pre></div>
+</p>
+
+<p>In my variable ( variables are placeholders ) i assigned a String with the value of Sam. Crystal being similar to Ruby figures out that it is a string. And then inside the hashtag curley brackets i can output the variable.</p>
+
+<p>Lets do some other fun stuff with strings..</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">my_text</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;I Love Crystal&quot;</span>
+
+<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;my_text has #{</span><span style="color: #f8f8f2">my_text</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">size</span><span style="color: #e6db74">} characters&quot;</span> <span style="color: #75715e"># nr of chars</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;#{</span><span style="color: #f8f8f2">my_text</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">upcase</span><span style="color: #e6db74">}&quot;</span>                      <span style="color: #75715e"># Uppercase</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;#{</span><span style="color: #f8f8f2">my_text</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">downcase</span><span style="color: #e6db74">}&quot;</span>                    <span style="color: #75715e"># Lowercase</span>
+
+<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;#{</span><span style="color: #f8f8f2">my_text</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sub(</span><span style="color: #e6db74">&quot;o&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;i&quot;</span><span style="color: #f8f8f2">)</span><span style="color: #e6db74">}&quot;</span>                <span style="color: #75715e"># substitutes o&#39;s with i&#39;s</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;#{</span><span style="color: #f8f8f2">my_text</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ends_with?(</span><span style="color: #e6db74">&quot;Crystal&quot;</span><span style="color: #f8f8f2">)</span><span style="color: #e6db74">}&quot;</span>       <span style="color: #75715e"># True! It does.</span>
+</pre></div>
+</p>
+
+<p>Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">src/casual.cr</span>
+<span style="color: #f8f8f2">my_text</span> <span style="color: #f8f8f2">has</span> <span style="color: #f8f8f2">14</span> <span style="color: #f8f8f2">characters</span>
+<span style="color: #f8f8f2">I</span> <span style="color: #f8f8f2">LOVE</span> <span style="color: #f8f8f2">CRYSTAL</span>
+<span style="color: #f8f8f2">i</span> <span style="color: #f8f8f2">love</span> <span style="color: #f8f8f2">crystal</span>
+<span style="color: #f8f8f2">I</span> <span style="color: #f8f8f2">Live</span> <span style="color: #f8f8f2">Crystal</span>
+<span style="color: #f8f8f2">true</span>
+</pre></div>
+</p>
+
+<p>Something cool i found was the &ldquo;Heredoc&rdquo;. I had never heard of it before but seems really useful for writing large string, or if you have alot of symbols. Heredoc starts with &lt;&lt;- and the name you give it. Then the text has to be indented 4 lines.</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e"># The text has to be indented 4 lines</span>
+<span style="color: #f8f8f2">x</span> <span style="color: #f92672">=</span> <span style="color: #f92672">&lt;&lt;-</span><span style="color: #e6db74">SOMETHING</span>
+<span style="color: #e6db74">    Hello to                    </span>
+<span style="color: #e6db74">    /&quot;You People In</span>
+<span style="color: #e6db74">    In The &quot; &quot; World?=)()</span>
+<span style="color: #e6db74">    &quot;{&#39;&#39;¤%&amp;¤{&amp;/(%/&amp;)}}&quot;</span>
+<span style="color: #e6db74">    SOMETHING</span>
+
+<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">x</span>
+</pre></div>
+</p>
+
+<p>Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">src/casual.cr</span>
+<span style="color: #f8f8f2">Hello</span> <span style="color: #f8f8f2">to</span>                          
+<span style="color: #f8f8f2">/</span><span style="color: #e6db74">&quot;You People In</span>
+<span style="color: #e6db74">In The &quot;</span> <span style="color: #e6db74">&quot; World?=)()</span>
+<span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">{</span><span style="color: #e6db74">&#39;&#39;</span><span style="color: #960050; background-color: #1e0010">¤</span><span style="color: #f8f8f2">%&amp;</span><span style="color: #960050; background-color: #1e0010">¤</span><span style="color: #f8f8f2">{&amp;/(%/&amp;)}}</span><span style="color: #e6db74">&quot;</span>
+</pre></div>
+</p>
+
+<p>And of course there is alot more you can do&hellip;</p>
+
+<h3 id="mathematics">Mathematics</h3>
+
+<p>Now for some simple math. Doing simple mathematics with crystal is really simple i think.</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">1</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">3</span>                <span style="color: #75715e"># add</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">10</span> <span style="color: #f92672">-</span> <span style="color: #ae81ff">3</span>               <span style="color: #75715e"># substract</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">20.0</span> <span style="color: #f92672">/</span> <span style="color: #ae81ff">2.0</span>           <span style="color: #75715e"># divide</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">71</span> <span style="color: #f92672">*</span> <span style="color: #ae81ff">13</span>              <span style="color: #75715e"># multiply</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">231</span> <span style="color: #f92672">%</span> <span style="color: #ae81ff">10</span>             <span style="color: #75715e"># modulus</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">22</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">10</span>              <span style="color: #75715e"># less than</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">22</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">10</span>              <span style="color: #75715e"># more than</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">33</span> <span style="color: #f92672">&gt;=</span> <span style="color: #ae81ff">15</span>             <span style="color: #75715e"># more or equal</span>
+
+<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;11.1 / 22.4 = #{</span><span style="color: #ae81ff">11.1</span><span style="color: #f92672">/</span><span style="color: #ae81ff">22.4</span><span style="color: #e6db74">}&quot;</span>
+</pre></div>
+</p>
+
+<p>Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">src/casual.cr</span>
+<span style="color: #f8f8f2">4</span>
+<span style="color: #f8f8f2">7</span>
+<span style="color: #f8f8f2">10.0</span>
+<span style="color: #f8f8f2">923</span>
+<span style="color: #f8f8f2">1</span>
+<span style="color: #f8f8f2">false</span>
+<span style="color: #f8f8f2">true</span>
+<span style="color: #f8f8f2">true</span>
+<span style="color: #f8f8f2">11.1</span> <span style="color: #f8f8f2">/</span> <span style="color: #f8f8f2">22.4</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">0.4955357142857143</span>
+</pre></div>
+</p>
+
+<p>And now let&rsquo;s convert Celcius to Fahrenheit. 0 degrees Celcius is 32 degrees Fahrenheit. To convert temperatures in degrees Celsius to Fahrenheit, multiply by 1.8 (or <sup>9</sup>&frasl;<sub>5</sub>) and add 32. So &hellip;</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">celsius</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">32</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">fahrenheit</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">1.8</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">celsius</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">32</span>
+
+<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;32 degrees celsius is #{</span><span style="color: #f8f8f2">fahrenheit</span><span style="color: #e6db74">}&quot;</span>
+</pre></div>
+</p>
+
+<p>Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">src/casual.cr</span>
+<span style="color: #f8f8f2">32</span> <span style="color: #f8f8f2">degrees</span> <span style="color: #f8f8f2">celsius</span> <span style="color: #f8f8f2">is</span> <span style="color: #f8f8f2">89.6</span> <span style="color: #f8f8f2">degrees</span> <span style="color: #f8f8f2">fahrenheit</span>
+</pre></div>
+</p>
+
+<p>And of course alot more complicated mathematics can be performed, and i&rsquo;m not a mathematician, but you get the picture.</p>
+
+<p>We have created a Crystal project, Compiled it, outputted code and done some simple mathematics. I hope this will help you to learn a bit about The Crystal language and Puts. Crystal syntax as i said is based on Ruby where there&rsquo;s tons of information. I am new to this language aswell and have never tried Ruby before, but it seems like a lang that makes developing a bit more simple.</p>
+
+<h3 id="references">References</h3>
+
+<ul>
+<li><a href="https://crystal-lang.org/docs/">https://crystal-lang.org/docs/</a></li>
+<li><a href="https://github.com/askn/crystal-by-example">https://github.com/askn/crystal-by-example</a></li>
+</ul>
+<br>
+  
+
+  
+    <span class="label label-info"><a href="https://mordsith.github.io/tags/crystal">Crystal</a></span>
+  
+    <span class="label label-info"><a href="https://mordsith.github.io/tags/programming">Programming</a></span>
+  
+
+<br><br><br>
+
+  <div class="panel panel-info">
+    <div class="panel-heading"><b>About Sam Ashkan</b></div>
+      <div class="panel-body"><img src="/img/avatar.png" alt="My Avatar" style="float: left; clear: left">
+      <p>I am a developer from Sweden, Programming is one of my favorite hobbies. I especially love compiled languages for there performance. I have never blogged before but i thought why not share what i have learned to anyone interested.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+          
+    
+        <div class="row">
+            <div class="col-md-12 content-card">
+                <div id="disqus_thread"></div>
+                <script>
+                    (function() {
+                        if (window.location.hostname == "localhost") {
+                            document.write("Disqus comments are unavailable while serving on localhost or 127.0.0.1");
+                            return;
+                        }
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        var disqus_shortname = 'mord-sith';
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </div>
+        </div>
+    
+
+
+          </div>
+          <div class="col-md-4">
+          <div class="form-group">
+    <h5>Search this site</h5>
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+        <div class="input-group">
+            <input class="form-control" type="search" name="q" />
+            <span class="input-group-btn">
+                    <button class="btn btn-custom" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+            </span>
+        </div>
+        <input type="hidden" name="q" value="site:https://mordsith.github.io/">
+    </form>
+</div>
+
+          
+<div class="list-group">
+  <div class="list-group-item active">
+    <b>Recent Posts</b>
+  </div>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---puts/" class="list-group-item">Crystal Tutorial The Basics - Puts
+  </a>
+
+</div>
+
+          
+
+          
+
+    
+<div class="list-group">
+  <div href="#" class="list-group-item active">
+    <b>categories</b>
+  </div>
+  
+    <a href="https://mordsith.github.io/categories/crystal" class="list-group-item">crystal</a>
+    
+  </a>
+</div>
+
+
+    
+
+
+          
+          </div>
+        </div>
+      <nav class="footer navbar-fixed-bottom" role="navigation">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4 col-xs-6">
+    <ul class="list-inline social-media">
+        
+        
+        
+            <li><a target="_blank" href="https://www.facebook.com/sam.inter"><i class="fa fa-facebook fa-lg"></i></a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </ul>
+</div>
+
+            <p>Copyleft &copy; 2017, Design by Sam Ashkan, All rights reversed!</p>
+        </div>
+    </div>
+</nav>
+
+      
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+
+    
+
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-XXXXX-YY', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+
+
+      </div>
+    </div>
+  </body>
+</html>
