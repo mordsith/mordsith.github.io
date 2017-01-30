@@ -58,7 +58,7 @@
     
     <ul class="list-inline meta">
     <li><i class="fa fa-calendar"></i> January 29, 2017</li>
-    <li><i class="fa fa-font"></i> 867 words</li>
+    <li><i class="fa fa-font"></i> 877 words</li>
     <li><i class="fa fa-user"></i> Sam Ashkan</li>
       
       
@@ -90,46 +90,54 @@
 
 <p>To install Crystal you should take a look at the official documents called <a href="https://crystal-lang.org/docs/installation/">The Crystal Book!</a> It is also a great way to learn more about the language.</p>
 
-<p>To create a Crystal project type:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">init</span> <span style="color: #f8f8f2">app</span> <span style="color: #f8f8f2">casual</span>
+<p>To create a Crystal project type &hellip;</p>
+
+<p>Terminal:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal init app casual</span>
 </pre></div>
 </p>
 
-<p><strong>crystal</strong> is the name of the compiler. The <strong>init</strong> command creates the default project structure. The <strong>app</strong> commands creates an app skeleton, to create a library change it to <strong>lib</strong>. <strong>casual</strong> is just the name i picked, you may change that to whatever you like.</p>
+<p><strong>crystal</strong> is the name of the compiler. The <strong>init</strong> command creates the default project structure. The <strong>app</strong> commands creates an app skeleton, to create a library change it to <strong>lib</strong>. <strong>casual</strong> is just the name i picked, you may change that to whatever you like. To run the app type &hellip;</p>
 
-<p>to run the app type:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">cd</span> <span style="color: #f8f8f2">casual</span>
-<span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">src/casual.cr</span>
+<p>Terminal:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ cd casual</span>
+<span style="color: #75715e">$ crystal src/casual.cr</span>
 </pre></div>
 </p>
 
 <p>And nothing will happen since we haven&rsquo;t put anything in the file.</p>
 
-<p>Open the <strong>casual.cr</strong> file with your favorite editor located inside the src folder. Remove everything inside and type:</p>
+<p>Open the <strong>casual.cr</strong> file with your favorite editor located inside the src folder. Remove everything inside and type &hellip;</p>
 
+<p>Code:
 <div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Hello, World!&quot;</span>
-</pre></div>
-
-
-<p>Save the file and return to the terminal and run it!</p>
-
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">src/casual.cr</span>
-<span style="color: #f8f8f2">Hello,</span> <span style="color: #f8f8f2">World!</span>
-</pre></div>
-
-
-<p>And congrats! You&rsquo;r first Crystal application. Totally worthless but still pretty cool.</p>
-
-<p>To build the app type:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">build</span> <span style="color: #f8f8f2">src/casual.cr</span> <span style="color: #f8f8f2">--release</span>
-<span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">./casual</span>
-<span style="color: #f8f8f2">Hello,</span> <span style="color: #f8f8f2">World!</span>
 </pre></div>
 </p>
 
-<p>Lets have a look at the file we just created.
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">ls</span> <span style="color: #f8f8f2">-shR</span> <span style="color: #f8f8f2">casual</span>
-<span style="color: #f8f8f2">104K</span> <span style="color: #f8f8f2">casual</span>
+<p>Save the file and return to the terminal and run it!</p>
+
+<p>Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal src/casual.cr</span>
+<span style="color: #75715e">Hello, World!</span>
+</pre></div>
+</p>
+
+<p>And congrats! You&rsquo;r first Crystal application. Totally worthless but still pretty cool.</p>
+
+<p>To build the app type &hellip;</p>
+
+<p>Terminal:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal build src/casual.cr --release</span>
+<span style="color: #75715e">$ ./casual</span>
+<span style="color: #75715e">Hello, World!</span>
+</pre></div>
+</p>
+
+<p>Lets have a look at the file we just created.</p>
+
+<p>Terminal:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ ls -shR casual</span>
+<span style="color: #75715e">104K casual</span>
 </pre></div>
 </p>
 
@@ -159,11 +167,11 @@
 </p>
 
 <p>Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">src/casual.cr</span>
-<span style="color: #f8f8f2">Hello,</span>
-<span style="color: #f8f8f2">World!</span>
-<span style="color: #f8f8f2">Hello,</span> <span style="color: #f8f8f2">World!</span>
-<span style="color: #f8f8f2">My</span> <span style="color: #f8f8f2">name</span> <span style="color: #f8f8f2">is</span><span style="color: #960050; background-color: #1e0010">:</span> <span style="color: #f8f8f2">Sam</span>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal src/casual.cr</span>
+<span style="color: #75715e">Hello,</span>
+<span style="color: #75715e">World!</span>
+<span style="color: #75715e">Hello, World!</span>
+<span style="color: #75715e">My name is: Sam</span>
 </pre></div>
 </p>
 
@@ -184,16 +192,16 @@
 </p>
 
 <p>Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">src/casual.cr</span>
-<span style="color: #f8f8f2">my_text</span> <span style="color: #f8f8f2">has</span> <span style="color: #f8f8f2">14</span> <span style="color: #f8f8f2">characters</span>
-<span style="color: #f8f8f2">I</span> <span style="color: #f8f8f2">LOVE</span> <span style="color: #f8f8f2">CRYSTAL</span>
-<span style="color: #f8f8f2">i</span> <span style="color: #f8f8f2">love</span> <span style="color: #f8f8f2">crystal</span>
-<span style="color: #f8f8f2">I</span> <span style="color: #f8f8f2">Live</span> <span style="color: #f8f8f2">Crystal</span>
-<span style="color: #f8f8f2">true</span>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal src/casual.cr</span>
+<span style="color: #75715e">my_text has 14 characters</span>
+<span style="color: #75715e">I LOVE CRYSTAL</span>
+<span style="color: #75715e">i love crystal</span>
+<span style="color: #75715e">I Live Crystal</span>
+<span style="color: #75715e">true</span>
 </pre></div>
 </p>
 
-<p>Something cool i found was the &ldquo;Heredoc&rdquo;. I had never heard of it before but seems really useful for writing large string, or if you have alot of symbols. Heredoc starts with &lt;&lt;- and the name you give it. Then the text has to be indented 4 lines.</p>
+<p>Something cool i found was the &ldquo;Heredoc&rdquo;. I had never heard of it before but seems really useful for writing large string, or if you have alot of symbols. Heredoc starts with &lt;&lt;- and the name you give it. Then the text has to be indented 4 line.</p>
 
 <p>Code:
 <div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e"># The text has to be indented 4 lines</span>
@@ -209,11 +217,11 @@
 </p>
 
 <p>Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">src/casual.cr</span>
-<span style="color: #f8f8f2">Hello</span> <span style="color: #f8f8f2">to</span>                          
-<span style="color: #f8f8f2">/</span><span style="color: #e6db74">&quot;You People In</span>
-<span style="color: #e6db74">In The &quot;</span> <span style="color: #e6db74">&quot; World?=)()</span>
-<span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">{</span><span style="color: #e6db74">&#39;&#39;</span><span style="color: #960050; background-color: #1e0010">¤</span><span style="color: #f8f8f2">%&amp;</span><span style="color: #960050; background-color: #1e0010">¤</span><span style="color: #f8f8f2">{&amp;/(%/&amp;)}}</span><span style="color: #e6db74">&quot;</span>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal src/casual.cr</span>
+<span style="color: #75715e">Hello to                          </span>
+<span style="color: #75715e">/&quot;You People In</span>
+<span style="color: #75715e">In The &quot; &quot; World?=)()</span>
+<span style="color: #75715e">&quot;{&#39;&#39;¤%&amp;¤{&amp;/(%/&amp;)}}&quot;</span>
 </pre></div>
 </p>
 
@@ -238,16 +246,16 @@
 </p>
 
 <p>Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">src/casual.cr</span>
-<span style="color: #f8f8f2">4</span>
-<span style="color: #f8f8f2">7</span>
-<span style="color: #f8f8f2">10.0</span>
-<span style="color: #f8f8f2">923</span>
-<span style="color: #f8f8f2">1</span>
-<span style="color: #f8f8f2">false</span>
-<span style="color: #f8f8f2">true</span>
-<span style="color: #f8f8f2">true</span>
-<span style="color: #f8f8f2">11.1</span> <span style="color: #f8f8f2">/</span> <span style="color: #f8f8f2">22.4</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">0.4955357142857143</span>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal src/casual.cr</span>
+<span style="color: #75715e">4</span>
+<span style="color: #75715e">7</span>
+<span style="color: #75715e">10.0</span>
+<span style="color: #75715e">923</span>
+<span style="color: #75715e">1</span>
+<span style="color: #75715e">false</span>
+<span style="color: #75715e">true</span>
+<span style="color: #75715e">true</span>
+<span style="color: #75715e">11.1 / 22.4 = 0.4955357142857143</span>
 </pre></div>
 </p>
 
@@ -262,8 +270,8 @@
 </p>
 
 <p>Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">crystal</span> <span style="color: #f8f8f2">src/casual.cr</span>
-<span style="color: #f8f8f2">32</span> <span style="color: #f8f8f2">degrees</span> <span style="color: #f8f8f2">celsius</span> <span style="color: #f8f8f2">is</span> <span style="color: #f8f8f2">89.6</span> <span style="color: #f8f8f2">degrees</span> <span style="color: #f8f8f2">fahrenheit</span>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal src/casual.cr</span>
+<span style="color: #75715e">32 degrees celsius is 89.6 degrees fahrenheit</span>
 </pre></div>
 </p>
 
