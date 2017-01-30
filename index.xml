@@ -232,7 +232,18 @@
       <pubDate>Fri, 27 Jan 2017 23:12:42 +0100</pubDate>
       
       <guid>https://mordsith.github.io/about/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+      <description>
+
+&lt;p&gt;I have been fascinated with computers ever since i got my first commodore 64 in the 80&amp;rsquo;s. I still remember putting in a cassette tape, letting it run for an hour while i&amp;rsquo;d go outside playing hoping something didn&amp;rsquo;t go wrong. And when i wrote my first Hello World i got hooked! I could talk to machines i thought.&lt;/p&gt;
+
+&lt;p&gt;Not much changed when i got older, computers still fascinated me and i cannot get enough working with them. Everything from databases, programming languages, image editing, writing documents and keep in touch with friends and colleges.&lt;/p&gt;
+
+&lt;h2 id=&#34;why-this-site&#34;&gt;Why this Site?&lt;/h2&gt;
+
+&lt;p&gt;I was bored and i thought i would give Static Website Generators a shot. I checked out some of them on
+&lt;a href=&#34;https://www.staticgen.com/&#34;&gt;Static Gen&lt;/a&gt;&amp;rsquo;s website. I wanted to create one with Crystal but could not find one.. Then jekyll seemed to be the most used and well known, but having had bad experience with slow languages like the one time i had with wordpress and 10k pages. It took 30 seconds to do a simple search and i did not want to go that route again.&lt;/p&gt;
+
+&lt;p&gt;I gave &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; a try and got hooked! &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; is an excellent option for a static site with alot of content because its designed to compile very fast. I started playing around with themes and finally found out a bit how Hugo is set up and created this theme. Then i figured why not fill it with something i like.&lt;/p&gt;
 </description>
     </item>
     
