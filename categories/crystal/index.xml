@@ -39,8 +39,9 @@ Output:
 
 &lt;p&gt;Now this is a very simple way to do it compared to some other languages.. * coughs rust * . I know that you usually don&amp;rsquo;t use something like input in real world software but it is very important when learning in my opinion.&lt;/p&gt;
 
-&lt;p&gt;To get a sertain amount of characters you can do this&amp;hellip;
-Code:
+&lt;p&gt;To get a sertain amount of characters you can do this&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Code:
 &lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets(&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;      &lt;span style=&#34;color: #75715e&#34;&gt;# outputs the three first characters&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
