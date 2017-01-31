@@ -9,6 +9,152 @@
     <atom:link href="https://mordsith.github.io/tags/crystal/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Crystal Tutorial The Basics - Gets</title>
+      <link>https://mordsith.github.io/2017/crystal-tutorial-the-basics---gets/</link>
+      <pubDate>Tue, 31 Jan 2017 16:16:03 +0100</pubDate>
+      
+      <guid>https://mordsith.github.io/2017/crystal-tutorial-the-basics---gets/</guid>
+      <description>
+
+&lt;p&gt;In the last tutorial we output text and numbers, in this tutorial im going to talk about something called standard streams. There are three kinds of standard streams and there are called &amp;hellip;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;stdin - standard input&lt;/li&gt;
+&lt;li&gt;stdout - standard output&lt;/li&gt;
+&lt;li&gt;stderr - standard error&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Last time we used stdout, these where puts and print to output on screen in Crystal. This time im going to discuss stdin, meaning getting input from the user. Usually in Crystal lang this is done by the command gets. This is what a simple gets looks like&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;          &lt;span style=&#34;color: #75715e&#34;&gt;# stores the input to x&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt;            &lt;span style=&#34;color: #75715e&#34;&gt;# outputs x&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+Output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;Crystal 123       # my input&lt;/span&gt;
+&lt;span style=&#34;color: #75715e&#34;&gt;Crystal 123       # what crystal outputs&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Now this is a very simple way to do it compared to some other languages.. * coughs rust * . I know that you usually don&amp;rsquo;t use something like input in real world software but it is very important when learning in my opinion.&lt;/p&gt;
+
+&lt;p&gt;To get a sertain amount of characters you can do this&amp;hellip;
+Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets(&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;      &lt;span style=&#34;color: #75715e&#34;&gt;# outputs the three first characters&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+Output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;Samuel L Jackson  # what i put in&lt;/span&gt;
+&lt;span style=&#34;color: #75715e&#34;&gt;Sam               # what gets took in&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;To stop taking in to the stdin when a specific character is put in you can ..&lt;/p&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;      &lt;span style=&#34;color: #75715e&#34;&gt;# will stop after the char s in found&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+Output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;today i had a sandwich for lunch # my input&lt;/span&gt;
+&lt;span style=&#34;color: #75715e&#34;&gt;today i had a s&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;You can also stop after a sertain amount of chars if you write &lt;strong&gt;puts gets(&amp;rsquo;s&amp;rsquo;, 10)&lt;/strong&gt;. To read before the delimiter is found ..&lt;/p&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;c++&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;      &lt;span style=&#34;color: #75715e&#34;&gt;# will stop before the delimiter is found&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+Output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;i do alot of c++ code&lt;/span&gt;
+&lt;span style=&#34;color: #75715e&#34;&gt;i do alot of&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Its easy to split up the gets. There is alot of information about this topic and more on &lt;strong&gt;&lt;a href=&#34;https://crystal-lang.org/api/0.19.2/index.html&#34;&gt;Crystal Lang Api&lt;/a&gt;&lt;/strong&gt; site. According to the site a not_nil! command is required that the compiler forces us to deal with. Like this &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+Output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;The Earth is Round&lt;/span&gt;
+&lt;span style=&#34;color: #75715e&#34;&gt;[&amp;quot;The&amp;quot;, &amp;quot;Earth&amp;quot;, &amp;quot;is&amp;quot;, &amp;quot;Round&amp;quot;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;And to split up to two variables.&lt;/p&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;x,&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;y&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;y&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+Output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;11 22 33         # input&lt;/span&gt;
+&lt;span style=&#34;color: #75715e&#34;&gt;11 22            # output, notice it did not take in the last numbers&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;We can also split with a perticular character.&lt;/p&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;-&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;           &lt;span style=&#34;color: #75715e&#34;&gt;# split when -&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+Output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;Linda-Samantha-Nick-Bjorn               # my input&lt;/span&gt;
+&lt;span style=&#34;color: #75715e&#34;&gt;[&amp;quot;Linda&amp;quot;, &amp;quot;Samantha&amp;quot;, &amp;quot;Nick&amp;quot;, &amp;quot;Bjorn&amp;quot;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;And lastly if we want to add numbers we can do this one liner&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;map(&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;to_i)&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;sum&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+Output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;120 21 43 66 22         # input&lt;/span&gt;
+&lt;span style=&#34;color: #75715e&#34;&gt;272&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;And there is probably alot more you can do with gets. Got anything to add please let me know.&lt;/p&gt;
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;                               &lt;span style=&#34;color: #75715e&#34;&gt;# stores the input to x&lt;/span&gt;
+
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;gets(&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;                                &lt;span style=&#34;color: #75715e&#34;&gt;# stores the three first characters&lt;/span&gt;
+
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;gets(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;                              &lt;span style=&#34;color: #75715e&#34;&gt;# will stop after the char s in found&lt;/span&gt;
+
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;c++&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;                   &lt;span style=&#34;color: #75715e&#34;&gt;# will stop before the delimiter is found&lt;/span&gt;
+
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split&lt;/span&gt;               &lt;span style=&#34;color: #75715e&#34;&gt;# split up the input&lt;/span&gt;
+
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;x,&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;y&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split&lt;/span&gt;             &lt;span style=&#34;color: #75715e&#34;&gt;# split up input to two variables&lt;/span&gt;
+
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;-&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;               &lt;span style=&#34;color: #75715e&#34;&gt;# split when -&lt;/span&gt;
+
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;map(&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;to_i)&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;sum&lt;/span&gt;    &lt;span style=&#34;color: #75715e&#34;&gt;# split up to integers and sums&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://crystal-lang.org/api/0.19.2/IO.html&#34;&gt;https://crystal-lang.org/api/0.19.2/IO.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Crystal Tutorial The Basics - Puts</title>
       <link>https://mordsith.github.io/2017/crystal-tutorial-the-basics---puts/</link>
       <pubDate>Sun, 29 Jan 2017 16:57:38 +0100</pubDate>

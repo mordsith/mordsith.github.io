@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.18.1" />
+    <title>Crystal Tutorial The Basics - Gets</title>
+    
+    
+    
+    <meta name="description" content="The Crystal language is a new programming language with similar syntax to Ruby and is very easy to grasp. In this tutorial we will discuss gets and when gets is." />
+    <meta name="keywords" content='Crystal,Programming' />
+    
+        <meta name="author" content="Sam Ashkan" />
+    
+    
+        <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="196x196" />
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Mordsith - Tech Docs" />
+
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css" rel="stylesheet" integrity="sha384-RpX8okQqCyUNG7PlOYNybyJXYTtGQH+7rIKiVvg1DLg6jahLEk47VvpUyS+E2/uJ" crossorigin="anonymous">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="https://mordsith.github.io/css/custom.css"  media="none" onload="if(media!='all')media='all'" />
+
+
+</head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+      
+<div class="col-md-12">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Mordsith - Tech Docs</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li><a href="/">Home</a></li>
+                
+                <li><a href="/about/">About</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+</nav>
+
+      <div id="top" class="container-fluid">
+        <div class="row" id="content-main">
+          <div class="col-md-8">
+          <div class="row">
+  <div class="col-md-12 ">
+  <h1>Crystal Tutorial The Basics - Gets</h1><br>
+    
+    
+    <ul class="list-inline meta">
+    <li><i class="fa fa-calendar"></i> January 31, 2017</li>
+    <li><i class="fa fa-font"></i> 524 words</li>
+    <li><i class="fa fa-user"></i> Sam Ashkan</li>
+      
+      
+        <li><i class="fa fa-folder"></i> <a href="https://mordsith.github.io/categories/crystal">crystal</a></li><br>
+      
+    </ul>
+    
+  
+<div class="container">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+  <a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet"><i class="fa fa-twitter-square fa-2x"></i></a>
+  <a href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square fa-2x"></i></a>
+  <a href="http://pinterest.com/pin/create/button/?url=&description=" target="_blank" title="Pin it"><i class="fa fa-pinterest-square fa-2x"></i></a>
+  <a href="http://www.reddit.com/submit?url=&title=" target="_blank" title="Submit to Reddit"><i class="fa fa-reddit-square fa-2x"></i></a>
+  <a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>
+</div>
+
+
+  <br>
+
+<p>In the last tutorial we output text and numbers, in this tutorial im going to talk about something called standard streams. There are three kinds of standard streams and there are called &hellip;</p>
+
+<ul>
+<li>stdin - standard input</li>
+<li>stdout - standard output</li>
+<li>stderr - standard error</li>
+</ul>
+
+<p>Last time we used stdout, these where puts and print to output on screen in Crystal. This time im going to discuss stdin, meaning getting input from the user. Usually in Crystal lang this is done by the command gets. This is what a simple gets looks like&hellip;</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">x</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">gets</span>          <span style="color: #75715e"># stores the input to x</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">x</span>            <span style="color: #75715e"># outputs x</span>
+</pre></div>
+
+Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">Crystal 123       # my input</span>
+<span style="color: #75715e">Crystal 123       # what crystal outputs</span>
+</pre></div>
+</p>
+
+<p>Now this is a very simple way to do it compared to some other languages.. * coughs rust * . I know that you usually don&rsquo;t use something like input in real world software but it is very important when learning in my opinion.</p>
+
+<p>To get a sertain amount of characters you can do this&hellip;
+Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">gets(</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">)</span>      <span style="color: #75715e"># outputs the three first characters</span>
+</pre></div>
+
+Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">Samuel L Jackson  # what i put in</span>
+<span style="color: #75715e">Sam               # what gets took in</span>
+</pre></div>
+</p>
+
+<p>To stop taking in to the stdin when a specific character is put in you can ..</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">gets(</span><span style="color: #e6db74">&#39;s&#39;</span><span style="color: #f8f8f2">)</span>      <span style="color: #75715e"># will stop after the char s in found</span>
+</pre></div>
+
+Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">today i had a sandwich for lunch # my input</span>
+<span style="color: #75715e">today i had a s</span>
+</pre></div>
+</p>
+
+<p>You can also stop after a sertain amount of chars if you write <strong>puts gets(&rsquo;s&rsquo;, 10)</strong>. To read before the delimiter is found ..</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">gets(</span><span style="color: #e6db74">&quot;c++&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">20</span><span style="color: #f8f8f2">)</span>      <span style="color: #75715e"># will stop before the delimiter is found</span>
+</pre></div>
+
+Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">i do alot of c++ code</span>
+<span style="color: #75715e">i do alot of</span>
+</pre></div>
+</p>
+
+<p>Its easy to split up the gets. There is alot of information about this topic and more on <strong><a href="https://crystal-lang.org/api/0.19.2/index.html">Crystal Lang Api</a></strong> site. According to the site a not_nil! command is required that the compiler forces us to deal with. Like this &hellip;</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split</span>
+</pre></div>
+
+Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">The Earth is Round</span>
+<span style="color: #75715e">[&quot;The&quot;, &quot;Earth&quot;, &quot;is&quot;, &quot;Round&quot;]</span>
+</pre></div>
+</p>
+
+<p>And to split up to two variables.</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">x,</span> <span style="color: #f8f8f2">y</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">x</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot; &quot;</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">y</span>
+</pre></div>
+
+Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">11 22 33         # input</span>
+<span style="color: #75715e">11 22            # output, notice it did not take in the last numbers</span>
+</pre></div>
+</p>
+
+<p>We can also split with a perticular character.</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split(</span><span style="color: #e6db74">&#39;-&#39;</span><span style="color: #f8f8f2">)</span>           <span style="color: #75715e"># split when -</span>
+</pre></div>
+
+Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">Linda-Samantha-Nick-Bjorn               # my input</span>
+<span style="color: #75715e">[&quot;Linda&quot;, &quot;Samantha&quot;, &quot;Nick&quot;, &quot;Bjorn&quot;]</span>
+</pre></div>
+</p>
+
+<p>And lastly if we want to add numbers we can do this one liner&hellip;</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">map(</span><span style="color: #f92672">&amp;.</span><span style="color: #f8f8f2">to_i)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sum</span>
+</pre></div>
+
+Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">120 21 43 66 22         # input</span>
+<span style="color: #75715e">272</span>
+</pre></div>
+</p>
+
+<p>And there is probably alot more you can do with gets. Got anything to add please let me know.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">x</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">gets</span>                               <span style="color: #75715e"># stores the input to x</span>
+
+<span style="color: #f8f8f2">gets(</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">)</span>                                <span style="color: #75715e"># stores the three first characters</span>
+
+<span style="color: #f8f8f2">gets(</span><span style="color: #e6db74">&#39;s&#39;</span><span style="color: #f8f8f2">)</span>                              <span style="color: #75715e"># will stop after the char s in found</span>
+
+<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">gets(</span><span style="color: #e6db74">&quot;c++&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">20</span><span style="color: #f8f8f2">)</span>                   <span style="color: #75715e"># will stop before the delimiter is found</span>
+
+<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split</span>               <span style="color: #75715e"># split up the input</span>
+
+<span style="color: #f8f8f2">x,</span> <span style="color: #f8f8f2">y</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split</span>             <span style="color: #75715e"># split up input to two variables</span>
+
+<span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split(</span><span style="color: #e6db74">&#39;-&#39;</span><span style="color: #f8f8f2">)</span>               <span style="color: #75715e"># split when -</span>
+
+<span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">map(</span><span style="color: #f92672">&amp;.</span><span style="color: #f8f8f2">to_i)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sum</span>    <span style="color: #75715e"># split up to integers and sums</span>
+</pre></div>
+</p>
+
+<h3 id="references">References</h3>
+
+<ul>
+<li><a href="https://crystal-lang.org/api/0.19.2/IO.html">https://crystal-lang.org/api/0.19.2/IO.html</a></li>
+</ul>
+<br>
+  
+
+  
+    <span class="label label-info"><a href="https://mordsith.github.io/tags/crystal">Crystal</a></span>
+  
+    <span class="label label-info"><a href="https://mordsith.github.io/tags/programming">Programming</a></span>
+  
+
+<br><br><br>
+
+  <div class="panel panel-info">
+    <div class="panel-heading"><b>About Sam Ashkan</b></div>
+      <div class="panel-body"><img src="/img/avatar.png" alt="My Avatar" style="float: left; clear: left">
+      <p>I am a developer from Sweden, Programming is one of my favorite hobbies. I especially love compiled languages for there performance. I have never blogged before but i thought why not share what i have learned to anyone interested.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+          
+    
+        <div class="row">
+            <div class="col-md-12 content-card">
+                <div id="disqus_thread"></div>
+                <script>
+                    (function() {
+                        if (window.location.hostname == "localhost") {
+                            document.write("Disqus comments are unavailable while serving on localhost or 127.0.0.1");
+                            return;
+                        }
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        var disqus_shortname = 'mord-sith';
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </div>
+        </div>
+    
+
+
+          </div>
+          <div class="col-md-4">
+          <script>
+  (function() {
+    var cx = '003471220390322062077:j5wxwe0wdfk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search linktarget="_parent"></gcse:search>
+<style type='text/css'>
+.gsc-control-cse div{ color: white; }
+.gsc-above-wrapper-area { border-bottom: none; }
+.gsc-control-cse { border-color: black; }
+.gsc-control-cse .gsc-option-menu{ background-color: darkgray; }
+ table.gsc-branding td, table.gsc-branding, table.gcsc-branding td, table.gcsc-branding { display: none; }
+ td.gcsc-branding-text div.gcsc-branding-text { display: none; }
+.gsc-adBlock { display: none; }
+.cse input.gsc-input, input.gsc-input { background-image:none !important; }
+.cse input.gsc-search-button, input.gsc-search-button{
+  font-size: 14px;
+  height: 40px;
+  padding: 8px 12px;
+  min-width: 100px;
+  -webkit-border-radius: 2px;
+}
+td.gsc-clear-button { display: none; }
+.cse input.gsc-input, input.gsc-input { padding: 8px 6px; }
+.cse table.gsc-search-box td.gsc-input, table.gsc-search-box td.gsc-input{
+  padding-right: inherit;
+}
+.gs-no-results-result .gs-snippet, .gs-error-result .gs-snippet { border: none; background-color: transparent;}
+ </style>
+<br>
+
+          
+<div class="list-group">
+  <div class="list-group-item active">
+    <b>Recent Posts</b>
+  </div>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---gets/" class="list-group-item">Crystal Tutorial The Basics - Gets
+  </a>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---puts/" class="list-group-item">Crystal Tutorial The Basics - Puts
+  </a>
+
+</div>
+
+          
+
+          
+
+    
+<div class="list-group">
+  <div href="#" class="list-group-item active">
+    <b>categories</b>
+  </div>
+  
+    <a href="https://mordsith.github.io/categories/crystal" class="list-group-item">crystal</a>
+    
+  </a>
+</div>
+
+
+    
+
+
+          
+          </div>
+        </div>
+      <nav class="footer navbar-fixed-bottom" role="navigation">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4 col-xs-6">
+    <ul class="list-inline social-media">
+        
+        
+        
+            <li><a target="_blank" href="https://www.facebook.com/sam.inter"><i class="fa fa-facebook fa-lg"></i></a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </ul>
+</div>
+
+            <p>Copyleft &copy; 2017, Design by Sam Ashkan, All rights reversed!</p>
+        </div>
+    </div>
+</nav>
+
+      
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+
+    
+
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-91005792-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+
+
+      </div>
+    </div>
+  </body>
+</html>
