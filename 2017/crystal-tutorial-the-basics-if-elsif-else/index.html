@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.18.1" />
+    <title>Crystal Tutorial The Basics If Elsif Else</title>
+    
+    
+    
+    <meta name="description" content="In Crystal lang we can check conditional statements by using the IF ELSIF or ELSE to check a block of code. This is a simple tutorial describing these issues." />
+    <meta name="keywords" content='Crystal,Programming' />
+    
+        <meta name="author" content="Sam Ashkan" />
+    
+    
+        <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="196x196" />
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Mordsith - Tech Docs" />
+
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css" rel="stylesheet" integrity="sha384-RpX8okQqCyUNG7PlOYNybyJXYTtGQH+7rIKiVvg1DLg6jahLEk47VvpUyS+E2/uJ" crossorigin="anonymous">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="https://mordsith.github.io/css/custom.css"  media="none" onload="if(media!='all')media='all'" />
+
+
+</head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+      
+<div class="col-md-12">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Mordsith - Tech Docs</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li><a href="/">Home</a></li>
+                
+                <li><a href="/about/">About</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+</nav>
+
+      <div id="top" class="container-fluid">
+        <div class="row" id="content-main">
+          <div class="col-md-8">
+          <div class="row">
+  <div class="col-md-12 ">
+  <h1>Crystal Tutorial The Basics If Elsif Else</h1><br>
+    
+    
+    <ul class="list-inline meta">
+    <li><i class="fa fa-calendar"></i> February 1, 2017</li>
+    <li><i class="fa fa-font"></i> 679 words</li>
+    <li><i class="fa fa-user"></i> Sam Ashkan</li>
+      
+      
+        <li><i class="fa fa-folder"></i> <a href="https://mordsith.github.io/categories/crystal">crystal</a></li><br>
+      
+    </ul>
+    
+  
+<div class="container">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+  <a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet"><i class="fa fa-twitter-square fa-2x"></i></a>
+  <a href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square fa-2x"></i></a>
+  <a href="http://pinterest.com/pin/create/button/?url=&description=" target="_blank" title="Pin it"><i class="fa fa-pinterest-square fa-2x"></i></a>
+  <a href="http://www.reddit.com/submit?url=&title=" target="_blank" title="Submit to Reddit"><i class="fa fa-reddit-square fa-2x"></i></a>
+  <a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>
+</div>
+
+
+  <br>
+
+<p>The if, elsif and else are Crystals conditionals statements that execute a block of code to check if a condition is true of false. It works very similar to the english languge that if this is true i will do this else i will do something else.</p>
+
+<p>Things to keep in mind!</p>
+
+<ul>
+<li>= means you assing a value to the variable</li>
+<li>== is for checking a conditional</li>
+<li>&amp;&amp; means and</li>
+<li>|| means OR</li>
+</ul>
+
+<p>Example:  lets say you want to output something if lets say the student
+is older than 19, and is to old to attend class.</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">student_name</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">20</span>
+
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">student_name</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">19</span>
+  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;The student is to old for this course.&quot;</span>
+<span style="color: #66d9ef">end</span>
+</pre></div>
+
+Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">The student is to old for this course.</span>
+</pre></div>
+</p>
+
+<p>Output: We will get the output that the student is to old for this class.</p>
+
+<p>Test: But now lets say that the student can take the night course if he is older than 19 and younger than 25. We can use nested if&rsquo;s.</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">student_name</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">20</span>
+
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">student_name</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">19</span>
+   <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;The student is to old for this course.&quot;</span>
+  <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">student_name</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">25</span>
+    <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;But the student can attend night courses&quot;</span>
+  <span style="color: #66d9ef">end</span>
+<span style="color: #66d9ef">end</span>
+</pre></div>
+
+Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">The student is to old for this course.</span>
+<span style="color: #75715e">But the student can attend night courses</span>
+</pre></div>
+</p>
+
+<p>Output: The first condition does the same as before. The second nested if gives the second option.</p>
+
+<p>Test: Now we want to output if a patient has the flu, and if patient doesn&rsquo;t output something else. You only have the flu or you dont.</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">patient_has_flu</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">false</span>
+
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">patient_has_flu</span> <span style="color: #f92672">==</span> <span style="color: #66d9ef">true</span>
+  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;The patient is ill&quot;</span>
+<span style="color: #66d9ef">else</span>
+  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;The patiens is not sick!&quot;</span>
+<span style="color: #66d9ef">end</span>
+</pre></div>
+
+Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">The patiens is not sick!</span>
+</pre></div>
+</p>
+
+<p>Output: If all statements fail then the else condition is called.</p>
+
+<p>Test: To test alot of conditions we can use the else if conditions that in crystal we write elsif. So lets say that in our case we cant to figure out the persons age description.</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">person</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">24</span>
+
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&gt;=</span> <span style="color: #ae81ff">0</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&lt;=</span> <span style="color: #ae81ff">3</span>
+  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Toddler&quot;</span>
+<span style="color: #66d9ef">elsif</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&gt;=</span> <span style="color: #ae81ff">4</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&lt;=</span> <span style="color: #ae81ff">12</span>
+  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Child&quot;</span>
+<span style="color: #66d9ef">elsif</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&gt;=</span> <span style="color: #ae81ff">13</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&lt;=</span> <span style="color: #ae81ff">19</span>
+  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Teenager&quot;</span>
+<span style="color: #66d9ef">elsif</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&gt;=</span> <span style="color: #ae81ff">20</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&lt;=</span> <span style="color: #ae81ff">70</span>
+  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Adult&quot;</span>
+<span style="color: #66d9ef">elsif</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&gt;=</span> <span style="color: #ae81ff">70</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&lt;=</span> <span style="color: #ae81ff">110</span>
+  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Senior&quot;</span>
+<span style="color: #66d9ef">else</span>
+  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;You are a turtle&quot;</span>
+<span style="color: #66d9ef">end</span>
+</pre></div>
+
+Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">Adult</span>
+</pre></div>
+</p>
+
+<p>Output: This way we can have many if cases. Keep in mind that the Case control expression is better for pattern matching.</p>
+
+<p>Example: If can also be written as an expression suffix.</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">x</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">22</span>
+<span style="color: #f8f8f2">output</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;Mathew&quot;</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">x</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">22</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">output</span>
+
+<span style="color: #75715e"># And a ternary If looks like this...</span>
+
+<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">110</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">222</span> <span style="color: #f92672">?</span> <span style="color: #66d9ef">true</span> <span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">false</span>
+</pre></div>
+
+Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">Mathew</span>
+<span style="color: #75715e">false</span>
+</pre></div>
+</p>
+
+<p>Example:  To check the variable type&hellip;</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">22</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">a</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">is_a?(String)</span>
+  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;a is a string&quot;</span>
+<span style="color: #66d9ef">elsif</span> <span style="color: #f8f8f2">a</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">is_a?(Number)</span>
+  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;a is a number&quot;</span>
+<span style="color: #66d9ef">end</span>
+</pre></div>
+
+Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">a is a number</span>
+</pre></div>
+</p>
+
+<p>Example: And then there is the OR statement</p>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">22</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">a</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">is_a?(String)</span> <span style="color: #f92672">||</span> <span style="color: #f8f8f2">a</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">is_a?(Number)</span>
+  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;a is a number or a string&quot;</span>
+<span style="color: #66d9ef">end</span>
+</pre></div>
+
+Output:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">a is a number or a string</span>
+</pre></div>
+</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Code:
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e"># What If looks like..</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition</span>
+  <span style="color: #f8f8f2">do_something</span>
+<span style="color: #66d9ef">elsif</span>
+  <span style="color: #f8f8f2">do_something</span>
+<span style="color: #66d9ef">else</span>
+  <span style="color: #f8f8f2">do_something</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #75715e"># A simple If statement</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition</span>                          <span style="color: #75715e"># If this is true</span>
+  <span style="color: #f8f8f2">do_something</span>                        <span style="color: #75715e"># Do this</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #75715e"># Nested If&#39;s</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition</span>
+  <span style="color: #f8f8f2">do_something</span>
+
+  <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition</span>                        <span style="color: #75715e"># If inside another if</span>
+    <span style="color: #f8f8f2">do_something</span>
+  <span style="color: #66d9ef">end</span>
+
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #75715e"># The Else statement</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition</span>
+  <span style="color: #f8f8f2">do_something</span>
+<span style="color: #66d9ef">else</span>                                  <span style="color: #75715e"># Else if above conditions fail</span>
+  <span style="color: #66d9ef">do</span> <span style="color: #f8f8f2">something</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #75715e"># If more than one condition needs to be true</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">condition</span>             <span style="color: #75715e"># If first AND second condition is true</span>
+  <span style="color: #f8f8f2">do_something</span>
+<span style="color: #66d9ef">elsif</span> <span style="color: #f8f8f2">condition</span> <span style="color: #f92672">||</span> <span style="color: #f8f8f2">condition</span>          <span style="color: #75715e"># Else if first OR second condition is true</span>
+  <span style="color: #f8f8f2">do_something</span>
+<span style="color: #66d9ef">else</span>                                  <span style="color: #75715e"># If above code fails</span>
+  <span style="color: #f8f8f2">do_something</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #75715e"># As expression suffix</span>
+<span style="color: #f8f8f2">x</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">10</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition</span>                   <span style="color: #75715e"># Variable is 10 if condition met</span>
+
+<span style="color: #75715e"># Check the variable type</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">x</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">is_a?(String)</span>                    <span style="color: #75715e"># If variable x is a String</span>
+  <span style="color: #f8f8f2">do_something</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">x</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">is_a?(Number)</span>                    <span style="color: #75715e"># If variable x is a Number</span>
+  <span style="color: #f8f8f2">do_something</span>
+<span style="color: #66d9ef">end</span>
+</pre></div>
+</p>
+
+<h3 id="references">References</h3>
+
+<ul>
+<li><a href="https://crystal-lang.org/docs/syntax_and_semantics/if.html">https://crystal-lang.org/docs/syntax_and_semantics/if.html</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Conditional_(computer_programming">https://en.wikipedia.org/wiki/Conditional_(computer_programming</a>)</li>
+</ul>
+<br>
+  
+
+  
+    <span class="label label-info"><a href="https://mordsith.github.io/tags/crystal">Crystal</a></span>
+  
+    <span class="label label-info"><a href="https://mordsith.github.io/tags/programming">Programming</a></span>
+  
+
+<br><br><br>
+
+  <div class="panel panel-info">
+    <div class="panel-heading"><b>About Sam Ashkan</b></div>
+      <div class="panel-body"><img src="/img/avatar.png" alt="My Avatar" style="float: left; clear: left">
+      <p>I am a developer from Sweden, Programming is one of my favorite hobbies. I especially love compiled languages for there performance. I have never blogged before but i thought why not share what i have learned to anyone interested.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+          
+    
+        <div class="row">
+            <div class="col-md-12 content-card">
+                <div id="disqus_thread"></div>
+                <script>
+                    (function() {
+                        if (window.location.hostname == "localhost") {
+                            document.write("Disqus comments are unavailable while serving on localhost or 127.0.0.1");
+                            return;
+                        }
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        var disqus_shortname = 'mord-sith';
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </div>
+        </div>
+    
+
+
+          </div>
+          <div class="col-md-4">
+          <script>
+  (function() {
+    var cx = '003471220390322062077:j5wxwe0wdfk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search linktarget="_parent"></gcse:search>
+<style type='text/css'>
+.gsc-control-cse div{ color: white; }
+.gsc-above-wrapper-area { border-bottom: none; }
+.gsc-control-cse { border-color: black; }
+.gsc-control-cse .gsc-option-menu{ background-color: darkgray; }
+ table.gsc-branding td, table.gsc-branding, table.gcsc-branding td, table.gcsc-branding { display: none; }
+ td.gcsc-branding-text div.gcsc-branding-text { display: none; }
+.gsc-adBlock { display: none; }
+.cse input.gsc-input, input.gsc-input { background-image:none !important; }
+.cse input.gsc-search-button, input.gsc-search-button{
+  font-size: 14px;
+  height: 40px;
+  padding: 8px 12px;
+  min-width: 100px;
+  -webkit-border-radius: 2px;
+}
+td.gsc-clear-button { display: none; }
+.cse input.gsc-input, input.gsc-input { padding: 8px 6px; }
+.cse table.gsc-search-box td.gsc-input, table.gsc-search-box td.gsc-input{
+  padding-right: inherit;
+}
+.gs-no-results-result .gs-snippet, .gs-error-result .gs-snippet { border: none; background-color: transparent;}
+ </style>
+<br>
+
+          
+<div class="list-group">
+  <div class="list-group-item active">
+    <b>Recent Posts</b>
+  </div>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics-if-elsif-else/" class="list-group-item">Crystal Tutorial The Basics If Elsif Else
+  </a>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---gets/" class="list-group-item">Crystal Tutorial The Basics - Gets
+  </a>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---puts/" class="list-group-item">Crystal Tutorial The Basics - Puts
+  </a>
+
+</div>
+
+          
+
+          
+
+    
+<div class="list-group">
+  <div href="#" class="list-group-item active">
+    <b>categories</b>
+  </div>
+  
+    <a href="https://mordsith.github.io/categories/crystal" class="list-group-item">crystal</a>
+    
+  </a>
+</div>
+
+
+    
+
+
+          
+          </div>
+        </div>
+      <nav class="footer navbar-fixed-bottom" role="navigation">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4 col-xs-6">
+    <ul class="list-inline social-media">
+        
+        
+        
+            <li><a target="_blank" href="https://www.facebook.com/sam.inter"><i class="fa fa-facebook fa-lg"></i></a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </ul>
+</div>
+
+            <p>Copyleft &copy; 2017, Design by Sam Ashkan, All rights reversed!</p>
+        </div>
+    </div>
+</nav>
+
+      
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+
+    
+
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-91005792-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+
+
+      </div>
+    </div>
+  </body>
+</html>

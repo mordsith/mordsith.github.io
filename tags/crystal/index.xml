@@ -9,6 +9,224 @@
     <atom:link href="https://mordsith.github.io/tags/crystal/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Crystal Tutorial The Basics If Elsif Else</title>
+      <link>https://mordsith.github.io/2017/crystal-tutorial-the-basics-if-elsif-else/</link>
+      <pubDate>Wed, 01 Feb 2017 15:01:15 +0100</pubDate>
+      
+      <guid>https://mordsith.github.io/2017/crystal-tutorial-the-basics-if-elsif-else/</guid>
+      <description>
+
+&lt;p&gt;The if, elsif and else are Crystals conditionals statements that execute a block of code to check if a condition is true of false. It works very similar to the english languge that if this is true i will do this else i will do something else.&lt;/p&gt;
+
+&lt;p&gt;Things to keep in mind!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;= means you assing a value to the variable&lt;/li&gt;
+&lt;li&gt;== is for checking a conditional&lt;/li&gt;
+&lt;li&gt;&amp;amp;&amp;amp; means and&lt;/li&gt;
+&lt;li&gt;|| means OR&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Example:  lets say you want to output something if lets say the student
+is older than 19, and is to old to attend class.&lt;/p&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;student_name&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;20&lt;/span&gt;
+
+&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;student_name&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;19&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;The student is to old for this course.&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+Output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;The student is to old for this course.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Output: We will get the output that the student is to old for this class.&lt;/p&gt;
+
+&lt;p&gt;Test: But now lets say that the student can take the night course if he is older than 19 and younger than 25. We can use nested if&amp;rsquo;s.&lt;/p&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;student_name&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;20&lt;/span&gt;
+
+&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;student_name&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;19&lt;/span&gt;
+   &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;The student is to old for this course.&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;student_name&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;25&lt;/span&gt;
+    &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;But the student can attend night courses&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+Output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;The student is to old for this course.&lt;/span&gt;
+&lt;span style=&#34;color: #75715e&#34;&gt;But the student can attend night courses&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Output: The first condition does the same as before. The second nested if gives the second option.&lt;/p&gt;
+
+&lt;p&gt;Test: Now we want to output if a patient has the flu, and if patient doesn&amp;rsquo;t output something else. You only have the flu or you dont.&lt;/p&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;patient_has_flu&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;false&lt;/span&gt;
+
+&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;patient_has_flu&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;true&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;The patient is ill&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;else&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;The patiens is not sick!&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+Output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;The patiens is not sick!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Output: If all statements fail then the else condition is called.&lt;/p&gt;
+
+&lt;p&gt;Test: To test alot of conditions we can use the else if conditions that in crystal we write elsif. So lets say that in our case we cant to figure out the persons age description.&lt;/p&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;24&lt;/span&gt;
+
+&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;3&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Toddler&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;12&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Child&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;13&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;19&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Teenager&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;20&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;70&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Adult&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;70&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;110&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Senior&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;else&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;You are a turtle&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+Output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;Adult&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Output: This way we can have many if cases. Keep in mind that the Case control expression is better for pattern matching.&lt;/p&gt;
+
+&lt;p&gt;Example: If can also be written as an expression suffix.&lt;/p&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;22&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;output&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Mathew&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;22&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;output&lt;/span&gt;
+
+&lt;span style=&#34;color: #75715e&#34;&gt;# And a ternary If looks like this...&lt;/span&gt;
+
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;110&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;222&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;?&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;true&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+Output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;Mathew&lt;/span&gt;
+&lt;span style=&#34;color: #75715e&#34;&gt;false&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Example:  To check the variable type&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;22&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;is_a?(String)&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;a is a string&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;is_a?(Number)&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;a is a number&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+Output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;a is a number&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Example: And then there is the OR statement&lt;/p&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;22&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;is_a?(String)&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;is_a?(Number)&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;a is a number or a string&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+Output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;a is a number or a string&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;Code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;# What If looks like..&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;elsif&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;else&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+
+&lt;span style=&#34;color: #75715e&#34;&gt;# A simple If statement&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;                          &lt;span style=&#34;color: #75715e&#34;&gt;# If this is true&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;                        &lt;span style=&#34;color: #75715e&#34;&gt;# Do this&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+
+&lt;span style=&#34;color: #75715e&#34;&gt;# Nested If&amp;#39;s&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
+
+  &lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;                        &lt;span style=&#34;color: #75715e&#34;&gt;# If inside another if&lt;/span&gt;
+    &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
+  &lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+
+&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+
+&lt;span style=&#34;color: #75715e&#34;&gt;# The Else statement&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;else&lt;/span&gt;                                  &lt;span style=&#34;color: #75715e&#34;&gt;# Else if above conditions fail&lt;/span&gt;
+  &lt;span style=&#34;color: #66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;something&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+
+&lt;span style=&#34;color: #75715e&#34;&gt;# If more than one condition needs to be true&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;             &lt;span style=&#34;color: #75715e&#34;&gt;# If first AND second condition is true&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;          &lt;span style=&#34;color: #75715e&#34;&gt;# Else if first OR second condition is true&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;else&lt;/span&gt;                                  &lt;span style=&#34;color: #75715e&#34;&gt;# If above code fails&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+
+&lt;span style=&#34;color: #75715e&#34;&gt;# As expression suffix&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;                   &lt;span style=&#34;color: #75715e&#34;&gt;# Variable is 10 if condition met&lt;/span&gt;
+
+&lt;span style=&#34;color: #75715e&#34;&gt;# Check the variable type&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;is_a?(String)&lt;/span&gt;                    &lt;span style=&#34;color: #75715e&#34;&gt;# If variable x is a String&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+
+&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;is_a?(Number)&lt;/span&gt;                    &lt;span style=&#34;color: #75715e&#34;&gt;# If variable x is a Number&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://crystal-lang.org/docs/syntax_and_semantics/if.html&#34;&gt;https://crystal-lang.org/docs/syntax_and_semantics/if.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Conditional_(computer_programming&#34;&gt;https://en.wikipedia.org/wiki/Conditional_(computer_programming&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Crystal Tutorial The Basics - Gets</title>
       <link>https://mordsith.github.io/2017/crystal-tutorial-the-basics---gets/</link>
       <pubDate>Tue, 31 Jan 2017 16:16:03 +0100</pubDate>
