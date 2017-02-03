@@ -47,7 +47,7 @@
             </ul>
         </div>
     </div>
-</div>
+  </div>
 </nav>
 
         <div class="row" id="content-main">
@@ -60,7 +60,7 @@
       
       <ul class="list-inline meta">
       <li><i class="fa fa-calendar"></i> February 1, 2017</li>
-      <li><i class="fa fa-font"></i> 679 words</li>
+      <li><i class="fa fa-font"></i> 767 words</li>
       <li><i class="fa fa-user"></i> Sam Ashkan</li>
         
         
@@ -85,206 +85,257 @@
 <div class="mytext">
     
 
-<p>The if, elsif and else are Crystals conditionals statements that execute a block of code to check if a condition is true of false. It works very similar to the english languge that if this is true i will do this else i will do something else.</p>
+<p>The <code>if</code>, <code>elsif</code> and <code>else</code> are Crystals conditionals statements that execute a block of code to check if a condition is true of false. It works very similar to the english languge that if this is true i will do this else i will do something else.</p>
 
-<p>Things to keep in mind!</p>
+<p><strong>Things to keep in mind!</strong></p>
 
-<ul>
-<li>= means you assing a value to the variable</li>
-<li>== is for checking a conditional</li>
-<li>&amp;&amp; means and</li>
-<li>|| means OR</li>
-</ul>
+<p><code>=</code> means you assing a value to the variable<br>
+<code>==</code> is for checking a conditional<br>
+<code>&amp;&amp;</code> means and<br>
+<code>||</code> means OR</p>
 
-<p>Example:  lets say you want to output something if lets say the student
-is older than 19, and is to old to attend class.</p>
+<div class="alert alert-warning" role="alert">
+Problem: Lets say you want to output something if lets say the student
+is older than 19, and is to old to attend class.
+</div>
 
-<p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">student_name</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">20</span>
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">student_name</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">20</span>
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">student_name</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">19</span>
-  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;The student is to old for this course.&quot;</span>
-<span style="color: #66d9ef">end</span>
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">student_name</span> <span style="color: #ce5c00; font-weight: bold">&gt;</span> <span style="color: #0000cf; font-weight: bold">19</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;The student is to old for this course.&quot;</span>
+<span style="color: #204a87; font-weight: bold">end</span>
 </pre></div>
 
-Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">The student is to old for this course.</span>
-</pre></div>
-</p>
-
-<p>Output: We will get the output that the student is to old for this class.</p>
-
-<p>Test: But now lets say that the student can take the night course if he is older than 19 and younger than 25. We can use nested if&rsquo;s.</p>
-
-<p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">student_name</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">20</span>
-
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">student_name</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">19</span>
-   <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;The student is to old for this course.&quot;</span>
-  <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">student_name</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">25</span>
-    <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;But the student can attend night courses&quot;</span>
-  <span style="color: #66d9ef">end</span>
-<span style="color: #66d9ef">end</span>
-</pre></div>
-
-Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">The student is to old for this course.</span>
-<span style="color: #75715e">But the student can attend night courses</span>
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>The student is to old for this course.
 </pre></div>
 </p>
 
-<p>Output: The first condition does the same as before. The second nested if gives the second option.</p>
+<p>And we will get the desired output that the student is to old for this class. This is a very simple situation and we can do alot more with <code>if</code>s, like using more of them.</p>
 
-<p>Test: Now we want to output if a patient has the flu, and if patient doesn&rsquo;t output something else. You only have the flu or you dont.</p>
+<div class="alert alert-warning" role="alert">
+Problem: Now lets say that the student can take the night course if he is older than 19 and younger than 25.
+</div>
 
-<p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">patient_has_flu</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">false</span>
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">student_name</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">20</span>
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">patient_has_flu</span> <span style="color: #f92672">==</span> <span style="color: #66d9ef">true</span>
-  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;The patient is ill&quot;</span>
-<span style="color: #66d9ef">else</span>
-  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;The patiens is not sick!&quot;</span>
-<span style="color: #66d9ef">end</span>
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">student_name</span> <span style="color: #ce5c00; font-weight: bold">&gt;</span> <span style="color: #0000cf; font-weight: bold">19</span>
+   <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;The student is to old for this course.&quot;</span>
+  <span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">student_name</span> <span style="color: #ce5c00; font-weight: bold">&lt;</span> <span style="color: #0000cf; font-weight: bold">25</span>
+    <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;But the student can attend night courses&quot;</span>
+  <span style="color: #204a87; font-weight: bold">end</span>
+<span style="color: #204a87; font-weight: bold">end</span>
 </pre></div>
 
-Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">The patiens is not sick!</span>
-</pre></div>
-</p>
-
-<p>Output: If all statements fail then the else condition is called.</p>
-
-<p>Test: To test alot of conditions we can use the else if conditions that in crystal we write elsif. So lets say that in our case we cant to figure out the persons age description.</p>
-
-<p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">person</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">24</span>
-
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&gt;=</span> <span style="color: #ae81ff">0</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&lt;=</span> <span style="color: #ae81ff">3</span>
-  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Toddler&quot;</span>
-<span style="color: #66d9ef">elsif</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&gt;=</span> <span style="color: #ae81ff">4</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&lt;=</span> <span style="color: #ae81ff">12</span>
-  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Child&quot;</span>
-<span style="color: #66d9ef">elsif</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&gt;=</span> <span style="color: #ae81ff">13</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&lt;=</span> <span style="color: #ae81ff">19</span>
-  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Teenager&quot;</span>
-<span style="color: #66d9ef">elsif</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&gt;=</span> <span style="color: #ae81ff">20</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&lt;=</span> <span style="color: #ae81ff">70</span>
-  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Adult&quot;</span>
-<span style="color: #66d9ef">elsif</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&gt;=</span> <span style="color: #ae81ff">70</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">person</span> <span style="color: #f92672">&lt;=</span> <span style="color: #ae81ff">110</span>
-  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Senior&quot;</span>
-<span style="color: #66d9ef">else</span>
-  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;You are a turtle&quot;</span>
-<span style="color: #66d9ef">end</span>
-</pre></div>
-
-Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">Adult</span>
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>The student is to old for this course.
+But the student can attend night courses
 </pre></div>
 </p>
 
-<p>Output: This way we can have many if cases. Keep in mind that the Case control expression is better for pattern matching.</p>
+<p>So how did we do this? We used something called a nested <code>if</code>. The first condition does the same as before. The second nested <code>if</code> gives the second option.</p>
 
-<p>Example: If can also be written as an expression suffix.</p>
+<div class="alert alert-warning" role="alert">
+Problem: Output something if a patient has the flu, and if patient doesn't have it output something else. You only have the flu or you dont.
+</div>
 
-<p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">x</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">22</span>
-<span style="color: #f8f8f2">output</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;Mathew&quot;</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">x</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">22</span>
-<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">output</span>
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">patient_has_flu</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span>
 
-<span style="color: #75715e"># And a ternary If looks like this...</span>
-
-<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">110</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">222</span> <span style="color: #f92672">?</span> <span style="color: #66d9ef">true</span> <span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">false</span>
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">patient_has_flu</span> <span style="color: #ce5c00; font-weight: bold">==</span> <span style="color: #204a87; font-weight: bold">true</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;The patient is ill&quot;</span>
+<span style="color: #204a87; font-weight: bold">else</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;The patiens is not sick!&quot;</span>
+<span style="color: #204a87; font-weight: bold">end</span>
 </pre></div>
 
-Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">Mathew</span>
-<span style="color: #75715e">false</span>
-</pre></div>
-</p>
-
-<p>Example:  To check the variable type&hellip;</p>
-
-<p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">22</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">a</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">is_a?(String)</span>
-  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;a is a string&quot;</span>
-<span style="color: #66d9ef">elsif</span> <span style="color: #f8f8f2">a</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">is_a?(Number)</span>
-  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;a is a number&quot;</span>
-<span style="color: #66d9ef">end</span>
-</pre></div>
-
-Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">a is a number</span>
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>The patiens is not sick!
 </pre></div>
 </p>
 
-<p>Example: And then there is the OR statement</p>
+<p>Notice we use <code>==</code> because we want to check if it is true, not give it a value. If all statements fail then the else condition is called.</p>
 
-<p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">22</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">a</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">is_a?(String)</span> <span style="color: #f92672">||</span> <span style="color: #f8f8f2">a</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">is_a?(Number)</span>
-  <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;a is a number or a string&quot;</span>
-<span style="color: #66d9ef">end</span>
+<div class="alert alert-warning" role="alert">
+Problem: To test alot of conditions we can use the else if conditions, in crystal we write elsif. So lets say that in our case we cant to figure out the persons age description.
+</div>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">person</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">24</span>
+
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">person</span> <span style="color: #ce5c00; font-weight: bold">&gt;=</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #ce5c00; font-weight: bold">&amp;&amp;</span> <span style="color: #000000">person</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">3</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;Toddler&quot;</span>
+<span style="color: #204a87; font-weight: bold">elsif</span> <span style="color: #000000">person</span> <span style="color: #ce5c00; font-weight: bold">&gt;=</span> <span style="color: #0000cf; font-weight: bold">4</span> <span style="color: #ce5c00; font-weight: bold">&amp;&amp;</span> <span style="color: #000000">person</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">12</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;Child&quot;</span>
+<span style="color: #204a87; font-weight: bold">elsif</span> <span style="color: #000000">person</span> <span style="color: #ce5c00; font-weight: bold">&gt;=</span> <span style="color: #0000cf; font-weight: bold">13</span> <span style="color: #ce5c00; font-weight: bold">&amp;&amp;</span> <span style="color: #000000">person</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">19</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;Teenager&quot;</span>
+<span style="color: #204a87; font-weight: bold">elsif</span> <span style="color: #000000">person</span> <span style="color: #ce5c00; font-weight: bold">&gt;=</span> <span style="color: #0000cf; font-weight: bold">20</span> <span style="color: #ce5c00; font-weight: bold">&amp;&amp;</span> <span style="color: #000000">person</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">70</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;Adult&quot;</span>
+<span style="color: #204a87; font-weight: bold">elsif</span> <span style="color: #000000">person</span> <span style="color: #ce5c00; font-weight: bold">&gt;=</span> <span style="color: #0000cf; font-weight: bold">70</span> <span style="color: #ce5c00; font-weight: bold">&amp;&amp;</span> <span style="color: #000000">person</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">110</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;Senior&quot;</span>
+<span style="color: #204a87; font-weight: bold">else</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;You are a turtle&quot;</span>
+<span style="color: #204a87; font-weight: bold">end</span>
 </pre></div>
 
-Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">a is a number or a string</span>
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>Adult
 </pre></div>
 </p>
+
+<p>This way we can have many <code>if</code> and <code>elsif</code> statements. Keep in mind that the <code>case</code> control expression is better for pattern matching. But thats coming up in another tutorial.</p>
+
+<div class="alert alert-info" role="alert">
+Tip! If can also be written as an expression suffix.
+</div>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">22</span>
+<span style="color: #000000">output</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">&quot;Mathew&quot;</span> <span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">==</span> <span style="color: #0000cf; font-weight: bold">22</span>
+<span style="color: #204a87">puts</span> <span style="color: #000000">output</span>
+
+<span style="color: #8f5902; font-style: italic"># And a ternary If looks like this...</span>
+
+<span style="color: #204a87">puts</span> <span style="color: #000000">a</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">110</span> <span style="color: #ce5c00; font-weight: bold">&gt;</span> <span style="color: #0000cf; font-weight: bold">222</span> <span style="color: #ce5c00; font-weight: bold">?</span> <span style="color: #204a87; font-weight: bold">true</span> <span style="color: #000000; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">false</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>Mathew
+false
+</pre></div>
+</p>
+
+<div class="alert alert-info" role="alert">
+Tip! You to check the variable type.
+</div>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">a</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">22</span>
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">a</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">is_a?</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87">String</span><span style="color: #000000; font-weight: bold">)</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;a is a string&quot;</span>
+<span style="color: #204a87; font-weight: bold">elsif</span> <span style="color: #000000">a</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">is_a?</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87">Number</span><span style="color: #000000; font-weight: bold">)</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;a is a number&quot;</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>a is a number
+</pre></div>
+</p>
+
+<p>And then there is the OR statement</p>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">a</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">22</span>
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">a</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">is_a?</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87">String</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">||</span> <span style="color: #000000">a</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">is_a?</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87">Number</span><span style="color: #000000; font-weight: bold">)</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;a is a number or a string&quot;</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>a is a number or a string
+</pre></div>
+</p>
+
+<p>And those where the basics of <code>if</code></p>
+
+<div class="alert alert-success" role="alert">
+Success! You made it this far, i hope this helped to understand the basics of the conditional statements.
+</div>
 
 <h2 id="summary">Summary</h2>
 
-<p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e"># What If looks like..</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition</span>
-  <span style="color: #f8f8f2">do_something</span>
-<span style="color: #66d9ef">elsif</span>
-  <span style="color: #f8f8f2">do_something</span>
-<span style="color: #66d9ef">else</span>
-  <span style="color: #f8f8f2">do_something</span>
-<span style="color: #66d9ef">end</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># This is what the If</span>
+<span style="color: #8f5902; font-style: italic"># statement looks like.</span>
 
-<span style="color: #75715e"># A simple If statement</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition</span>                          <span style="color: #75715e"># If this is true</span>
-  <span style="color: #f8f8f2">do_something</span>                        <span style="color: #75715e"># Do this</span>
-<span style="color: #66d9ef">end</span>
-
-<span style="color: #75715e"># Nested If&#39;s</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition</span>
-  <span style="color: #f8f8f2">do_something</span>
-
-  <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition</span>                        <span style="color: #75715e"># If inside another if</span>
-    <span style="color: #f8f8f2">do_something</span>
-  <span style="color: #66d9ef">end</span>
-
-<span style="color: #66d9ef">end</span>
-
-<span style="color: #75715e"># The Else statement</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition</span>
-  <span style="color: #f8f8f2">do_something</span>
-<span style="color: #66d9ef">else</span>                                  <span style="color: #75715e"># Else if above conditions fail</span>
-  <span style="color: #66d9ef">do</span> <span style="color: #f8f8f2">something</span>
-<span style="color: #66d9ef">end</span>
-
-<span style="color: #75715e"># If more than one condition needs to be true</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">condition</span>             <span style="color: #75715e"># If first AND second condition is true</span>
-  <span style="color: #f8f8f2">do_something</span>
-<span style="color: #66d9ef">elsif</span> <span style="color: #f8f8f2">condition</span> <span style="color: #f92672">||</span> <span style="color: #f8f8f2">condition</span>          <span style="color: #75715e"># Else if first OR second condition is true</span>
-  <span style="color: #f8f8f2">do_something</span>
-<span style="color: #66d9ef">else</span>                                  <span style="color: #75715e"># If above code fails</span>
-  <span style="color: #f8f8f2">do_something</span>
-<span style="color: #66d9ef">end</span>
-
-<span style="color: #75715e"># As expression suffix</span>
-<span style="color: #f8f8f2">x</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">10</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition</span>                   <span style="color: #75715e"># Variable is 10 if condition met</span>
-
-<span style="color: #75715e"># Check the variable type</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">x</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">is_a?(String)</span>                    <span style="color: #75715e"># If variable x is a String</span>
-  <span style="color: #f8f8f2">do_something</span>
-<span style="color: #66d9ef">end</span>
-
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">x</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">is_a?(Number)</span>                    <span style="color: #75715e"># If variable x is a Number</span>
-  <span style="color: #f8f8f2">do_something</span>
-<span style="color: #66d9ef">end</span>
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">condition</span>
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">elsif</span>
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">else</span>
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">end</span>
 </pre></div>
-</p>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># A simple If statement</span>
+<span style="color: #8f5902; font-style: italic"># if true do something</span>
+
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">condition</span>
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># Nested If&#39;s</span>
+<span style="color: #8f5902; font-style: italic"># if true do something</span>
+<span style="color: #8f5902; font-style: italic"># and if second is true</span>
+<span style="color: #8f5902; font-style: italic"># do that.</span>
+
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">condition</span>
+  <span style="color: #000000">do_something</span>
+
+  <span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">condition</span>   
+    <span style="color: #000000">do_something</span>
+  <span style="color: #204a87; font-weight: bold">end</span>
+
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># The Else statement</span>
+<span style="color: #8f5902; font-style: italic"># if above conditions are</span>
+<span style="color: #8f5902; font-style: italic"># not true do else.</span>
+
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">condition</span>
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">else</span>              
+  <span style="color: #204a87; font-weight: bold">do</span> <span style="color: #000000">something</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># If more than one condition needs to be true</span>
+<span style="color: #8f5902; font-style: italic"># if first and second condition is true</span>
+<span style="color: #8f5902; font-style: italic"># do the code. else if the third and fourth</span>
+<span style="color: #8f5902; font-style: italic"># condition is true do that. Otherwise</span>
+<span style="color: #8f5902; font-style: italic"># do else.</span>
+
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">condition</span> <span style="color: #ce5c00; font-weight: bold">&amp;&amp;</span> <span style="color: #000000">condition</span>   
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">elsif</span> <span style="color: #000000">condition</span> <span style="color: #ce5c00; font-weight: bold">||</span> <span style="color: #000000">condition</span>          
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">else</span>                                  
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># As expression suffix</span>
+
+<span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">10</span> <span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">condition</span>                   
+</pre></div>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># Check if the variable type</span>
+<span style="color: #8f5902; font-style: italic"># is a String.</span>
+
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">is_a?</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87">String</span><span style="color: #000000; font-weight: bold">)</span>                    
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># Check if the variable type</span>
+<span style="color: #8f5902; font-style: italic"># is a Number.</span>
+
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">is_a?</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87">Number</span><span style="color: #000000; font-weight: bold">)</span>                    
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
 
 <h3 id="references">References</h3>
 
@@ -353,10 +404,8 @@ Output:
 </script>
 <gcse:search linktarget="_parent"></gcse:search>
 <style type='text/css'>
-.gsc-control-cse div{ color: black; }
 .gsc-above-wrapper-area { border-bottom: none; }
 .gsc-control-cse { border-color: red; }
-.gsc-control-cse .gsc-option-menu{ background-color: white; }
  table.gsc-branding td, table.gsc-branding, table.gcsc-branding td, table.gcsc-branding { display: none; }
  td.gcsc-branding-text div.gcsc-branding-text { display: none; }
 .gsc-adBlock { display: none; }

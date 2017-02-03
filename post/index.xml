@@ -17,206 +17,257 @@
       <guid>https://mordsith.github.io/2017/crystal-tutorial-the-basics-if-elsif-else/</guid>
       <description>
 
-&lt;p&gt;The if, elsif and else are Crystals conditionals statements that execute a block of code to check if a condition is true of false. It works very similar to the english languge that if this is true i will do this else i will do something else.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;elsif&lt;/code&gt; and &lt;code&gt;else&lt;/code&gt; are Crystals conditionals statements that execute a block of code to check if a condition is true of false. It works very similar to the english languge that if this is true i will do this else i will do something else.&lt;/p&gt;
 
-&lt;p&gt;Things to keep in mind!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Things to keep in mind!&lt;/strong&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;= means you assing a value to the variable&lt;/li&gt;
-&lt;li&gt;== is for checking a conditional&lt;/li&gt;
-&lt;li&gt;&amp;amp;&amp;amp; means and&lt;/li&gt;
-&lt;li&gt;|| means OR&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;=&lt;/code&gt; means you assing a value to the variable&lt;br&gt;
+&lt;code&gt;==&lt;/code&gt; is for checking a conditional&lt;br&gt;
+&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt; means and&lt;br&gt;
+&lt;code&gt;||&lt;/code&gt; means OR&lt;/p&gt;
 
-&lt;p&gt;Example:  lets say you want to output something if lets say the student
-is older than 19, and is to old to attend class.&lt;/p&gt;
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: Lets say you want to output something if lets say the student
+is older than 19, and is to old to attend class.
+&lt;/div&gt;
 
-&lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;student_name&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;20&lt;/span&gt;
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;student_name&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;20&lt;/span&gt;
 
-&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;student_name&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;19&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;The student is to old for this course.&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;student_name&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;19&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;The student is to old for this course.&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;The student is to old for this course.&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Output: We will get the output that the student is to old for this class.&lt;/p&gt;
-
-&lt;p&gt;Test: But now lets say that the student can take the night course if he is older than 19 and younger than 25. We can use nested if&amp;rsquo;s.&lt;/p&gt;
-
-&lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;student_name&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;20&lt;/span&gt;
-
-&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;student_name&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;19&lt;/span&gt;
-   &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;The student is to old for this course.&amp;quot;&lt;/span&gt;
-  &lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;student_name&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;25&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;But the student can attend night courses&amp;quot;&lt;/span&gt;
-  &lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;The student is to old for this course.&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;But the student can attend night courses&lt;/span&gt;
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;The student is to old for this course.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
-&lt;p&gt;Output: The first condition does the same as before. The second nested if gives the second option.&lt;/p&gt;
+&lt;p&gt;And we will get the desired output that the student is to old for this class. This is a very simple situation and we can do alot more with &lt;code&gt;if&lt;/code&gt;s, like using more of them.&lt;/p&gt;
 
-&lt;p&gt;Test: Now we want to output if a patient has the flu, and if patient doesn&amp;rsquo;t output something else. You only have the flu or you dont.&lt;/p&gt;
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: Now lets say that the student can take the night course if he is older than 19 and younger than 25.
+&lt;/div&gt;
 
-&lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;patient_has_flu&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;student_name&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;20&lt;/span&gt;
 
-&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;patient_has_flu&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;true&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;The patient is ill&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;else&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;The patiens is not sick!&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;student_name&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;19&lt;/span&gt;
+   &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;The student is to old for this course.&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;student_name&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;25&lt;/span&gt;
+    &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;But the student can attend night courses&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;The patiens is not sick!&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Output: If all statements fail then the else condition is called.&lt;/p&gt;
-
-&lt;p&gt;Test: To test alot of conditions we can use the else if conditions that in crystal we write elsif. So lets say that in our case we cant to figure out the persons age description.&lt;/p&gt;
-
-&lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;24&lt;/span&gt;
-
-&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;3&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Toddler&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;12&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Child&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;13&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;19&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Teenager&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;20&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;70&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Adult&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;70&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;110&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Senior&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;else&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;You are a turtle&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;Adult&lt;/span&gt;
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;The student is to old for this course.
+But the student can attend night courses
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
-&lt;p&gt;Output: This way we can have many if cases. Keep in mind that the Case control expression is better for pattern matching.&lt;/p&gt;
+&lt;p&gt;So how did we do this? We used something called a nested &lt;code&gt;if&lt;/code&gt;. The first condition does the same as before. The second nested &lt;code&gt;if&lt;/code&gt; gives the second option.&lt;/p&gt;
 
-&lt;p&gt;Example: If can also be written as an expression suffix.&lt;/p&gt;
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: Output something if a patient has the flu, and if patient doesn&#39;t have it output something else. You only have the flu or you dont.
+&lt;/div&gt;
 
-&lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;22&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;output&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Mathew&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;22&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;output&lt;/span&gt;
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;patient_has_flu&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;false&lt;/span&gt;
 
-&lt;span style=&#34;color: #75715e&#34;&gt;# And a ternary If looks like this...&lt;/span&gt;
-
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;110&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;222&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;?&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;true&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;patient_has_flu&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;true&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;The patient is ill&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;else&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;The patiens is not sick!&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;Mathew&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;false&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Example:  To check the variable type&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;22&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;is_a?(String)&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;a is a string&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;is_a?(Number)&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;a is a number&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;a is a number&lt;/span&gt;
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;The patiens is not sick!
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
-&lt;p&gt;Example: And then there is the OR statement&lt;/p&gt;
+&lt;p&gt;Notice we use &lt;code&gt;==&lt;/code&gt; because we want to check if it is true, not give it a value. If all statements fail then the else condition is called.&lt;/p&gt;
 
-&lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;22&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;is_a?(String)&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;is_a?(Number)&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;a is a number or a string&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: To test alot of conditions we can use the else if conditions, in crystal we write elsif. So lets say that in our case we cant to figure out the persons age description.
+&lt;/div&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;24&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;3&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Toddler&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;12&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Child&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;13&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;19&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Teenager&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;20&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;70&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Adult&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;70&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;person&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;110&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Senior&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;else&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;You are a turtle&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;a is a number or a string&lt;/span&gt;
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;Adult
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
+
+&lt;p&gt;This way we can have many &lt;code&gt;if&lt;/code&gt; and &lt;code&gt;elsif&lt;/code&gt; statements. Keep in mind that the &lt;code&gt;case&lt;/code&gt; control expression is better for pattern matching. But thats coming up in another tutorial.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;
+Tip! If can also be written as an expression suffix.
+&lt;/div&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;22&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;output&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Mathew&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;22&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;output&lt;/span&gt;
+
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# And a ternary If looks like this...&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;110&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;222&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;?&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;true&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;false&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;Mathew
+false
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;
+Tip! You to check the variable type.
+&lt;/div&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;22&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;is_a?&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #204a87&#34;&gt;String&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;a is a string&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;is_a?&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #204a87&#34;&gt;Number&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;a is a number&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;a is a number
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;And then there is the OR statement&lt;/p&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;22&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;is_a?&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #204a87&#34;&gt;String&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;is_a?&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #204a87&#34;&gt;Number&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;a is a number or a string&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;a is a number or a string
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;And those where the basics of &lt;code&gt;if&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-success&#34; role=&#34;alert&#34;&gt;
+Success! You made it this far, i hope this helped to understand the basics of the conditional statements.
+&lt;/div&gt;
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 
-&lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;# What If looks like..&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;elsif&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;else&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# This is what the If&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# statement looks like.&lt;/span&gt;
 
-&lt;span style=&#34;color: #75715e&#34;&gt;# A simple If statement&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;                          &lt;span style=&#34;color: #75715e&#34;&gt;# If this is true&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;                        &lt;span style=&#34;color: #75715e&#34;&gt;# Do this&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
-
-&lt;span style=&#34;color: #75715e&#34;&gt;# Nested If&amp;#39;s&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
-
-  &lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;                        &lt;span style=&#34;color: #75715e&#34;&gt;# If inside another if&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
-  &lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
-
-&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
-
-&lt;span style=&#34;color: #75715e&#34;&gt;# The Else statement&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;else&lt;/span&gt;                                  &lt;span style=&#34;color: #75715e&#34;&gt;# Else if above conditions fail&lt;/span&gt;
-  &lt;span style=&#34;color: #66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;something&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
-
-&lt;span style=&#34;color: #75715e&#34;&gt;# If more than one condition needs to be true&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;             &lt;span style=&#34;color: #75715e&#34;&gt;# If first AND second condition is true&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;          &lt;span style=&#34;color: #75715e&#34;&gt;# Else if first OR second condition is true&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;else&lt;/span&gt;                                  &lt;span style=&#34;color: #75715e&#34;&gt;# If above code fails&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
-
-&lt;span style=&#34;color: #75715e&#34;&gt;# As expression suffix&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;condition&lt;/span&gt;                   &lt;span style=&#34;color: #75715e&#34;&gt;# Variable is 10 if condition met&lt;/span&gt;
-
-&lt;span style=&#34;color: #75715e&#34;&gt;# Check the variable type&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;is_a?(String)&lt;/span&gt;                    &lt;span style=&#34;color: #75715e&#34;&gt;# If variable x is a String&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
-
-&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;is_a?(Number)&lt;/span&gt;                    &lt;span style=&#34;color: #75715e&#34;&gt;# If variable x is a Number&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;do_something&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;condition&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;elsif&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;else&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# A simple If statement&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# if true do something&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;condition&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# Nested If&amp;#39;s&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# if true do something&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# and if second is true&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# do that.&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;condition&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;condition&lt;/span&gt;   
+    &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# The Else statement&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# if above conditions are&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# not true do else.&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;condition&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;else&lt;/span&gt;              
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# If more than one condition needs to be true&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# if first and second condition is true&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# do the code. else if the third and fourth&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# condition is true do that. Otherwise&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# do else.&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;condition&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;condition&lt;/span&gt;   
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;elsif&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;condition&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;condition&lt;/span&gt;          
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;else&lt;/span&gt;                                  
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# As expression suffix&lt;/span&gt;
+
+&lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;condition&lt;/span&gt;                   
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# Check if the variable type&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# is a String.&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;is_a?&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #204a87&#34;&gt;String&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;                    
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# Check if the variable type&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# is a Number.&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;is_a?&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #204a87&#34;&gt;Number&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;                    
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 
@@ -243,103 +294,133 @@ Output:
 &lt;li&gt;stderr - standard error&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Last time we used stdout, these where puts and print to output on screen in Crystal. This time im going to discuss stdin, meaning getting input from the user. Usually in Crystal lang this is done by the command gets. This is what a simple gets looks like&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Last time we used stdout, these where puts and print to output on screen in Crystal. This time im going to discuss stdin, meaning getting input from the user. Usually in &lt;a href=&#34;https://crystal-lang.org/&#34;&gt;Crystal&lt;/a&gt; lang this is done by the command gets. This is what a simple gets looks like&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;          &lt;span style=&#34;color: #75715e&#34;&gt;# stores the input to x&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt;            &lt;span style=&#34;color: #75715e&#34;&gt;# outputs x&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# stores the input to x&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# and then outputs x.&lt;/span&gt;
+
+&lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;          
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt;            
 &lt;/pre&gt;&lt;/div&gt;
 
 Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;Crystal 123       # my input&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;Crystal 123       # what crystal outputs&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;Crystal 123
+Crystal 123       
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
-&lt;p&gt;Now this is a very simple way to do it compared to some other languages.. * coughs rust * . I know that you usually don&amp;rsquo;t use something like input in real world software but it is very important when learning in my opinion.&lt;/p&gt;
+&lt;p&gt;Now this is a very simple way to do it compared to some other languages.. * coughs &lt;a href=&#34;https://www.rust-lang.org/en-US/&#34;&gt;Rust&lt;/a&gt; * . I know that you usually don&amp;rsquo;t use something like input in real world software but it is very important when learning in my opinion. And for completing tasks like on &lt;a href=&#34;http://rosettacode.org/wiki/Rosetta_Code&#34;&gt;Rosetta Code&lt;/a&gt; or &lt;a href=&#34;https://www.hackerrank.com/&#34;&gt;Hackerrank&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;To get a sertain amount of characters you can do this&amp;hellip;&lt;/p&gt;
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: Get the first 3 characters in gets.
+&lt;/div&gt;
 
 &lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets(&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;      &lt;span style=&#34;color: #75715e&#34;&gt;# outputs the three first characters&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# gets input, but only the&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# first three characters.&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;     
 &lt;/pre&gt;&lt;/div&gt;
 
 Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;Samuel L Jackson  # what i put in&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;Sam               # what gets took in&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;Samuel L Jackson
+Sam              
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
 &lt;p&gt;To stop taking in to the stdin when a specific character is put in you can ..&lt;/p&gt;
 
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: Get input until you find the char s and include it in the output.
+&lt;/div&gt;
+
 &lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;      &lt;span style=&#34;color: #75715e&#34;&gt;# will stop after the char s in found&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# will stop after the&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# char s in found&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;      
 &lt;/pre&gt;&lt;/div&gt;
 
 Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;today i had a sandwich for lunch # my input&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;today i had a s&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;today i had a sandwich for lunch
+today i had a s
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
-&lt;p&gt;You can also stop after a sertain amount of chars if you write &lt;strong&gt;puts gets(&amp;rsquo;s&amp;rsquo;, 10)&lt;/strong&gt;. To read before the delimiter is found ..&lt;/p&gt;
+&lt;p&gt;And like expected it stopped AFTER &amp;rsquo;s&amp;rsquo;.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;
+Tip! You can also stop after a sertain amount of chars if you write `puts gets(&#39;s&#39;, 10)`. To read before the delimiter is found.
+&lt;/div&gt;
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: Stop BEFORE the last character is found.
+&lt;/div&gt;
 
 &lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;c++&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;      &lt;span style=&#34;color: #75715e&#34;&gt;# will stop before the delimiter is found&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# will stop before the&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# delimiter is found&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;c++&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;      
 &lt;/pre&gt;&lt;/div&gt;
 
 Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;i do alot of c++ code&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;i do alot of&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;i do alot of c++ code
+i do alot of
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
 &lt;p&gt;Its easy to split up the gets. There is alot of information about this topic and more on &lt;strong&gt;&lt;a href=&#34;https://crystal-lang.org/api/0.19.2/index.html&#34;&gt;Crystal Lang Api&lt;/a&gt;&lt;/strong&gt; site. According to the site a not_nil! command is required that the compiler forces us to deal with. Like this &amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;split&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;The Earth is Round&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;[&amp;quot;The&amp;quot;, &amp;quot;Earth&amp;quot;, &amp;quot;is&amp;quot;, &amp;quot;Round&amp;quot;]&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;The Earth is Round
+[&amp;quot;The&amp;quot;, &amp;quot;Earth&amp;quot;, &amp;quot;is&amp;quot;, &amp;quot;Round&amp;quot;]
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
 &lt;p&gt;And to split up to two variables.&lt;/p&gt;
 
 &lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;x,&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;y&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;y&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;y&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;split&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;y&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;11 22 33         # input&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;11 22            # output, notice it did not take in the last numbers&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;11 22 33         
+11 22            
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
 &lt;p&gt;We can also split with a perticular character.&lt;/p&gt;
 
 &lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;-&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;           &lt;span style=&#34;color: #75715e&#34;&gt;# split when -&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# split when -&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;split&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;#39;-&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;           
 &lt;/pre&gt;&lt;/div&gt;
 
 Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;Linda-Samantha-Nick-Bjorn               # my input&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;[&amp;quot;Linda&amp;quot;, &amp;quot;Samantha&amp;quot;, &amp;quot;Nick&amp;quot;, &amp;quot;Bjorn&amp;quot;]&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;Linda-Samantha-Nick-Bjorn              
+[&amp;quot;Linda&amp;quot;, &amp;quot;Samantha&amp;quot;, &amp;quot;Nick&amp;quot;, &amp;quot;Bjorn&amp;quot;]
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
-&lt;p&gt;And lastly if we want to add numbers we can do this one liner&amp;hellip;&lt;/p&gt;
+&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;
+Tip! To sum numbers with a one liner.
+&lt;/div&gt;
 
 &lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;map(&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;to_i)&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;sum&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;split&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;map&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;amp;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;to_i&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;sum&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;120 21 43 66 22         # input&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;272&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;120 21 43 66 22         
+272
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
@@ -348,21 +429,49 @@ Output:
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;                               &lt;span style=&#34;color: #75715e&#34;&gt;# stores the input to x&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# storing the input to x&lt;/span&gt;
 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;gets(&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;                                &lt;span style=&#34;color: #75715e&#34;&gt;# stores the three first characters&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;                               
+&lt;/pre&gt;&lt;/div&gt;
 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;gets(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;                              &lt;span style=&#34;color: #75715e&#34;&gt;# will stop after the char s in found&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# storing the first three characters&lt;/span&gt;
 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;gets(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;c++&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;                        &lt;span style=&#34;color: #75715e&#34;&gt;# will stop before the delimiter is found&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;                                
+&lt;/pre&gt;&lt;/div&gt;
 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split&lt;/span&gt;                    &lt;span style=&#34;color: #75715e&#34;&gt;# split up the input&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# will stop after the char s in found&lt;/span&gt;
 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;x,&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;y&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split&lt;/span&gt;             &lt;span style=&#34;color: #75715e&#34;&gt;# split up input to two variables&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;                              
+&lt;/pre&gt;&lt;/div&gt;
 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;-&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;               &lt;span style=&#34;color: #75715e&#34;&gt;# split when -&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# Stop before the delimiter is found&lt;/span&gt;
 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;map(&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;to_i)&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;sum&lt;/span&gt;    &lt;span style=&#34;color: #75715e&#34;&gt;# split up to integers and sums&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;input&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;                        
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# split up the input&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;split&lt;/span&gt;                    
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# split up the input&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;split&lt;/span&gt;                    
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# split up input to two variables&lt;/span&gt;
+
+&lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;y&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;split&lt;/span&gt;             
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# split when - is found in the text&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;split&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;#39;-&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;               
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# split up to integers and sums&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87&#34;&gt;gets&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;not_nil!&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;split&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;map&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;amp;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;to_i&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;sum&lt;/span&gt;    
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
@@ -382,29 +491,29 @@ Output:
       <guid>https://mordsith.github.io/2017/crystal-tutorial-the-basics---puts/</guid>
       <description>
 
-&lt;p&gt;I really like these new programming languages like Go and Rust. I found a relatively new language called Crystal. I am really amazed by its performance and how easy it is to use. Crystal has similar syntax as Ruby but compared to Ruby it is a compiled language and not interpreted, making it perform really well and leave a low memory footprint.&lt;/p&gt;
+&lt;p&gt;I really like these new programming languages like &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; and &lt;a href=&#34;https://www.rust-lang.org/en-US/&#34;&gt;Rust&lt;/a&gt;. I found a relatively new language called &lt;a href=&#34;https://crystal-lang.org/&#34;&gt;Crystal&lt;/a&gt;. I am really amazed by its performance and how easy it is to use. &lt;a href=&#34;https://crystal-lang.org/&#34;&gt;Crystal&lt;/a&gt; has similar syntax as &lt;a href=&#34;https://www.ruby-lang.org/en/&#34;&gt;Ruby&lt;/a&gt; but compared to &lt;a href=&#34;https://www.ruby-lang.org/en/&#34;&gt;Ruby&lt;/a&gt; it is a compiled language and not interpreted, making it perform really well and leave a low memory footprint.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Crystal is Alpha stage at the moment.&lt;/li&gt;
-&lt;li&gt;Crystal does not work on Windows, but it will sometime in 2017.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://crystal-lang.org/&#34;&gt;Crystal&lt;/a&gt; is Alpha stage at the moment.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://crystal-lang.org/&#34;&gt;Crystal&lt;/a&gt; does not work on Windows, but it will sometime in 2017.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;To install Crystal you should take a look at the official documents called &lt;a href=&#34;https://crystal-lang.org/docs/installation/&#34;&gt;The Crystal Book!&lt;/a&gt; It is also a great way to learn more about the language.&lt;/p&gt;
+&lt;p&gt;To install &lt;a href=&#34;https://crystal-lang.org/&#34;&gt;Crystal&lt;/a&gt; you should take a look at the official documents called &lt;a href=&#34;https://crystal-lang.org/docs/installation/&#34;&gt;The Crystal Book!&lt;/a&gt; It is also a great way to learn more about the language.&lt;/p&gt;
 
-&lt;p&gt;To create a Crystal project type &amp;hellip;&lt;/p&gt;
+&lt;p&gt;To create a &lt;a href=&#34;https://crystal-lang.org/&#34;&gt;Crystal&lt;/a&gt; project type &amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;Terminal:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;$ crystal init app casual&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ crystal init app casual
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;crystal&lt;/strong&gt; is the name of the compiler. The &lt;strong&gt;init&lt;/strong&gt; command creates the default project structure. The &lt;strong&gt;app&lt;/strong&gt; commands creates an app skeleton, to create a library change it to &lt;strong&gt;lib&lt;/strong&gt;. &lt;strong&gt;casual&lt;/strong&gt; is just the name i picked, you may change that to whatever you like. To run the app type &amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;Terminal:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;$ cd casual&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;$ crystal src/casual.cr&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ cd casual
+$ crystal src/casual.cr
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
@@ -413,15 +522,15 @@ Output:
 &lt;p&gt;Open the &lt;strong&gt;casual.cr&lt;/strong&gt; file with your favorite editor located inside the src folder. Remove everything inside and type &amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Hello, World!&amp;quot;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Hello, World!&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
 &lt;p&gt;Save the file and return to the terminal and run it!&lt;/p&gt;
 
 &lt;p&gt;Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;$ crystal src/casual.cr&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;Hello, World!&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ crystal src/casual.cr
+Hello, World!
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
@@ -430,17 +539,17 @@ Output:
 &lt;p&gt;To build the app type &amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;Terminal:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;$ crystal build src/casual.cr --release&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;$ ./casual&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;Hello, World!&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ crystal build src/casual.cr --release
+$ ./casual
+Hello, World!
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
 &lt;p&gt;Lets have a look at the file we just created.&lt;/p&gt;
 
 &lt;p&gt;Terminal:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;$ ls -shR casual&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;104K casual&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ ls -shR casual
+104K casual
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
@@ -451,30 +560,30 @@ Output:
 &lt;p&gt;Here are some simple output commands. It is good to remember that&amp;hellip;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;puts # adds a new line after the end.&lt;/li&gt;
-&lt;li&gt;print # does not add a new line.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;puts&lt;/code&gt; adds a new line after the end.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;print&lt;/code&gt; does not add a new line.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;btw hashtag means that it is a comment.&lt;/p&gt;
 
 &lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Hello,&amp;quot;&lt;/span&gt;                     &lt;span style=&#34;color: #75715e&#34;&gt;# simple output with new line&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;World!&amp;quot;&lt;/span&gt;                     
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Hello,&amp;quot;&lt;/span&gt;                     &lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# simple output with new line&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;World!&amp;quot;&lt;/span&gt;                     
 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Hello, &amp;quot;&lt;/span&gt;                   &lt;span style=&#34;color: #75715e&#34;&gt;# without new line&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;World!&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;&lt;/span&gt;                  &lt;span style=&#34;color: #75715e&#34;&gt;# \n = newline like in most C langs&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Hello, &amp;quot;&lt;/span&gt;                   &lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# without new line&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;World!\n&amp;quot;&lt;/span&gt;                  &lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# \n = newline like in most C langs&lt;/span&gt;
 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;my_name&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Sam&amp;quot;&lt;/span&gt;                   &lt;span style=&#34;color: #75715e&#34;&gt;# declaring a string variable&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;My name is: #{&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;my_name&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;}&amp;quot;&lt;/span&gt;     &lt;span style=&#34;color: #75715e&#34;&gt;# output with a placeholder for the variable&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;my_name&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Sam&amp;quot;&lt;/span&gt;                   &lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# declaring a string variable&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;My name is: #{&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;my_name&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;}&amp;quot;&lt;/span&gt;     &lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# output with a placeholder for the variable&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
 &lt;p&gt;Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;$ crystal src/casual.cr&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;Hello,&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;World!&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;Hello, World!&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;My name is: Sam&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ crystal src/casual.cr
+Hello,
+World!
+Hello, World!
+My name is: Sam
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
@@ -483,48 +592,58 @@ Output:
 &lt;p&gt;Lets do some other fun stuff with strings..&lt;/p&gt;
 
 &lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;my_text&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;I Love Crystal&amp;quot;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# The String&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;my_text&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;I Love Crystal&amp;quot;&lt;/span&gt;
 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;my_text has #{&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;my_text&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;size&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;} characters&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #75715e&#34;&gt;# nr of chars&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;#{&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;my_text&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;upcase&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;}&amp;quot;&lt;/span&gt;                      &lt;span style=&#34;color: #75715e&#34;&gt;# Uppercase&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;#{&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;my_text&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;downcase&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;}&amp;quot;&lt;/span&gt;                    &lt;span style=&#34;color: #75715e&#34;&gt;# Lowercase&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# Nr of chars&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;my_text has #{&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;my_text&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;size&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;} characters&amp;quot;&lt;/span&gt;
 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;#{&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;my_text&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;sub(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;o&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;i&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;}&amp;quot;&lt;/span&gt;                &lt;span style=&#34;color: #75715e&#34;&gt;# substitutes o&amp;#39;s with i&amp;#39;s&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;#{&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;my_text&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;ends_with?(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Crystal&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;}&amp;quot;&lt;/span&gt;       &lt;span style=&#34;color: #75715e&#34;&gt;# True! It does.&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# Uppercase&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;#{&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;my_text&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;upcase&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;}&amp;quot;&lt;/span&gt;                      
+
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# Lowercase&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;#{&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;my_text&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;downcase&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;}&amp;quot;&lt;/span&gt;                    
+
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# substitutes o&amp;#39;s with i&amp;#39;s&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;#{&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;my_text&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;sub&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;o&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;i&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;}&amp;quot;&lt;/span&gt;                
+
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# True! It does.&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;#{&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;my_text&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;ends_with?&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Crystal&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;}&amp;quot;&lt;/span&gt;       
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
 &lt;p&gt;Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;$ crystal src/casual.cr&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;my_text has 14 characters&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;I LOVE CRYSTAL&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;i love crystal&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;I Live Crystal&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;true&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ crystal src/casual.cr
+my_text has 14 characters
+I LOVE CRYSTAL
+i love crystal
+I Live Crystal
+true
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
 &lt;p&gt;Something cool i found was the &amp;ldquo;Heredoc&amp;rdquo;. I had never heard of it before but seems really useful for writing large string, or if you have alot of symbols. Heredoc starts with &amp;lt;&amp;lt;- and the name you give it. Then the text has to be indented 4 line.&lt;/p&gt;
 
 &lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;# The text has to be indented 4 lines&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&amp;lt;-&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;SOMETHING&lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    Hello to                    &lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    /&amp;quot;You People In&lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    In The &amp;quot; &amp;quot; World?=)()&lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    &amp;quot;{&amp;#39;&amp;#39;¤%&amp;amp;¤{&amp;amp;/(%/&amp;amp;)}}&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    SOMETHING&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# The text has to be indented 4 lines&lt;/span&gt;
 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;lt;&amp;lt;-&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;SOMETHING&lt;/span&gt;
+&lt;span style=&#34;color: #4e9a06&#34;&gt;    Hello to                    &lt;/span&gt;
+&lt;span style=&#34;color: #4e9a06&#34;&gt;    /&amp;quot;You People In&lt;/span&gt;
+&lt;span style=&#34;color: #4e9a06&#34;&gt;    In The &amp;quot; &amp;quot; World?=)()&lt;/span&gt;
+&lt;span style=&#34;color: #4e9a06&#34;&gt;    &amp;quot;{&amp;#39;&amp;#39;¤%&amp;amp;¤{&amp;amp;/(%/&amp;amp;)}}&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #4e9a06&#34;&gt;    SOMETHING&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
 &lt;p&gt;Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;$ crystal src/casual.cr&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;Hello to                          &lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;/&amp;quot;You People In&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;In The &amp;quot; &amp;quot; World?=)()&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;&amp;quot;{&amp;#39;&amp;#39;¤%&amp;amp;¤{&amp;amp;/(%/&amp;amp;)}}&amp;quot;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ crystal src/casual.cr
+Hello to                          
+/&amp;quot;You People In
+In The &amp;quot; &amp;quot; World?=)()
+&amp;quot;{&amp;#39;&amp;#39;¤%&amp;amp;¤{&amp;amp;/(%/&amp;amp;)}}&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
@@ -535,46 +654,64 @@ Output:
 &lt;p&gt;Now for some simple math. Doing simple mathematics with crystal is really simple i think.&lt;/p&gt;
 
 &lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;3&lt;/span&gt;                &lt;span style=&#34;color: #75715e&#34;&gt;# add&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;3&lt;/span&gt;               &lt;span style=&#34;color: #75715e&#34;&gt;# substract&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;20.0&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;2.0&lt;/span&gt;           &lt;span style=&#34;color: #75715e&#34;&gt;# divide&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;71&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;13&lt;/span&gt;              &lt;span style=&#34;color: #75715e&#34;&gt;# multiply&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;231&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;10&lt;/span&gt;             &lt;span style=&#34;color: #75715e&#34;&gt;# modulus&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;22&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;10&lt;/span&gt;              &lt;span style=&#34;color: #75715e&#34;&gt;# less than&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;22&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;10&lt;/span&gt;              &lt;span style=&#34;color: #75715e&#34;&gt;# more than&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;33&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;15&lt;/span&gt;             &lt;span style=&#34;color: #75715e&#34;&gt;# more or equal&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# add&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;3&lt;/span&gt;                
 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;11.1 / 22.4 = #{&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;11.1&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;22.4&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;}&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# substract&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;3&lt;/span&gt;               
+
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# divide&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;20.0&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;2.0&lt;/span&gt;           
+
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# multiply&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;71&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;13&lt;/span&gt;              
+
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# modulus &amp;quot;not percent&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;231&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;10&lt;/span&gt;             
+
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# less than&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;22&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;10&lt;/span&gt;              
+
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# more than&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;22&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;10&lt;/span&gt;              
+
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# more or equal&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;33&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;15&lt;/span&gt;             
+
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# and we can add inside the string&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;11.1 / 22.4 = #{&lt;/span&gt;&lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;11.1&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;22.4&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;}&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
 &lt;p&gt;Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;$ crystal src/casual.cr&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;4&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;7&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;10.0&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;923&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;1&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;false&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;true&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;true&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;11.1 / 22.4 = 0.4955357142857143&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ crystal src/casual.cr
+4
+7
+10.0
+923
+1
+false
+true
+true
+11.1 / 22.4 = 0.4955357142857143
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
-&lt;p&gt;And now let&amp;rsquo;s convert Celcius to Fahrenheit. 0 degrees Celcius is 32 degrees Fahrenheit. To convert temperatures in degrees Celsius to Fahrenheit, multiply by 1.8 (or &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;5&lt;/sub&gt;) and add 32. So &amp;hellip;&lt;/p&gt;
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: And now let&#39;s convert Celcius to Fahrenheit. 0 degrees Celcius is 32 degrees Fahrenheit. To convert temperatures in degrees Celsius to Fahrenheit, multiply by 1.8 (or 9/5) and add 32.
+&lt;/div&gt;
 
 &lt;p&gt;Code:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;celsius&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;32&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;fahrenheit&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;1.8&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;celsius&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;32&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;celsius&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;32&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;fahrenheit&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1.8&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;celsius&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;32&lt;/span&gt;
 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;32 degrees celsius is #{&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;fahrenheit&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;}&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;32 degrees celsius is #{&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;fahrenheit&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;}&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
 &lt;p&gt;Output:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;$ crystal src/casual.cr&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;32 degrees celsius is 89.6 degrees fahrenheit&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ crystal src/casual.cr
+32 degrees celsius is 89.6 degrees fahrenheit
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 

@@ -47,7 +47,7 @@
             </ul>
         </div>
     </div>
-</div>
+  </div>
 </nav>
 
         <div class="row" id="content-main">
@@ -60,7 +60,7 @@
       
       <ul class="list-inline meta">
       <li><i class="fa fa-calendar"></i> January 29, 2017</li>
-      <li><i class="fa fa-font"></i> 877 words</li>
+      <li><i class="fa fa-font"></i> 887 words</li>
       <li><i class="fa fa-user"></i> Sam Ashkan</li>
         
         
@@ -85,29 +85,29 @@
 <div class="mytext">
     
 
-<p>I really like these new programming languages like Go and Rust. I found a relatively new language called Crystal. I am really amazed by its performance and how easy it is to use. Crystal has similar syntax as Ruby but compared to Ruby it is a compiled language and not interpreted, making it perform really well and leave a low memory footprint.</p>
+<p>I really like these new programming languages like <a href="https://golang.org/">Go</a> and <a href="https://www.rust-lang.org/en-US/">Rust</a>. I found a relatively new language called <a href="https://crystal-lang.org/">Crystal</a>. I am really amazed by its performance and how easy it is to use. <a href="https://crystal-lang.org/">Crystal</a> has similar syntax as <a href="https://www.ruby-lang.org/en/">Ruby</a> but compared to <a href="https://www.ruby-lang.org/en/">Ruby</a> it is a compiled language and not interpreted, making it perform really well and leave a low memory footprint.</p>
 
 <p><strong>Note:</strong></p>
 
 <ul>
-<li>Crystal is Alpha stage at the moment.</li>
-<li>Crystal does not work on Windows, but it will sometime in 2017.</li>
+<li><a href="https://crystal-lang.org/">Crystal</a> is Alpha stage at the moment.</li>
+<li><a href="https://crystal-lang.org/">Crystal</a> does not work on Windows, but it will sometime in 2017.</li>
 </ul>
 
-<p>To install Crystal you should take a look at the official documents called <a href="https://crystal-lang.org/docs/installation/">The Crystal Book!</a> It is also a great way to learn more about the language.</p>
+<p>To install <a href="https://crystal-lang.org/">Crystal</a> you should take a look at the official documents called <a href="https://crystal-lang.org/docs/installation/">The Crystal Book!</a> It is also a great way to learn more about the language.</p>
 
-<p>To create a Crystal project type &hellip;</p>
+<p>To create a <a href="https://crystal-lang.org/">Crystal</a> project type &hellip;</p>
 
 <p>Terminal:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal init app casual</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ crystal init app casual
 </pre></div>
 </p>
 
 <p><strong>crystal</strong> is the name of the compiler. The <strong>init</strong> command creates the default project structure. The <strong>app</strong> commands creates an app skeleton, to create a library change it to <strong>lib</strong>. <strong>casual</strong> is just the name i picked, you may change that to whatever you like. To run the app type &hellip;</p>
 
 <p>Terminal:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ cd casual</span>
-<span style="color: #75715e">$ crystal src/casual.cr</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ cd casual
+$ crystal src/casual.cr
 </pre></div>
 </p>
 
@@ -116,15 +116,15 @@
 <p>Open the <strong>casual.cr</strong> file with your favorite editor located inside the src folder. Remove everything inside and type &hellip;</p>
 
 <p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Hello, World!&quot;</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;Hello, World!&quot;</span>
 </pre></div>
 </p>
 
 <p>Save the file and return to the terminal and run it!</p>
 
 <p>Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal src/casual.cr</span>
-<span style="color: #75715e">Hello, World!</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ crystal src/casual.cr
+Hello, World!
 </pre></div>
 </p>
 
@@ -133,17 +133,17 @@
 <p>To build the app type &hellip;</p>
 
 <p>Terminal:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal build src/casual.cr --release</span>
-<span style="color: #75715e">$ ./casual</span>
-<span style="color: #75715e">Hello, World!</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ crystal build src/casual.cr --release
+$ ./casual
+Hello, World!
 </pre></div>
 </p>
 
 <p>Lets have a look at the file we just created.</p>
 
 <p>Terminal:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ ls -shR casual</span>
-<span style="color: #75715e">104K casual</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ ls -shR casual
+104K casual
 </pre></div>
 </p>
 
@@ -154,30 +154,30 @@
 <p>Here are some simple output commands. It is good to remember that&hellip;</p>
 
 <ul>
-<li>puts # adds a new line after the end.</li>
-<li>print # does not add a new line.</li>
+<li><code>puts</code> adds a new line after the end.</li>
+<li><code>print</code> does not add a new line.</li>
 </ul>
 
 <p>btw hashtag means that it is a comment.</p>
 
 <p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Hello,&quot;</span>                     <span style="color: #75715e"># simple output with new line</span>
-<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;World!&quot;</span>                     
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;Hello,&quot;</span>                     <span style="color: #8f5902; font-style: italic"># simple output with new line</span>
+<span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;World!&quot;</span>                     
 
-<span style="color: #f8f8f2">print</span> <span style="color: #e6db74">&quot;Hello, &quot;</span>                   <span style="color: #75715e"># without new line</span>
-<span style="color: #f8f8f2">print</span> <span style="color: #e6db74">&quot;World!</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>                  <span style="color: #75715e"># \n = newline like in most C langs</span>
+<span style="color: #204a87">print</span> <span style="color: #4e9a06">&quot;Hello, &quot;</span>                   <span style="color: #8f5902; font-style: italic"># without new line</span>
+<span style="color: #204a87">print</span> <span style="color: #4e9a06">&quot;World!\n&quot;</span>                  <span style="color: #8f5902; font-style: italic"># \n = newline like in most C langs</span>
 
-<span style="color: #f8f8f2">my_name</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;Sam&quot;</span>                   <span style="color: #75715e"># declaring a string variable</span>
-<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;My name is: #{</span><span style="color: #f8f8f2">my_name</span><span style="color: #e6db74">}&quot;</span>     <span style="color: #75715e"># output with a placeholder for the variable</span>
+<span style="color: #000000">my_name</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">&quot;Sam&quot;</span>                   <span style="color: #8f5902; font-style: italic"># declaring a string variable</span>
+<span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;My name is: #{</span><span style="color: #000000">my_name</span><span style="color: #4e9a06">}&quot;</span>     <span style="color: #8f5902; font-style: italic"># output with a placeholder for the variable</span>
 </pre></div>
 </p>
 
 <p>Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal src/casual.cr</span>
-<span style="color: #75715e">Hello,</span>
-<span style="color: #75715e">World!</span>
-<span style="color: #75715e">Hello, World!</span>
-<span style="color: #75715e">My name is: Sam</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ crystal src/casual.cr
+Hello,
+World!
+Hello, World!
+My name is: Sam
 </pre></div>
 </p>
 
@@ -186,48 +186,58 @@
 <p>Lets do some other fun stuff with strings..</p>
 
 <p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">my_text</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;I Love Crystal&quot;</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># The String</span>
+<span style="color: #000000">my_text</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">&quot;I Love Crystal&quot;</span>
 
-<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;my_text has #{</span><span style="color: #f8f8f2">my_text</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">size</span><span style="color: #e6db74">} characters&quot;</span> <span style="color: #75715e"># nr of chars</span>
-<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;#{</span><span style="color: #f8f8f2">my_text</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">upcase</span><span style="color: #e6db74">}&quot;</span>                      <span style="color: #75715e"># Uppercase</span>
-<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;#{</span><span style="color: #f8f8f2">my_text</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">downcase</span><span style="color: #e6db74">}&quot;</span>                    <span style="color: #75715e"># Lowercase</span>
+<span style="color: #8f5902; font-style: italic"># Nr of chars</span>
+<span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;my_text has #{</span><span style="color: #000000">my_text</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">size</span><span style="color: #4e9a06">} characters&quot;</span>
 
-<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;#{</span><span style="color: #f8f8f2">my_text</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sub(</span><span style="color: #e6db74">&quot;o&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;i&quot;</span><span style="color: #f8f8f2">)</span><span style="color: #e6db74">}&quot;</span>                <span style="color: #75715e"># substitutes o&#39;s with i&#39;s</span>
-<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;#{</span><span style="color: #f8f8f2">my_text</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ends_with?(</span><span style="color: #e6db74">&quot;Crystal&quot;</span><span style="color: #f8f8f2">)</span><span style="color: #e6db74">}&quot;</span>       <span style="color: #75715e"># True! It does.</span>
+<span style="color: #8f5902; font-style: italic"># Uppercase</span>
+<span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;#{</span><span style="color: #000000">my_text</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">upcase</span><span style="color: #4e9a06">}&quot;</span>                      
+
+<span style="color: #8f5902; font-style: italic"># Lowercase</span>
+<span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;#{</span><span style="color: #000000">my_text</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">downcase</span><span style="color: #4e9a06">}&quot;</span>                    
+
+<span style="color: #8f5902; font-style: italic"># substitutes o&#39;s with i&#39;s</span>
+<span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;#{</span><span style="color: #000000">my_text</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">sub</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;o&quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #4e9a06">&quot;i&quot;</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #4e9a06">}&quot;</span>                
+
+<span style="color: #8f5902; font-style: italic"># True! It does.</span>
+<span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;#{</span><span style="color: #000000">my_text</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">ends_with?</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;Crystal&quot;</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #4e9a06">}&quot;</span>       
 </pre></div>
 </p>
 
 <p>Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal src/casual.cr</span>
-<span style="color: #75715e">my_text has 14 characters</span>
-<span style="color: #75715e">I LOVE CRYSTAL</span>
-<span style="color: #75715e">i love crystal</span>
-<span style="color: #75715e">I Live Crystal</span>
-<span style="color: #75715e">true</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ crystal src/casual.cr
+my_text has 14 characters
+I LOVE CRYSTAL
+i love crystal
+I Live Crystal
+true
 </pre></div>
 </p>
 
 <p>Something cool i found was the &ldquo;Heredoc&rdquo;. I had never heard of it before but seems really useful for writing large string, or if you have alot of symbols. Heredoc starts with &lt;&lt;- and the name you give it. Then the text has to be indented 4 line.</p>
 
 <p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e"># The text has to be indented 4 lines</span>
-<span style="color: #f8f8f2">x</span> <span style="color: #f92672">=</span> <span style="color: #f92672">&lt;&lt;-</span><span style="color: #e6db74">SOMETHING</span>
-<span style="color: #e6db74">    Hello to                    </span>
-<span style="color: #e6db74">    /&quot;You People In</span>
-<span style="color: #e6db74">    In The &quot; &quot; World?=)()</span>
-<span style="color: #e6db74">    &quot;{&#39;&#39;¤%&amp;¤{&amp;/(%/&amp;)}}&quot;</span>
-<span style="color: #e6db74">    SOMETHING</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># The text has to be indented 4 lines</span>
 
-<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">x</span>
+<span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #ce5c00; font-weight: bold">&lt;&lt;-</span><span style="color: #4e9a06">SOMETHING</span>
+<span style="color: #4e9a06">    Hello to                    </span>
+<span style="color: #4e9a06">    /&quot;You People In</span>
+<span style="color: #4e9a06">    In The &quot; &quot; World?=)()</span>
+<span style="color: #4e9a06">    &quot;{&#39;&#39;¤%&amp;¤{&amp;/(%/&amp;)}}&quot;</span>
+<span style="color: #4e9a06">    SOMETHING</span>
+
+<span style="color: #204a87">puts</span> <span style="color: #000000">x</span>
 </pre></div>
 </p>
 
 <p>Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal src/casual.cr</span>
-<span style="color: #75715e">Hello to                          </span>
-<span style="color: #75715e">/&quot;You People In</span>
-<span style="color: #75715e">In The &quot; &quot; World?=)()</span>
-<span style="color: #75715e">&quot;{&#39;&#39;¤%&amp;¤{&amp;/(%/&amp;)}}&quot;</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ crystal src/casual.cr
+Hello to                          
+/&quot;You People In
+In The &quot; &quot; World?=)()
+&quot;{&#39;&#39;¤%&amp;¤{&amp;/(%/&amp;)}}&quot;
 </pre></div>
 </p>
 
@@ -238,46 +248,64 @@
 <p>Now for some simple math. Doing simple mathematics with crystal is really simple i think.</p>
 
 <p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">1</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">3</span>                <span style="color: #75715e"># add</span>
-<span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">10</span> <span style="color: #f92672">-</span> <span style="color: #ae81ff">3</span>               <span style="color: #75715e"># substract</span>
-<span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">20.0</span> <span style="color: #f92672">/</span> <span style="color: #ae81ff">2.0</span>           <span style="color: #75715e"># divide</span>
-<span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">71</span> <span style="color: #f92672">*</span> <span style="color: #ae81ff">13</span>              <span style="color: #75715e"># multiply</span>
-<span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">231</span> <span style="color: #f92672">%</span> <span style="color: #ae81ff">10</span>             <span style="color: #75715e"># modulus</span>
-<span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">22</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">10</span>              <span style="color: #75715e"># less than</span>
-<span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">22</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">10</span>              <span style="color: #75715e"># more than</span>
-<span style="color: #f8f8f2">puts</span> <span style="color: #ae81ff">33</span> <span style="color: #f92672">&gt;=</span> <span style="color: #ae81ff">15</span>             <span style="color: #75715e"># more or equal</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># add</span>
+<span style="color: #204a87">puts</span> <span style="color: #0000cf; font-weight: bold">1</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #0000cf; font-weight: bold">3</span>                
 
-<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;11.1 / 22.4 = #{</span><span style="color: #ae81ff">11.1</span><span style="color: #f92672">/</span><span style="color: #ae81ff">22.4</span><span style="color: #e6db74">}&quot;</span>
+<span style="color: #8f5902; font-style: italic"># substract</span>
+<span style="color: #204a87">puts</span> <span style="color: #0000cf; font-weight: bold">10</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #0000cf; font-weight: bold">3</span>               
+
+<span style="color: #8f5902; font-style: italic"># divide</span>
+<span style="color: #204a87">puts</span> <span style="color: #0000cf; font-weight: bold">20.0</span> <span style="color: #ce5c00; font-weight: bold">/</span> <span style="color: #0000cf; font-weight: bold">2.0</span>           
+
+<span style="color: #8f5902; font-style: italic"># multiply</span>
+<span style="color: #204a87">puts</span> <span style="color: #0000cf; font-weight: bold">71</span> <span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #0000cf; font-weight: bold">13</span>              
+
+<span style="color: #8f5902; font-style: italic"># modulus &quot;not percent&quot;</span>
+<span style="color: #204a87">puts</span> <span style="color: #0000cf; font-weight: bold">231</span> <span style="color: #ce5c00; font-weight: bold">%</span> <span style="color: #0000cf; font-weight: bold">10</span>             
+
+<span style="color: #8f5902; font-style: italic"># less than</span>
+<span style="color: #204a87">puts</span> <span style="color: #0000cf; font-weight: bold">22</span> <span style="color: #ce5c00; font-weight: bold">&lt;</span> <span style="color: #0000cf; font-weight: bold">10</span>              
+
+<span style="color: #8f5902; font-style: italic"># more than</span>
+<span style="color: #204a87">puts</span> <span style="color: #0000cf; font-weight: bold">22</span> <span style="color: #ce5c00; font-weight: bold">&gt;</span> <span style="color: #0000cf; font-weight: bold">10</span>              
+
+<span style="color: #8f5902; font-style: italic"># more or equal</span>
+<span style="color: #204a87">puts</span> <span style="color: #0000cf; font-weight: bold">33</span> <span style="color: #ce5c00; font-weight: bold">&gt;=</span> <span style="color: #0000cf; font-weight: bold">15</span>             
+
+<span style="color: #8f5902; font-style: italic"># and we can add inside the string</span>
+<span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;11.1 / 22.4 = #{</span><span style="color: #0000cf; font-weight: bold">11.1</span><span style="color: #ce5c00; font-weight: bold">/</span><span style="color: #0000cf; font-weight: bold">22.4</span><span style="color: #4e9a06">}&quot;</span>
 </pre></div>
 </p>
 
 <p>Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal src/casual.cr</span>
-<span style="color: #75715e">4</span>
-<span style="color: #75715e">7</span>
-<span style="color: #75715e">10.0</span>
-<span style="color: #75715e">923</span>
-<span style="color: #75715e">1</span>
-<span style="color: #75715e">false</span>
-<span style="color: #75715e">true</span>
-<span style="color: #75715e">true</span>
-<span style="color: #75715e">11.1 / 22.4 = 0.4955357142857143</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ crystal src/casual.cr
+4
+7
+10.0
+923
+1
+false
+true
+true
+11.1 / 22.4 = 0.4955357142857143
 </pre></div>
 </p>
 
-<p>And now let&rsquo;s convert Celcius to Fahrenheit. 0 degrees Celcius is 32 degrees Fahrenheit. To convert temperatures in degrees Celsius to Fahrenheit, multiply by 1.8 (or <sup>9</sup>&frasl;<sub>5</sub>) and add 32. So &hellip;</p>
+<div class="alert alert-warning" role="alert">
+Problem: And now let's convert Celcius to Fahrenheit. 0 degrees Celcius is 32 degrees Fahrenheit. To convert temperatures in degrees Celsius to Fahrenheit, multiply by 1.8 (or 9/5) and add 32.
+</div>
 
 <p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">celsius</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">32</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">fahrenheit</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">1.8</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">celsius</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">32</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">celsius</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">32</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000">fahrenheit</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">1.8</span> <span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #000000">celsius</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #0000cf; font-weight: bold">32</span>
 
-<span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;32 degrees celsius is #{</span><span style="color: #f8f8f2">fahrenheit</span><span style="color: #e6db74">}&quot;</span>
+<span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;32 degrees celsius is #{</span><span style="color: #000000">fahrenheit</span><span style="color: #4e9a06">}&quot;</span>
 </pre></div>
 </p>
 
 <p>Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">$ crystal src/casual.cr</span>
-<span style="color: #75715e">32 degrees celsius is 89.6 degrees fahrenheit</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ crystal src/casual.cr
+32 degrees celsius is 89.6 degrees fahrenheit
 </pre></div>
 </p>
 
@@ -352,10 +380,8 @@
 </script>
 <gcse:search linktarget="_parent"></gcse:search>
 <style type='text/css'>
-.gsc-control-cse div{ color: black; }
 .gsc-above-wrapper-area { border-bottom: none; }
 .gsc-control-cse { border-color: red; }
-.gsc-control-cse .gsc-option-menu{ background-color: white; }
  table.gsc-branding td, table.gsc-branding, table.gcsc-branding td, table.gcsc-branding { display: none; }
  td.gcsc-branding-text div.gcsc-branding-text { display: none; }
 .gsc-adBlock { display: none; }

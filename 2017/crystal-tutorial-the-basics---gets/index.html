@@ -47,7 +47,7 @@
             </ul>
         </div>
     </div>
-</div>
+  </div>
 </nav>
 
         <div class="row" id="content-main">
@@ -60,7 +60,7 @@
       
       <ul class="list-inline meta">
       <li><i class="fa fa-calendar"></i> January 31, 2017</li>
-      <li><i class="fa fa-font"></i> 522 words</li>
+      <li><i class="fa fa-font"></i> 533 words</li>
       <li><i class="fa fa-user"></i> Sam Ashkan</li>
         
         
@@ -93,103 +93,133 @@
 <li>stderr - standard error</li>
 </ul>
 
-<p>Last time we used stdout, these where puts and print to output on screen in Crystal. This time im going to discuss stdin, meaning getting input from the user. Usually in Crystal lang this is done by the command gets. This is what a simple gets looks like&hellip;</p>
+<p>Last time we used stdout, these where puts and print to output on screen in Crystal. This time im going to discuss stdin, meaning getting input from the user. Usually in <a href="https://crystal-lang.org/">Crystal</a> lang this is done by the command gets. This is what a simple gets looks like&hellip;</p>
 
 <p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">x</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">gets</span>          <span style="color: #75715e"># stores the input to x</span>
-<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">x</span>            <span style="color: #75715e"># outputs x</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># stores the input to x</span>
+<span style="color: #8f5902; font-style: italic"># and then outputs x.</span>
+
+<span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">gets</span>          
+<span style="color: #204a87">puts</span> <span style="color: #000000">x</span>            
 </pre></div>
 
 Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">Crystal 123       # my input</span>
-<span style="color: #75715e">Crystal 123       # what crystal outputs</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>Crystal 123
+Crystal 123       
 </pre></div>
 </p>
 
-<p>Now this is a very simple way to do it compared to some other languages.. * coughs rust * . I know that you usually don&rsquo;t use something like input in real world software but it is very important when learning in my opinion.</p>
+<p>Now this is a very simple way to do it compared to some other languages.. * coughs <a href="https://www.rust-lang.org/en-US/">Rust</a> * . I know that you usually don&rsquo;t use something like input in real world software but it is very important when learning in my opinion. And for completing tasks like on <a href="http://rosettacode.org/wiki/Rosetta_Code">Rosetta Code</a> or <a href="https://www.hackerrank.com/">Hackerrank</a>.</p>
 
-<p>To get a sertain amount of characters you can do this&hellip;</p>
+<div class="alert alert-warning" role="alert">
+Problem: Get the first 3 characters in gets.
+</div>
 
 <p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">gets(</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">)</span>      <span style="color: #75715e"># outputs the three first characters</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># gets input, but only the</span>
+<span style="color: #8f5902; font-style: italic"># first three characters.</span>
+
+<span style="color: #204a87">puts</span> <span style="color: #204a87">gets</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">3</span><span style="color: #000000; font-weight: bold">)</span>     
 </pre></div>
 
 Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">Samuel L Jackson  # what i put in</span>
-<span style="color: #75715e">Sam               # what gets took in</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>Samuel L Jackson
+Sam              
 </pre></div>
 </p>
 
 <p>To stop taking in to the stdin when a specific character is put in you can ..</p>
 
+<div class="alert alert-warning" role="alert">
+Problem: Get input until you find the char s and include it in the output.
+</div>
+
 <p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">gets(</span><span style="color: #e6db74">&#39;s&#39;</span><span style="color: #f8f8f2">)</span>      <span style="color: #75715e"># will stop after the char s in found</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># will stop after the</span>
+<span style="color: #8f5902; font-style: italic"># char s in found</span>
+
+<span style="color: #204a87">puts</span> <span style="color: #204a87">gets</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&#39;s&#39;</span><span style="color: #000000; font-weight: bold">)</span>      
 </pre></div>
 
 Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">today i had a sandwich for lunch # my input</span>
-<span style="color: #75715e">today i had a s</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>today i had a sandwich for lunch
+today i had a s
 </pre></div>
 </p>
 
-<p>You can also stop after a sertain amount of chars if you write <strong>puts gets(&rsquo;s&rsquo;, 10)</strong>. To read before the delimiter is found ..</p>
+<p>And like expected it stopped AFTER &rsquo;s&rsquo;.</p>
+
+<div class="alert alert-info" role="alert">
+Tip! You can also stop after a sertain amount of chars if you write `puts gets('s', 10)`. To read before the delimiter is found.
+</div>
+
+<div class="alert alert-warning" role="alert">
+Problem: Stop BEFORE the last character is found.
+</div>
 
 <p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">gets(</span><span style="color: #e6db74">&quot;c++&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">20</span><span style="color: #f8f8f2">)</span>      <span style="color: #75715e"># will stop before the delimiter is found</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># will stop before the</span>
+<span style="color: #8f5902; font-style: italic"># delimiter is found</span>
+
+<span style="color: #204a87">puts</span> <span style="color: #204a87">gets</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;c++&quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">20</span><span style="color: #000000; font-weight: bold">)</span>      
 </pre></div>
 
 Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">i do alot of c++ code</span>
-<span style="color: #75715e">i do alot of</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>i do alot of c++ code
+i do alot of
 </pre></div>
 </p>
 
 <p>Its easy to split up the gets. There is alot of information about this topic and more on <strong><a href="https://crystal-lang.org/api/0.19.2/index.html">Crystal Lang Api</a></strong> site. According to the site a not_nil! command is required that the compiler forces us to deal with. Like this &hellip;</p>
 
 <p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #204a87">puts</span> <span style="color: #204a87">gets</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">not_nil!</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">split</span>
 </pre></div>
 
 Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">The Earth is Round</span>
-<span style="color: #75715e">[&quot;The&quot;, &quot;Earth&quot;, &quot;is&quot;, &quot;Round&quot;]</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>The Earth is Round
+[&quot;The&quot;, &quot;Earth&quot;, &quot;is&quot;, &quot;Round&quot;]
 </pre></div>
 </p>
 
 <p>And to split up to two variables.</p>
 
 <p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">x,</span> <span style="color: #f8f8f2">y</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split</span>
-<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">x</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot; &quot;</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">y</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">y</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">gets</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">not_nil!</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">split</span>
+<span style="color: #204a87">puts</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #4e9a06">&quot; &quot;</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">y</span>
 </pre></div>
 
 Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">11 22 33         # input</span>
-<span style="color: #75715e">11 22            # output, notice it did not take in the last numbers</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>11 22 33         
+11 22            
 </pre></div>
 </p>
 
 <p>We can also split with a perticular character.</p>
 
 <p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split(</span><span style="color: #e6db74">&#39;-&#39;</span><span style="color: #f8f8f2">)</span>           <span style="color: #75715e"># split when -</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># split when -</span>
+
+<span style="color: #204a87">puts</span> <span style="color: #204a87">gets</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">not_nil!</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">split</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&#39;-&#39;</span><span style="color: #000000; font-weight: bold">)</span>           
 </pre></div>
 
 Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">Linda-Samantha-Nick-Bjorn               # my input</span>
-<span style="color: #75715e">[&quot;Linda&quot;, &quot;Samantha&quot;, &quot;Nick&quot;, &quot;Bjorn&quot;]</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>Linda-Samantha-Nick-Bjorn              
+[&quot;Linda&quot;, &quot;Samantha&quot;, &quot;Nick&quot;, &quot;Bjorn&quot;]
 </pre></div>
 </p>
 
-<p>And lastly if we want to add numbers we can do this one liner&hellip;</p>
+<div class="alert alert-info" role="alert">
+Tip! To sum numbers with a one liner.
+</div>
 
 <p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">map(</span><span style="color: #f92672">&amp;.</span><span style="color: #f8f8f2">to_i)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sum</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #204a87">puts</span> <span style="color: #204a87">gets</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">not_nil!</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">split</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">map</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #ce5c00; font-weight: bold">&amp;.</span><span style="color: #000000">to_i</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">sum</span>
 </pre></div>
 
 Output:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">120 21 43 66 22         # input</span>
-<span style="color: #75715e">272</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>120 21 43 66 22         
+272
 </pre></div>
 </p>
 
@@ -198,21 +228,49 @@ Output:
 <h2 id="summary">Summary</h2>
 
 <p>Code:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">x</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">gets</span>                               <span style="color: #75715e"># stores the input to x</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># storing the input to x</span>
 
-<span style="color: #f8f8f2">gets(</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">)</span>                                <span style="color: #75715e"># stores the three first characters</span>
+<span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">gets</span>                               
+</pre></div>
 
-<span style="color: #f8f8f2">gets(</span><span style="color: #e6db74">&#39;s&#39;</span><span style="color: #f8f8f2">)</span>                              <span style="color: #75715e"># will stop after the char s in found</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># storing the first three characters</span>
 
-<span style="color: #f8f8f2">gets(</span><span style="color: #e6db74">&quot;c++&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">20</span><span style="color: #f8f8f2">)</span>                        <span style="color: #75715e"># will stop before the delimiter is found</span>
+<span style="color: #204a87">gets</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">3</span><span style="color: #000000; font-weight: bold">)</span>                                
+</pre></div>
 
-<span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split</span>                    <span style="color: #75715e"># split up the input</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># will stop after the char s in found</span>
 
-<span style="color: #f8f8f2">x,</span> <span style="color: #f8f8f2">y</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split</span>             <span style="color: #75715e"># split up input to two variables</span>
+<span style="color: #204a87">gets</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&#39;s&#39;</span><span style="color: #000000; font-weight: bold">)</span>                              
+</pre></div>
 
-<span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split(</span><span style="color: #e6db74">&#39;-&#39;</span><span style="color: #f8f8f2">)</span>               <span style="color: #75715e"># split when -</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># Stop before the delimiter is found</span>
 
-<span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">not_nil!</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">map(</span><span style="color: #f92672">&amp;.</span><span style="color: #f8f8f2">to_i)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sum</span>    <span style="color: #75715e"># split up to integers and sums</span>
+<span style="color: #204a87">gets</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;input&quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">20</span><span style="color: #000000; font-weight: bold">)</span>                        
+</pre></div>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># split up the input</span>
+
+<span style="color: #204a87">gets</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">not_nil!</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">split</span>                    
+</pre></div>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># split up the input</span>
+
+<span style="color: #204a87">gets</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">not_nil!</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">split</span>                    
+</pre></div>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># split up input to two variables</span>
+
+<span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">y</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">gets</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">not_nil!</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">split</span>             
+</pre></div>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># split when - is found in the text</span>
+
+<span style="color: #204a87">gets</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">not_nil!</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">split</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&#39;-&#39;</span><span style="color: #000000; font-weight: bold">)</span>               
+</pre></div>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># split up to integers and sums</span>
+
+<span style="color: #204a87">gets</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">not_nil!</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">split</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">map</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #ce5c00; font-weight: bold">&amp;.</span><span style="color: #000000">to_i</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">sum</span>    
 </pre></div>
 </p>
 
@@ -282,10 +340,8 @@ Output:
 </script>
 <gcse:search linktarget="_parent"></gcse:search>
 <style type='text/css'>
-.gsc-control-cse div{ color: black; }
 .gsc-above-wrapper-area { border-bottom: none; }
 .gsc-control-cse { border-color: red; }
-.gsc-control-cse .gsc-option-menu{ background-color: white; }
  table.gsc-branding td, table.gsc-branding, table.gcsc-branding td, table.gcsc-branding { display: none; }
  td.gcsc-branding-text div.gcsc-branding-text { display: none; }
 .gsc-adBlock { display: none; }
