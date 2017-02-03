@@ -9,11 +9,204 @@
     <atom:link href="https://mordsith.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Crystal Tutorial The Basics If Elsif Else</title>
-      <link>https://mordsith.github.io/2017/crystal-tutorial-the-basics-if-elsif-else/</link>
+      <title>Crystal Tutorial The Basics - Case</title>
+      <link>https://mordsith.github.io/2017/crystal-tutorial-the-basics---case/</link>
+      <pubDate>Fri, 03 Feb 2017 16:42:31 +0100</pubDate>
+      
+      <guid>https://mordsith.github.io/2017/crystal-tutorial-the-basics---case/</guid>
+      <description>
+
+&lt;p&gt;So in the last tutorial we discussed &lt;code&gt;if&lt;/code&gt;&amp;rsquo;s. This time im going to talk about the &lt;code&gt;case&lt;/code&gt; statement. What is &lt;code&gt;case&lt;/code&gt; and why should i care? Usually if you have more than a few conditionals &lt;code&gt;case&lt;/code&gt; would be preferred. For the programmer &lt;code&gt;case&lt;/code&gt; makes it alot easier to read and debug. You could think of it abit like pattern matching.&lt;/p&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# what case looks like&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;expression&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;expression1&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;expression2&lt;/span&gt;
+   &lt;span style=&#34;color: #000000&#34;&gt;statement&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;expression3&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;expression4&lt;/span&gt;
+   &lt;span style=&#34;color: #000000&#34;&gt;statement2&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;else&lt;/span&gt;
+   &lt;span style=&#34;color: #000000&#34;&gt;statement3&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This is what a &lt;code&gt;case&lt;/code&gt; control expression looks like. It leads to better readability.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: create a simple case, if the variable is met run something.
+&lt;/div&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;2&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;2&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;else&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;other&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;2
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This is a very simple case condition, when a condition is met the output is run. If it fails run else. And now lets say you have many options you want to do the same condition.&lt;/p&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;num&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;22&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;num&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;32&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;11&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;43&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;22&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;num&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;well hello there&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;And then we can invoke methods in cases.&lt;/p&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;num&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;11&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;num&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;even?&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;even&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;odd?&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;odd&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: Lets say that you need to have a case condition between 1 and 100, instead of writing every single number we can do this.
+&lt;/div&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;5&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;..&lt;/span&gt;&lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;100&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;The case statement in within range!&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;And then we can check the variable type with &lt;code&gt;case&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;10&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;var&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;String&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;String&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;Int32&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;32 bit integer&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;else&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Something else&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: Now we want to fint the Capital of the Country we specify.
+&lt;/div&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# Find the Capital of the country&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;country&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Germany&amp;quot;&lt;/span&gt;
+
+&lt;span style=&#34;color: #000000&#34;&gt;capital&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;country&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;China&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;then&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Beijing&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;India&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;then&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;New Delhi&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Japan&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;then&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Tokyo&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Phillipines&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;then&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Manila&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Germany&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;then&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Berlin&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;France&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;then&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Paris&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Sweden&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;then&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Stockholm&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Russia&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;then&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Moscow&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Egypt&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;then&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Cairo&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Spain&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;then&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Madrid&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Unknown&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;The capital of &amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;country&lt;/span&gt;  &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot; is &amp;quot;&lt;/span&gt;  &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;capital&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;The capital of Germany is Berlin
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;And there is a little more of a real world use of case when you have alot of things to check. You could do it with if and elsif but it would not be recommended.&lt;/p&gt;
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# what case looks like&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;expression&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;expression1&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;expression2&lt;/span&gt;
+   &lt;span style=&#34;color: #000000&#34;&gt;statement&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;expression3&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;expression4&lt;/span&gt;
+   &lt;span style=&#34;color: #000000&#34;&gt;statement2&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;else&lt;/span&gt;
+   &lt;span style=&#34;color: #000000&#34;&gt;statement3&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# many checks&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;num&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;32&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;11&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;43&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;22&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;string&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# checking variable type&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;var&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;String&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;Int32&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;else&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something_else&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# When Then&lt;/span&gt;
+
+&lt;span style=&#34;color: #000000&#34;&gt;var1&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;var2&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;something&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;then&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;do_something_else&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://crystal-lang.org/docs/syntax_and_semantics/case.html&#34;&gt;https://crystal-lang.org/docs/syntax_and_semantics/case.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Crystal Tutorial The Basics - If Elsif Else</title>
+      <link>https://mordsith.github.io/2017/crystal-tutorial-the-basics---if-elsif-else/</link>
       <pubDate>Wed, 01 Feb 2017 15:01:15 +0100</pubDate>
       
-      <guid>https://mordsith.github.io/2017/crystal-tutorial-the-basics-if-elsif-else/</guid>
+      <guid>https://mordsith.github.io/2017/crystal-tutorial-the-basics---if-elsif-else/</guid>
       <description>
 
 &lt;p&gt;The &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;elsif&lt;/code&gt; and &lt;code&gt;else&lt;/code&gt; are Crystals conditionals statements that execute a block of code to check if a condition is true of false. It works very similar to the english languge that if this is true i will do this else i will do something else.&lt;/p&gt;

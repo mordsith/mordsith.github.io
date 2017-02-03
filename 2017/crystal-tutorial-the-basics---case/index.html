@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.18.1" />
+    <title>Crystal Tutorial The Basics - Case</title>
+    
+    
+    
+    <meta name="description" content="Mordsith Development Docs is a site for documenting stuff i program, i am mostly interested in compiled languages and very happy to see their comeback." />
+    <meta name="keywords" content='Crystal,Programming' />
+    
+        <meta name="author" content="Sam Ashkan" />
+    
+    
+        <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="196x196" />
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Mordsith - Tech Docs" />
+
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css" rel="stylesheet" integrity="sha384-pVJelSCJ58Og1XDc2E95RVYHZDPb9AVyXsI8NoVpB2xmtxoZKJePbMfE4mlXw7BJ" crossorigin="anonymous">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="https://mordsith.github.io/css/custom.css"  media="none" onload="if(media!='all')media='all'" />
+
+
+</head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+      
+<div class="col-md-12">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Mordsith - Tech Docs</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li><a href="/">Home</a></li>
+                
+                <li><a href="/about/">About</a></li>
+                
+            </ul>
+        </div>
+    </div>
+  </div>
+</nav>
+
+        <div class="row" id="content-main">
+          <div class="col-md-8">
+          
+<div class="list-group-item">
+      <h1 style="font-size:30px;font-weight:bold;">Crystal Tutorial The Basics - Case</h1>
+
+      
+      
+      <ul class="list-inline meta">
+      <li><i class="fa fa-calendar"></i> February 3, 2017</li>
+      <li><i class="fa fa-font"></i> 469 words</li>
+      <li><i class="fa fa-user"></i> Sam Ashkan</li>
+        
+        
+          <li><i class="fa fa-folder"></i> <a href="https://mordsith.github.io/categories/crystal">crystal</a></li><br>
+        
+      </ul>
+      
+
+    
+<div class="container">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+  <a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet"><i class="fa fa-twitter-square fa-2x"></i></a>
+  <a href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square fa-2x"></i></a>
+  <a href="http://pinterest.com/pin/create/button/?url=&description=" target="_blank" title="Pin it"><i class="fa fa-pinterest-square fa-2x"></i></a>
+  <a href="http://www.reddit.com/submit?url=&title=" target="_blank" title="Submit to Reddit"><i class="fa fa-reddit-square fa-2x"></i></a>
+  <a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>
+</div>
+
+
+
+<br>
+<div class="mytext">
+    
+
+<p>So in the last tutorial we discussed <code>if</code>&rsquo;s. This time im going to talk about the <code>case</code> statement. What is <code>case</code> and why should i care? Usually if you have more than a few conditionals <code>case</code> would be preferred. For the programmer <code>case</code> makes it alot easier to read and debug. You could think of it abit like pattern matching.</p>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># what case looks like</span>
+
+<span style="color: #204a87; font-weight: bold">case</span> <span style="color: #000000">expression</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #000000">expression1</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">expression2</span>
+   <span style="color: #000000">statement</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #000000">expression3</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">expression4</span>
+   <span style="color: #000000">statement2</span>
+<span style="color: #204a87; font-weight: bold">else</span>
+   <span style="color: #000000">statement3</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+</p>
+
+<p>This is what a <code>case</code> control expression looks like. It leads to better readability.</p>
+
+<div class="alert alert-warning" role="alert">
+Problem: create a simple case, if the variable is met run something.
+</div>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">1</span>
+
+<span style="color: #204a87; font-weight: bold">case</span> <span style="color: #000000">x</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #0000cf; font-weight: bold">1</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;1&quot;</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #0000cf; font-weight: bold">2</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;2&quot;</span>
+<span style="color: #204a87; font-weight: bold">else</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;other&quot;</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>2
+</pre></div>
+</p>
+
+<p>This is a very simple case condition, when a condition is met the output is run. If it fails run else. And now lets say you have many options you want to do the same condition.</p>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">num</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">22</span>
+
+<span style="color: #204a87; font-weight: bold">case</span> <span style="color: #000000">num</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #0000cf; font-weight: bold">32</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">11</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">43</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">22</span>
+  <span style="color: #204a87">puts</span> <span style="color: #000000">num</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #4e9a06">&quot;hello&quot;</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;well hello there&quot;</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+</p>
+
+<p>And then we can invoke methods in cases.</p>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">num</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">11</span>
+
+<span style="color: #204a87; font-weight: bold">case</span> <span style="color: #000000">num</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">even?</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;even&quot;</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">odd?</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;odd&quot;</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+</p>
+
+<div class="alert alert-warning" role="alert">
+Problem: Lets say that you need to have a case condition between 1 and 100, instead of writing every single number we can do this.
+</div>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #204a87; font-weight: bold">case</span> <span style="color: #0000cf; font-weight: bold">5</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #ce5c00; font-weight: bold">..</span><span style="color: #0000cf; font-weight: bold">100</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;The case statement in within range!&quot;</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+</p>
+
+<p>And then we can check the variable type with <code>case</code>.</p>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">var</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">10</span>
+
+<span style="color: #204a87; font-weight: bold">case</span> <span style="color: #000000">var</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #204a87">String</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;String&quot;</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #204a87">Int32</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;32 bit integer&quot;</span>
+<span style="color: #204a87; font-weight: bold">else</span>
+  <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;Something else&quot;</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+</p>
+
+<div class="alert alert-warning" role="alert">
+Problem: Now we want to fint the Capital of the Country we specify.
+</div>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># Find the Capital of the country</span>
+<span style="color: #000000">country</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">&quot;Germany&quot;</span>
+
+<span style="color: #000000">capital</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">case</span> <span style="color: #000000">country</span>
+  <span style="color: #204a87; font-weight: bold">when</span> <span style="color: #4e9a06">&quot;China&quot;</span> <span style="color: #204a87; font-weight: bold">then</span> <span style="color: #4e9a06">&quot;Beijing&quot;</span>
+  <span style="color: #204a87; font-weight: bold">when</span> <span style="color: #4e9a06">&quot;India&quot;</span> <span style="color: #204a87; font-weight: bold">then</span> <span style="color: #4e9a06">&quot;New Delhi&quot;</span>
+  <span style="color: #204a87; font-weight: bold">when</span> <span style="color: #4e9a06">&quot;Japan&quot;</span> <span style="color: #204a87; font-weight: bold">then</span> <span style="color: #4e9a06">&quot;Tokyo&quot;</span>
+  <span style="color: #204a87; font-weight: bold">when</span> <span style="color: #4e9a06">&quot;Phillipines&quot;</span> <span style="color: #204a87; font-weight: bold">then</span> <span style="color: #4e9a06">&quot;Manila&quot;</span>
+  <span style="color: #204a87; font-weight: bold">when</span> <span style="color: #4e9a06">&quot;Germany&quot;</span> <span style="color: #204a87; font-weight: bold">then</span> <span style="color: #4e9a06">&quot;Berlin&quot;</span>
+  <span style="color: #204a87; font-weight: bold">when</span> <span style="color: #4e9a06">&quot;France&quot;</span> <span style="color: #204a87; font-weight: bold">then</span> <span style="color: #4e9a06">&quot;Paris&quot;</span>
+  <span style="color: #204a87; font-weight: bold">when</span> <span style="color: #4e9a06">&quot;Sweden&quot;</span> <span style="color: #204a87; font-weight: bold">then</span> <span style="color: #4e9a06">&quot;Stockholm&quot;</span>
+  <span style="color: #204a87; font-weight: bold">when</span> <span style="color: #4e9a06">&quot;Russia&quot;</span> <span style="color: #204a87; font-weight: bold">then</span> <span style="color: #4e9a06">&quot;Moscow&quot;</span>
+  <span style="color: #204a87; font-weight: bold">when</span> <span style="color: #4e9a06">&quot;Egypt&quot;</span> <span style="color: #204a87; font-weight: bold">then</span> <span style="color: #4e9a06">&quot;Cairo&quot;</span>
+  <span style="color: #204a87; font-weight: bold">when</span> <span style="color: #4e9a06">&quot;Spain&quot;</span> <span style="color: #204a87; font-weight: bold">then</span> <span style="color: #4e9a06">&quot;Madrid&quot;</span>
+<span style="color: #204a87; font-weight: bold">else</span> <span style="color: #4e9a06">&quot;Unknown&quot;</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+
+<span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;The capital of &quot;</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">country</span>  <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #4e9a06">&quot; is &quot;</span>  <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">capital</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>The capital of Germany is Berlin
+</pre></div>
+</p>
+
+<p>And there is a little more of a real world use of case when you have alot of things to check. You could do it with if and elsif but it would not be recommended.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># what case looks like</span>
+
+<span style="color: #204a87; font-weight: bold">case</span> <span style="color: #000000">expression</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #000000">expression1</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">expression2</span>
+   <span style="color: #000000">statement</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #000000">expression3</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">expression4</span>
+   <span style="color: #000000">statement2</span>
+<span style="color: #204a87; font-weight: bold">else</span>
+   <span style="color: #000000">statement3</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
+code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># many checks</span>
+
+<span style="color: #204a87; font-weight: bold">case</span> <span style="color: #000000">num</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #0000cf; font-weight: bold">32</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">11</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">43</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">22</span>
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #4e9a06">&quot;string&quot;</span>
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
+code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># checking variable type</span>
+
+<span style="color: #204a87; font-weight: bold">case</span> <span style="color: #000000">var</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #204a87">String</span>
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">when</span> <span style="color: #204a87">Int32</span>
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">else</span>
+  <span style="color: #000000">do_something_else</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
+code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># When Then</span>
+
+<span style="color: #000000">var1</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">case</span> <span style="color: #000000">var2</span>
+  <span style="color: #204a87; font-weight: bold">when</span> <span style="color: #000000">something</span> <span style="color: #204a87; font-weight: bold">then</span> <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">else</span> <span style="color: #000000">do_something_else</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+</p>
+
+<h3 id="references">References</h3>
+
+<ul>
+<li><a href="https://crystal-lang.org/docs/syntax_and_semantics/case.html">https://crystal-lang.org/docs/syntax_and_semantics/case.html</a></li>
+</ul>
+
+</div>
+</div>
+
+
+  <br>
+    
+
+  
+    <span class="label label-info"><a href="https://mordsith.github.io/tags/crystal">Crystal</a></span>
+  
+    <span class="label label-info"><a href="https://mordsith.github.io/tags/programming">Programming</a></span>
+  
+
+<br><br><br>
+
+  <div class="panel panel-info">
+    <div class="panel-heading"><b>About Sam Ashkan</b></div>
+      <div class="panel-body"><img src="/img/avatar.png" alt="My Avatar" style="float: left; clear: left">
+      <p>I am a developer from Sweden, Programming is one of my favorite hobbies. I especially love compiled languages for there performance. I have never blogged before but i thought why not share what i have learned to anyone interested.</p>
+      </div>
+    </div>
+
+          
+    
+        <div class="row">
+            <div class="col-md-12 content-card">
+                <div id="disqus_thread"></div>
+                <script>
+                    (function() {
+                        if (window.location.hostname == "localhost") {
+                            document.write("Disqus comments are unavailable while serving on localhost or 127.0.0.1");
+                            return;
+                        }
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        var disqus_shortname = 'mord-sith';
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </div>
+        </div>
+    
+
+
+          </div>
+          <div class="col-md-4">
+          <script>
+  (function() {
+    var cx = '003471220390322062077:j5wxwe0wdfk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search linktarget="_parent"></gcse:search>
+<style type='text/css'>
+.gsc-above-wrapper-area { border-bottom: none; }
+.gsc-control-cse { border-color: red; }
+ table.gsc-branding td, table.gsc-branding, table.gcsc-branding td, table.gcsc-branding { display: none; }
+ td.gcsc-branding-text div.gcsc-branding-text { display: none; }
+.gsc-adBlock { display: none; }
+.cse input.gsc-input, input.gsc-input { background-image:none !important; }
+.cse input.gsc-search-button, input.gsc-search-button{
+  font-size: 14px;
+  height: 40px;
+  padding: 8px 12px;
+  min-width: 100px;
+  -webkit-border-radius: 2px;
+}
+td.gsc-clear-button { display: none; }
+.cse input.gsc-input, input.gsc-input { padding: 8px 6px; }
+.cse table.gsc-search-box td.gsc-input, table.gsc-search-box td.gsc-input{
+  padding-right: inherit;
+}
+.gs-no-results-result .gs-snippet, .gs-error-result .gs-snippet { border: none; background-color: transparent;}
+ </style>
+<br>
+
+          
+<div class="list-group">
+  <div class="list-group-item active">
+    <b>Recent Posts</b>
+  </div>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---case/" class="list-group-item">Crystal Tutorial The Basics - Case
+  </a>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---if-elsif-else/" class="list-group-item">Crystal Tutorial The Basics - If Elsif Else
+  </a>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---gets/" class="list-group-item">Crystal Tutorial The Basics - Gets
+  </a>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---puts/" class="list-group-item">Crystal Tutorial The Basics - Puts
+  </a>
+
+</div>
+
+          
+
+          
+
+    
+<div class="list-group">
+  <div href="#" class="list-group-item active">
+    <b>categories</b>
+  </div>
+  
+    <a href="https://mordsith.github.io/categories/crystal" class="list-group-item">crystal</a>
+    
+  </a>
+</div>
+
+
+    
+
+
+          
+          </div>
+        </div>
+      <nav class="footer navbar-fixed-bottom" role="navigation">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4 col-xs-6">
+    <ul class="list-inline social-media">
+        
+        
+        
+            <li><a target="_blank" href="https://www.facebook.com/sam.inter"><i class="fa fa-facebook fa-lg"></i></a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </ul>
+</div>
+
+            <p>Copyleft &copy; 2017, Design by Sam Ashkan, All rights reversed!</p>
+        </div>
+    </div>
+</nav>
+
+      
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+    
+
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-91005792-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+
+
+      </div>
+  </body>
+</html>
