@@ -10,11 +10,11 @@
     <atom:link href="https://mordsith.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Crystal Tutorial The Basics Loops</title>
-      <link>https://mordsith.github.io/2017/crystal-tutorial-the-basics-loops/</link>
+      <title>Crystal Tutorial The Basics - Loops</title>
+      <link>https://mordsith.github.io/2017/crystal-tutorial-the-basics---loops/</link>
       <pubDate>Sun, 05 Feb 2017 12:26:02 +0100</pubDate>
       
-      <guid>https://mordsith.github.io/2017/crystal-tutorial-the-basics-loops/</guid>
+      <guid>https://mordsith.github.io/2017/crystal-tutorial-the-basics---loops/</guid>
       <description>
 
 &lt;p&gt;In computer programming Loops are very important so that you the developer don&amp;rsquo;t have to repeat yourself. The most usual loop in Crystal is the &lt;code&gt;while&lt;/code&gt; loop. while repeats through a block of code while the condition is true. It is important to remember that if you don&amp;rsquo;t modify the variable to &lt;code&gt;break&lt;/code&gt; out of the loop it will run
