@@ -9,6 +9,208 @@
     <atom:link href="https://mordsith.github.io/categories/crystal/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Crystal Tutorial The Basics Loops</title>
+      <link>https://mordsith.github.io/2017/crystal-tutorial-the-basics-loops/</link>
+      <pubDate>Sun, 05 Feb 2017 12:26:02 +0100</pubDate>
+      
+      <guid>https://mordsith.github.io/2017/crystal-tutorial-the-basics-loops/</guid>
+      <description>
+
+&lt;p&gt;In computer programming Loops are very important so that you the developer don&amp;rsquo;t have to repeat yourself. The most usual loop in Crystal is the &lt;code&gt;while&lt;/code&gt; loop. while repeats through a block of code while the condition is true. It is important to remember that if you don&amp;rsquo;t modify the variable to &lt;code&gt;break&lt;/code&gt; out of the loop it will run
+forever.&lt;/p&gt;
+
+&lt;p&gt;This is what the &lt;code&gt;while&lt;/code&gt; loop looks like.&lt;/p&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;some_condition&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_this&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: Make a simple while loop to increment count by 1, break after you reach 10.
+&lt;/div&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;count&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;count&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;11&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;count = #{&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;count&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;} &amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;count&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;count = 1
+count = 2
+count = 3
+count = 4
+count = 5
+count = 6
+count = 7
+count = 8
+count = 9
+count = 10
+&lt;/pre&gt;&lt;/div&gt;
+
+Note that it&amp;rsquo;s &lt;code&gt;count &amp;lt; 11&lt;/code&gt; and not 10 because from 1 to 10 means repeating 9 times.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: Once again increment by 1 and when you reach the numbers 3 and 6 skip to next iteration.
+&lt;/div&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;0&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;10&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;3&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;6&lt;/span&gt;
+    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;next&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;1 2 4 5 7 8 9 10
+&lt;/pre&gt;&lt;/div&gt;
+
+And as we can see the loop skipped 3 and 6&lt;/p&gt;
+
+&lt;p&gt;The simplest way to &lt;code&gt;loop&lt;/code&gt; in Crystal is the Loop do, loop! Loop do is very similar to the &lt;code&gt;while&lt;/code&gt; loop, but in loop do we dont set a condition in the beginning.&lt;/p&gt;
+
+&lt;p&gt;This is what &lt;code&gt;loop&lt;/code&gt; do looks like.&lt;/p&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #204a87&#34;&gt;loop&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;do&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The most important thing to remember with this loops is that it will continue forever until you give it a break condition.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: Do the same with loop do that you did with while. Count to 10 and end the loop.
+&lt;/div&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #204a87&#34;&gt;loop&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;do&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;count = #{&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;count&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;}&amp;quot;&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;count&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;count&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;11&lt;/span&gt;
+    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;break&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;count = 1
+count = 2
+count = 3
+count = 4
+count = 5
+count = 6
+count = 7
+count = 8
+count = 9
+count = 10
+&lt;/pre&gt;&lt;/div&gt;
+
+Always remember to have an exit strategy unless you want it to &lt;code&gt;loop&lt;/code&gt; forever.&lt;/p&gt;
+
+&lt;p&gt;The Until loop is pretty much the same as the while loop. The difference is that while loops while the condition is true and Until loops while the condition is false.&lt;/p&gt;
+
+&lt;p&gt;This is what the &lt;code&gt;until&lt;/code&gt; loop looks like.&lt;/p&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;until&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;some_condition&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_this&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;And yet again we will loop 10 times but decrement instead of increment.&lt;/p&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;10&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;until&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;-=&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+&lt;/pre&gt;&lt;/div&gt;
+
+And thats the until loop.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;
+Tip! Not sure if these are official Crystal loops but they seem to work.
+&lt;/div&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;upto&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;|&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;n&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;n&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;downto&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;|&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;n&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;n&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;summary-of-loops&#34;&gt;Summary of loops&lt;/h2&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# The while loop&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;some_condition&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_this&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# The next iteration&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;some_condition&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;some_condition&lt;/span&gt;
+    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;next&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# The loop do&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87&#34;&gt;loop&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;do&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_something&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# The until loop.&lt;/span&gt;
+
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;until&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;some_condition&lt;/span&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;do_this&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://crystal-lang.org/docs/syntax_and_semantics/while.html&#34;&gt;https://crystal-lang.org/docs/syntax_and_semantics/while.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://crystal-lang.org/docs/syntax_and_semantics/next.html&#34;&gt;https://crystal-lang.org/docs/syntax_and_semantics/next.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://crystal-lang.org/docs/syntax_and_semantics/until.html&#34;&gt;https://crystal-lang.org/docs/syntax_and_semantics/until.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Crystal Tutorial The Basics - Case</title>
       <link>https://mordsith.github.io/2017/crystal-tutorial-the-basics---case/</link>
       <pubDate>Fri, 03 Feb 2017 16:42:31 +0100</pubDate>
