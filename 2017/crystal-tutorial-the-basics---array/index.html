@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.18.1" />
+    <title>Crystal Tutorial The Basics - Array</title>
+    
+    
+    
+    <meta name="description" content="Arrays are a fundamental part computer science and Crystal is no exeption. Storing data and getting them back is crucial for any software. Tuples are immutable arrays" />
+    <meta name="keywords" content='Crystal,Programming' />
+    
+        <meta name="author" content="Sam Ashkan" />
+    
+    
+        <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="196x196" />
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Mordsith - Tech Docs" />
+
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css" rel="stylesheet" integrity="sha384-pVJelSCJ58Og1XDc2E95RVYHZDPb9AVyXsI8NoVpB2xmtxoZKJePbMfE4mlXw7BJ" crossorigin="anonymous">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="https://mordsith.github.io/css/custom.css"  media="none" onload="if(media!='all')media='all'" />
+
+
+</head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+      
+<div class="col-md-12">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Mordsith - Tech Docs</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li><a href="/">Home</a></li>
+                
+                <li><a href="/about/">About</a></li>
+                
+            </ul>
+        </div>
+    </div>
+  </div>
+</nav>
+
+        <div class="row" id="content-main">
+          <div class="col-md-8">
+          
+<div class="list-group-item">
+      <h1 style="font-size:30px;font-weight:bold;">Crystal Tutorial The Basics - Array</h1>
+
+      
+      
+      <ul class="list-inline meta">
+      <li><i class="fa fa-calendar"></i> February 6, 2017</li>
+      <li><i class="fa fa-font"></i> 724 words</li>
+      <li><i class="fa fa-user"></i> Sam Ashkan</li>
+        
+        
+          <li><i class="fa fa-folder"></i> <a href="https://mordsith.github.io/categories/crystal">crystal</a></li><br>
+        
+      </ul>
+      
+
+    
+<div class="container">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+  <a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet"><i class="fa fa-twitter-square fa-2x"></i></a>
+  <a href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square fa-2x"></i></a>
+  <a href="http://pinterest.com/pin/create/button/?url=&description=" target="_blank" title="Pin it"><i class="fa fa-pinterest-square fa-2x"></i></a>
+  <a href="http://www.reddit.com/submit?url=&title=" target="_blank" title="Submit to Reddit"><i class="fa fa-reddit-square fa-2x"></i></a>
+  <a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>
+</div>
+
+
+
+<br>
+<div class="mytext">
+    
+
+<p>Arrays are a way of storing data. In Crystal arrays are of generic type T and is integer integer ordered. Meaning the index of the array start with at 0 just like C and Java. Since arrays in crystal are of generic type it means you can mix types, for example integers, strings and Characters.</p>
+
+<p>From now on i will use <a href="https://crystal-lang.org/api/0.20.1/PrettyPrint.html">Pretty_print</a> pp for debugging.</p>
+
+<p>And here goes some of the ways you can create an array.</p>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># an empty string array</span>
+<span style="color: #8f5902; font-style: italic"># needs to be defined since its T</span>
+<span style="color: #000000">my_arr</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">Array</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87">String</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">new</span>
+
+<span style="color: #8f5902; font-style: italic"># an integer based array</span>
+<span style="color: #000000">my_arr</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">Array</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87">Int32</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">new</span>
+
+<span style="color: #8f5902; font-style: italic"># defining the ints in an array</span>
+<span style="color: #000000">my_arr</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">3</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">4</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">5</span><span style="color: #ce5c00; font-weight: bold">]</span>
+
+<span style="color: #8f5902; font-style: italic"># a generic array</span>
+<span style="color: #000000">my_arr</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&quot;hello&quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&#39;x&#39;</span><span style="color: #ce5c00; font-weight: bold">]</span>
+</pre></div>
+</p>
+
+<p>And these are some of the ways you can create and array.</p>
+
+<div class="alert alert-warning" role="alert">
+Problem: Create an array, put in five names and then print the second name in the array.
+</div>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">my_array</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #4e9a06">&quot;Samson&quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&quot;Erica&quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&quot;Tommy&quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&quot;Jessica&quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&quot;Donald&quot;</span><span style="color: #ce5c00; font-weight: bold">]</span>
+<span style="color: #3465a4">pp</span> <span style="color: #000000">my_array</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">at</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>my_array.at(1) # =&gt; &quot;Erica&quot;
+</pre></div>
+</p>
+
+<p>And if you remember what i said before.. the array starts at nr 0, The second name in the array is at(1)</p>
+
+<div class="alert alert-warning" role="alert">
+Problem: We forgot to put in the name of Linda, and Linda needs to be inserted between Samson and Erica.
+</div>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">my_array</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">insert</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&quot;Linda&quot;</span><span style="color: #000000; font-weight: bold">)</span>
+<span style="color: #3465a4">pp</span> <span style="color: #000000">my_array</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>my_array # =&gt; [&quot;Samson&quot;, &quot;Linda&quot;, &quot;Erica&quot;, &quot;Tommy&quot;, &quot;Jessica&quot;, &quot;Donald&quot;]
+</pre></div>
+</p>
+
+<p>And now Linda is between Samson and Erica..</p>
+
+<p>But Ohh no! Instead of putting in their surname we put in their first name.</p>
+
+<div class="alert alert-warning" role="alert">
+Problem: Clear the array.
+</div>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">my_array</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">clear</span>
+<span style="color: #3465a4">pp</span> <span style="color: #000000">my_array</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>my_array # =&gt; []
+</pre></div>
+</p>
+
+<p>And good that is how we clear an array.. not lets put in their surnames instead.</p>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># Another way to fill a String array</span>
+<span style="color: #000000">my_array</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">%w(Smith Ericson Larsson Mayfield Bush)</span>
+<span style="color: #3465a4">pp</span> <span style="color: #000000">my_array</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>my_array # =&gt; [&quot;Smith&quot;, &quot;Ericson&quot;, &quot;Larsson&quot;, &quot;Mayfield&quot;, &quot;Bush&quot;]
+</pre></div>
+</p>
+
+<p>Wonderful now we have all their last names.</p>
+
+<div class="alert alert-info" role="alert">
+ Tip! Some usefull stuff you can do with arrays...
+</div>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">my_array</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">%w(Smith Ericson Larsson Mayfield Bush)</span>
+
+<span style="color: #8f5902; font-style: italic">#Reverse the array</span>
+<span style="color: #3465a4">pp</span> <span style="color: #000000">my_array</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">reverse</span>
+
+<span style="color: #8f5902; font-style: italic"># Cloning the array</span>
+<span style="color: #3465a4">pp</span> <span style="color: #000000">my_clone</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">my_array</span>
+
+<span style="color: #8f5902; font-style: italic"># Concat array</span>
+<span style="color: #3465a4">pp</span> <span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">3</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">4</span><span style="color: #ce5c00; font-weight: bold">].</span><span style="color: #000000">concat</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">5</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">6</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">7</span><span style="color: #ce5c00; font-weight: bold">]</span><span style="color: #000000; font-weight: bold">)</span>
+
+<span style="color: #8f5902; font-style: italic"># Size of the array</span>
+<span style="color: #3465a4">pp</span> <span style="color: #000000">my_array</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">size</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>my_array.reverse # =&gt; [&quot;Bush&quot;, &quot;Mayfield&quot;, &quot;Larsson&quot;, &quot;Ericson&quot;, &quot;Smith&quot;]
+my_clone = my_array # =&gt; [&quot;Smith&quot;, &quot;Ericson&quot;, &quot;Larsson&quot;, &quot;Mayfield&quot;, &quot;Bush&quot;]
+[1, 2, 3, 4].concat([5, 6, 7]) # =&gt; [1, 2, 3, 4, 5, 6, 7]
+my_array.size # =&gt; 5
+</pre></div>
+</p>
+
+<p>And there alot more stuff you can do to arrays.. i recommend taking a look at these <a href="https://github.com/tbpgr/crystal_samples/tree/master/Array">crystal samples</a></p>
+
+<div class="alert alert-warning" role="alert">
+Now lets insert the age of the person as a string after their names.
+</div>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">my_array</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">%w(Smith Ericson Larsson Mayfield Bush)</span>
+
+<span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">1</span>
+
+<span style="color: #8f5902; font-style: italic"># loop until all ages are set</span>
+<span style="color: #204a87">loop</span> <span style="color: #204a87; font-weight: bold">do</span>
+  <span style="color: #000000">age</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">gets</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">to_s</span>
+  <span style="color: #000000">my_array</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">insert</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">number</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">age</span><span style="color: #000000; font-weight: bold">)</span>
+  <span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #0000cf; font-weight: bold">2</span>
+  <span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">&gt;=</span> <span style="color: #0000cf; font-weight: bold">10</span>
+    <span style="color: #204a87; font-weight: bold">break</span>
+  <span style="color: #204a87; font-weight: bold">end</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+
+<span style="color: #3465a4">pp</span> <span style="color: #000000">my_array</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>22
+33
+41
+65
+19
+my_array # =&gt; [&quot;Smith&quot;,
+               &quot;22&quot;,
+               &quot;Ericson&quot;,
+               &quot;33&quot;,
+               &quot;Larsson&quot;,
+               &quot;41&quot;,
+
+               &quot;Mayfield&quot;,
+               &quot;65&quot;,
+               &quot;Bush&quot;,
+               &quot;19&quot;]
+</pre></div>
+</p>
+
+<p>Why 10? Because if you have 5 names, and you want to add 5 ages well you get the point.</p>
+
+<div class="alert alert-warning" role="alert">
+Problem: Now i want to see the names in the array between the numbers of 2 - 4.
+</div>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #000000">my_array</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">%w(Smith Ericson Larsson Mayfield Bush)</span>
+
+<span style="color: #3465a4">pp</span> <span style="color: #000000">my_array</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">2</span><span style="color: #ce5c00; font-weight: bold">..</span><span style="color: #0000cf; font-weight: bold">4</span><span style="color: #ce5c00; font-weight: bold">]</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>my_array[2..4] # =&gt; [&quot;Larsson&quot;, &quot;Mayfield&quot;, &quot;Bush&quot;]
+</pre></div>
+</p>
+
+<p>Now there is another kind of array in Crystal called Tuple. Tuples are basically Arrays that are immutable, and arrays are mutable.</p>
+
+<blockquote>
+<p>According to Crystal Api : You can think of a Tuple as an immutable Array whose type for each position is known at compile time.</p>
+</blockquote>
+
+<p>And this is what a tuple looks like..
+<code>my_tuple = { 23, &quot;string&quot;, 'c' }</code></p>
+
+<h2 id="summary-of-arrays">Summary of Arrays</h2>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># an empty string array</span>
+<span style="color: #8f5902; font-style: italic"># needs to be defined since its T</span>
+<span style="color: #000000">array_name</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">Array</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87">String</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">new</span>
+</pre></div>
+</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># an integer based array</span>
+<span style="color: #000000">array_name</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">Array</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87">Int32</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">new</span>
+</pre></div>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># defining the ints in an array</span>
+<span style="color: #000000">array_name</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">3</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">4</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">5</span><span style="color: #ce5c00; font-weight: bold">]</span>
+</pre></div>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># a generic array</span>
+<span style="color: #000000">array_name</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&quot;hello&quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&#39;x&#39;</span><span style="color: #ce5c00; font-weight: bold">]</span>
+</pre></div>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># picking at a single array point</span>
+<span style="color: #000000">array_name</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">at</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span>
+</pre></div>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># inserting at a sertain point</span>
+<span style="color: #000000">array_name</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">insert</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&quot;value&quot;</span><span style="color: #000000; font-weight: bold">)</span>
+</pre></div>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># inserting at a sertain point</span>
+<span style="color: #000000">array_name</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">insert</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&quot;value&quot;</span><span style="color: #000000; font-weight: bold">)</span>
+</pre></div>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># reverse an array</span>
+<span style="color: #000000">array_name</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">reverse</span>
+</pre></div>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># clone an array</span>
+<span style="color: #000000">new_array</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">array_name</span>
+</pre></div>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># size of the array</span>
+<span style="color: #000000">array_name</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">size</span>
+</pre></div>
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># compairing arrays</span>
+<span style="color: #3465a4">pp</span> <span style="color: #000000">my_array</span> <span style="color: #ce5c00; font-weight: bold">&lt;=&gt;</span> <span style="color: #000000">my_array2</span>
+</pre></div>
+
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># each through the array</span>
+<span style="color: #000000">my_array</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">each</span> <span style="color: #000000; font-weight: bold">{</span> <span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #000000">e</span><span style="color: #ce5c00; font-weight: bold">|</span> <span style="color: #3465a4">pp</span> <span style="color: #000000">e</span> <span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+And there is alot more where that came from.</p>
+
+<h3 id="references">References</h3>
+
+<ul>
+<li><a href="https://github.com/tbpgr/crystal_samples/tree/master/Array">https://github.com/tbpgr/crystal_samples/tree/master/Array</a></li>
+<li><a href="https://crystal-lang.org/docs/syntax_and_semantics/literals/array.html">https://crystal-lang.org/docs/syntax_and_semantics/literals/array.html</a></li>
+<li><a href="https://crystal-lang.org/docs/syntax_and_semantics/literals/tuple.html">https://crystal-lang.org/docs/syntax_and_semantics/literals/tuple.html</a></li>
+<li><a href="https://crystal-lang.org/api/0.20.5/Tuple.html">https://crystal-lang.org/api/0.20.5/Tuple.html</a></li>
+</ul>
+
+</div>
+</div>
+
+
+  <br>
+    
+
+  
+    <span class="label label-info"><a href="https://mordsith.github.io/tags/crystal">Crystal</a></span>
+  
+    <span class="label label-info"><a href="https://mordsith.github.io/tags/programming">Programming</a></span>
+  
+
+<br><br><br>
+
+  <div class="panel panel-info">
+    <div class="panel-heading"><b>About Sam Ashkan</b></div>
+      <div class="panel-body"><img src="/img/avatar.png" alt="My Avatar" style="float: left; clear: left">
+      <p>I am a developer from Sweden, Programming is one of my favorite hobbies. I especially love compiled languages for there performance. I have never blogged before but i thought why not share what i have learned to anyone interested.</p>
+      </div>
+    </div>
+
+          
+    
+        <div class="row">
+            <div class="col-md-12 content-card">
+                <div id="disqus_thread"></div>
+                <script>
+                    (function() {
+                        if (window.location.hostname == "localhost") {
+                            document.write("Disqus comments are unavailable while serving on localhost or 127.0.0.1");
+                            return;
+                        }
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        var disqus_shortname = 'mord-sith';
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </div>
+        </div>
+    
+
+
+          </div>
+          <div class="col-md-4">
+          <script>
+  (function() {
+    var cx = '003471220390322062077:j5wxwe0wdfk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search linktarget="_parent"></gcse:search>
+<style type='text/css'>
+.gsc-above-wrapper-area { border-bottom: none; }
+.gsc-control-cse { border-color: red; }
+ table.gsc-branding td, table.gsc-branding, table.gcsc-branding td, table.gcsc-branding { display: none; }
+ td.gcsc-branding-text div.gcsc-branding-text { display: none; }
+.gsc-adBlock { display: none; }
+.cse input.gsc-input, input.gsc-input { background-image:none !important; }
+.cse input.gsc-search-button, input.gsc-search-button{
+  font-size: 14px;
+  height: 40px;
+  padding: 8px 12px;
+  min-width: 100px;
+  -webkit-border-radius: 2px;
+}
+td.gsc-clear-button { display: none; }
+.cse input.gsc-input, input.gsc-input { padding: 8px 6px; }
+.cse table.gsc-search-box td.gsc-input, table.gsc-search-box td.gsc-input{
+  padding-right: inherit;
+}
+.gs-no-results-result .gs-snippet, .gs-error-result .gs-snippet { border: none; background-color: transparent;}
+ </style>
+<br>
+
+          
+<div class="list-group">
+  <div class="list-group-item active">
+    <b>Recent Posts</b>
+  </div>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---array/" class="list-group-item">Crystal Tutorial The Basics - Array
+  </a>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---loops/" class="list-group-item">Crystal Tutorial The Basics - Loops
+  </a>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---case/" class="list-group-item">Crystal Tutorial The Basics - Case
+  </a>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---if-elsif-else/" class="list-group-item">Crystal Tutorial The Basics - If Elsif Else
+  </a>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---gets/" class="list-group-item">Crystal Tutorial The Basics - Gets
+  </a>
+
+</div>
+
+          
+
+          
+
+    
+<div class="list-group">
+  <div href="#" class="list-group-item active">
+    <b>categories</b>
+  </div>
+  
+    <a href="https://mordsith.github.io/categories/crystal" class="list-group-item">crystal</a>
+    
+  </a>
+</div>
+
+
+    
+
+
+          
+          </div>
+        </div>
+      <nav class="footer navbar-fixed-bottom" role="navigation">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4 col-xs-6">
+    <ul class="list-inline social-media">
+        
+        
+        
+            <li><a target="_blank" href="https://www.facebook.com/sam.inter"><i class="fa fa-facebook fa-lg"></i></a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </ul>
+</div>
+
+            <p>Copyleft &copy; 2017, Design by Sam Ashkan, All rights reversed!</p>
+        </div>
+    </div>
+</nav>
+
+      
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+    
+
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-91005792-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+
+
+      </div>
+  </body>
+</html>
