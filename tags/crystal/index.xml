@@ -9,6 +9,151 @@
     <atom:link href="https://mordsith.github.io/tags/crystal/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Crystal Tutorial The Basics - Hash</title>
+      <link>https://mordsith.github.io/2017/crystal-tutorial-the-basics---hash/</link>
+      <pubDate>Wed, 08 Feb 2017 14:12:31 +0100</pubDate>
+      
+      <guid>https://mordsith.github.io/2017/crystal-tutorial-the-basics---hash/</guid>
+      <description>
+
+&lt;p&gt;In the last tutorial we discussed Arrays, in this tutorial im going to show Hashes. Hash is very similar to an array. The main differences are that an array is an integer indexed collections of object while hash points to a Key. This is what a Hash looks like&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;hash&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;key1&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;:value1&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;To create an empty Hash we must always define the K (key) And V (value).&lt;/p&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# hash of Int32&amp;#39;s&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;my_hash&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;{}&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;of&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;Int32&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;Int32&lt;/span&gt;
+
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# string and int based&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;my_hash&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;{}&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;of&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;String&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;Int32&lt;/span&gt;
+
+&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# Same as above&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;my_hash&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;Hash&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #204a87&#34;&gt;String&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;Int32&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;new&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;And to write in implicit form, easiest way to write and read imo&lt;/p&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;age&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Martin Johnsson&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;29&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Jane Doe&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;16&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #3465a4&#34;&gt;pp&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;age&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;age # =&amp;gt; {&amp;quot;Martin Johnsson&amp;quot; =&amp;gt; 29, &amp;quot;Jane Doe&amp;quot; =&amp;gt; 16}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;And an alternative syntax form.&lt;/p&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;options&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;:font_size&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;:font_family&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Arial&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #3465a4&#34;&gt;pp&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;options&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;options # =&amp;gt; {:font_size =&amp;gt; 20, :font_family =&amp;gt; &amp;quot;Arial&amp;quot;}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s alot of ways to write you&amp;rsquo;re hash, you should pick the way that suites you.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: Output a specific key!
+&lt;/div&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# output a specific key in the hash.&lt;/span&gt;
+&lt;span style=&#34;color: #3465a4&#34;&gt;pp&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;options&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;:font_size&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;options[:font_size] # =&amp;gt; 20
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: Create a list of movies and output movie name after the year it was made.
+&lt;/div&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;movie&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1972&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;The Godfather&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1994&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;The Shawshank Redemption&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1993&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Schindler&amp;#39;s List&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1980&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Raging Bull&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1942&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Casablanca&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color: #3465a4&#34;&gt;pp&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;movie&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;1980&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;movie[1980] # =&amp;gt; &amp;quot;Raging Bull&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Now keep in mind that this is not a good in real life example since there are alot more movies made the same year. But lets continue with it for learning.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+Problem: Loop through the movie Hash list and output the result.
+&lt;/div&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;movie&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;each&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;|&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;|&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Year: #{&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;} Movie: #{&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;}&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+output:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;Year: 1972 Movie: The Godfather
+Year: 1994 Movie: The Shawshank Redemption
+Year: 1993 Movie: Schindler&amp;#39;s List
+Year: 1980 Movie: Raging Bull
+Year: 1942 Movie: Casablanca
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;summary-of-hash&#34;&gt;Summary of Hash&lt;/h2&gt;
+
+&lt;p&gt;code:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# Creating a hash&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;my_hash&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;Value&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #204a87&#34;&gt;Value&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# Clearing a hash.&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;my_hash&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;21&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Hash&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;my_hash&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;clear&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# Cloning a hash.&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;my_hash&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color: #0000cf; font-weight: bold&#34;&gt;21&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Hash&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;my_sec_hash&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;my_hash&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;clone&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# Check if its empty&lt;/span&gt;
+&lt;span style=&#34;color: #000000&#34;&gt;my_hash&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;empty?&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;# Inverting the hash&lt;/span&gt;
+&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;foo&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;invert&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://crystal-lang.org/api/0.20.5/Hash.html#pretty_print%28pp%29%3ANil-instance-method&#34;&gt;https://crystal-lang.org/api/0.20.5/Hash.html#pretty_print%28pp%29%3ANil-instance-method&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Crystal Tutorial The Basics - Array</title>
       <link>https://mordsith.github.io/2017/crystal-tutorial-the-basics---array/</link>
       <pubDate>Mon, 06 Feb 2017 15:03:37 +0100</pubDate>
@@ -16,7 +161,7 @@
       <guid>https://mordsith.github.io/2017/crystal-tutorial-the-basics---array/</guid>
       <description>
 
-&lt;p&gt;Arrays are a way of storing data. In Crystal arrays are of generic type T and is integer integer ordered. Meaning the index of the array start with at 0 just like C and Java. Since arrays in crystal are of generic type it means you can mix types, for example integers, strings and Characters.&lt;/p&gt;
+&lt;p&gt;Arrays are a way of storing data. In Crystal arrays are of generic type T and is integer ordered. Meaning the index of the array start with at 0 just like C and Java. Since arrays in crystal are of generic type it means you can mix types, for example integers, strings and Characters.&lt;/p&gt;
 
 &lt;p&gt;From now on i will use &lt;a href=&#34;https://crystal-lang.org/api/0.20.1/PrettyPrint.html&#34;&gt;Pretty_print&lt;/a&gt; pp for debugging.&lt;/p&gt;
 
@@ -134,7 +279,7 @@ my_array.size # =&amp;gt; 5
 &lt;p&gt;And there alot more stuff you can do to arrays.. i recommend taking a look at these &lt;a href=&#34;https://github.com/tbpgr/crystal_samples/tree/master/Array&#34;&gt;crystal samples&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
-Now lets insert the age of the person as a string after their names.
+Problem: Now lets insert the age of the person as a string after their names.
 &lt;/div&gt;
 
 &lt;p&gt;code:
