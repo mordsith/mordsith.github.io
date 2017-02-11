@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.18.1" />
+    <title>Crystal Tutoial The Basics - Methods</title>
+    
+    
+    
+    <meta name="description" content="description" />
+    <meta name="keywords" content='Crystal,Programming' />
+    
+        <meta name="author" content="Sam Ashkan" />
+    
+    
+        <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="196x196" />
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Mordsith - Tech Docs" />
+
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css" rel="stylesheet" integrity="sha384-pVJelSCJ58Og1XDc2E95RVYHZDPb9AVyXsI8NoVpB2xmtxoZKJePbMfE4mlXw7BJ" crossorigin="anonymous">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="https://mordsith.github.io/css/custom.css"  media="none" onload="if(media!='all')media='all'" />
+
+
+</head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+      
+<div class="col-md-12">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Mordsith - Tech Docs</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li><a href="/">Home</a></li>
+                
+                <li><a href="/about/">About</a></li>
+                
+            </ul>
+        </div>
+    </div>
+  </div>
+</nav>
+
+        <div class="row" id="content-main">
+          <div class="col-md-8">
+          
+<div class="list-group-item">
+      <h1 style="font-size:30px;font-weight:bold;">Crystal Tutoial The Basics - Methods</h1>
+
+      
+      
+      <ul class="list-inline meta">
+      <li><i class="fa fa-calendar"></i> February 11, 2017</li>
+      <li><i class="fa fa-font"></i> 354 words</li>
+      <li><i class="fa fa-user"></i> Sam Ashkan</li>
+        
+        
+          <li><i class="fa fa-folder"></i> <a href="https://mordsith.github.io/categories/crystal">crystal</a></li><br>
+        
+      </ul>
+      
+
+    
+<div class="container">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+  <a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet"><i class="fa fa-twitter-square fa-2x"></i></a>
+  <a href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square fa-2x"></i></a>
+  <a href="http://pinterest.com/pin/create/button/?url=&description=" target="_blank" title="Pin it"><i class="fa fa-pinterest-square fa-2x"></i></a>
+  <a href="http://www.reddit.com/submit?url=&title=" target="_blank" title="Submit to Reddit"><i class="fa fa-reddit-square fa-2x"></i></a>
+  <a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>
+</div>
+
+
+
+<br>
+<div class="mytext">
+    
+
+<p>A method is basically a block of code you wish to execute many times without the need of writing it again and again. In other languages methods are sometimes called functions or procedures. In <a href="https://crystal-lang.org/">Crystal</a> the reserved word for a method is <code>def</code> and ends with an <code>end</code>. You could also think of them as a box with stuff in it and you&rsquo;ve put a name on it.</p>
+
+<p>What methods look like..</p>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #204a87; font-weight: bold">def</span> <span style="color: #000000">name</span>
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
+Look very simple and neat to me. And now for a real example.</p>
+
+<div class="alert alert-warning" role="alert">
+Problem: Create a method and call it to print Hello World 10 times.
+</div>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># defining the method.</span>
+<span style="color: #204a87; font-weight: bold">def</span> <span style="color: #000000">hello</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">word</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">times</span><span style="color: #000000; font-weight: bold">)</span>
+  <span style="color: #204a87">puts</span> <span style="color: #000000">word</span> <span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #000000">times</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+
+<span style="color: #8f5902; font-style: italic"># Invoking the method.</span>
+<span style="color: #000000">hello</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;Hello, World! &quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">10</span><span style="color: #000000; font-weight: bold">)</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello,World! Hello, World! Hello, World! Hello, World! Hello, World!
+</pre></div>
+</p>
+
+<p>In Crystal there is no need to add a return value as the last expression is returned.. But you can if you want to. And it is useful for breaking out early.</p>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #204a87; font-weight: bold">def</span> <span style="color: #000000">add32</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">num</span><span style="color: #000000; font-weight: bold">)</span>
+  <span style="color: #204a87; font-weight: bold">return</span> <span style="color: #000000">num</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #0000cf; font-weight: bold">32</span>
+  <span style="color: #000000">num</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #0000cf; font-weight: bold">100</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+
+<span style="color: #000000">returnvalue</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">add32</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">10</span><span style="color: #000000; font-weight: bold">)</span>
+<span style="color: #204a87">puts</span> <span style="color: #000000">returnvalue</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>42
+</pre></div>
+</p>
+
+<p>Methods can have a default variable values.</p>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># method with default values</span>
+<span style="color: #204a87; font-weight: bold">def</span> <span style="color: #000000">output</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">out_one</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">&quot;Default&quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">out_two</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">&quot;Value&quot;</span><span style="color: #000000; font-weight: bold">)</span>
+   <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;Outputs: #{</span><span style="color: #000000">out_one</span><span style="color: #4e9a06">}&quot;</span>
+   <span style="color: #204a87">puts</span> <span style="color: #4e9a06">&quot;Outputs: #{</span><span style="color: #000000">out_two</span><span style="color: #4e9a06">}&quot;</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+
+<span style="color: #8f5902; font-style: italic"># overriding default values</span>
+<span style="color: #000000">output</span> <span style="color: #4e9a06">&quot;Over&quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&quot;Write&quot;</span>
+
+<span style="color: #8f5902; font-style: italic"># output default value</span>
+<span style="color: #000000">output</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>Outputs: Over
+Outputs: Write
+Outputs: Default
+Outputs: Value
+</pre></div>
+</p>
+
+<p>And we can use the Asterisk or &ldquo;splat&rdquo; to take all the arguments you give it.</p>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #204a87; font-weight: bold">def</span> <span style="color: #000000">foo</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #ce5c00; font-weight: bold">*</span><span style="color: #000000">my_string</span><span style="color: #000000; font-weight: bold">)</span>
+  <span style="color: #3465a4">pp</span> <span style="color: #000000">my_string</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+
+<span style="color: #204a87">puts</span> <span style="color: #000000">foo</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;hello&quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #4e9a06">&quot;world&quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&quot;This&quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&quot;Is&quot;</span><span style="color: #000000; font-weight: bold">)</span>
+<span style="color: #204a87">puts</span> <span style="color: #000000">foo</span><span style="color: #000000; font-weight: bold">()</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>my_string # =&gt; {&quot;hello&quot;, &quot;world&quot;, &quot;This&quot;, &quot;Is&quot;}
+
+my_string # =&gt; {}
+</pre></div>
+</p>
+
+<p>This also works with numbers..</p>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #204a87; font-weight: bold">def</span> <span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #ce5c00; font-weight: bold">*</span><span style="color: #000000">num</span><span style="color: #000000; font-weight: bold">)</span>
+  <span style="color: #3465a4">pp</span> <span style="color: #000000">num</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">sum</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+
+<span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">32</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">32</span><span style="color: #000000; font-weight: bold">)</span>
+</pre></div>
+
+output:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>num.sum # =&gt; 64
+</pre></div>
+</p>
+
+<p>Note: Parentheses are optional, you could write <code>add 32, 32</code> but i would recommend it.</p>
+
+<h2 id="summary-of-methods">Summary of Methods</h2>
+
+<p>code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># Defining a method</span>
+
+<span style="color: #204a87; font-weight: bold">def</span> <span style="color: #000000">name</span>
+  <span style="color: #000000">do_something</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
+code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># Breaking out early</span>
+
+<span style="color: #204a87; font-weight: bold">def</span> <span style="color: #000000">name</span>
+  <span style="color: #204a87; font-weight: bold">return</span> <span style="color: #000000">early</span>
+  <span style="color: #000000">some_code</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
+code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># Splat all arguments</span>
+
+<span style="color: #204a87; font-weight: bold">def</span> <span style="color: #000000">name</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #ce5c00; font-weight: bold">*</span><span style="color: #000000">something</span><span style="color: #000000; font-weight: bold">)</span>
+  <span style="color: #000000">some_code</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+
+code:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic"># Default values</span>
+
+<span style="color: #204a87; font-weight: bold">def</span> <span style="color: #000000">output</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">out_one</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">&quot;Default&quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">out_two</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">&quot;Value&quot;</span><span style="color: #000000; font-weight: bold">)</span>
+  <span style="color: #000000">some_code</span>
+<span style="color: #204a87; font-weight: bold">end</span>
+</pre></div>
+</p>
+
+<h3 id="references">References</h3>
+
+<ul>
+<li><a href="https://crystal-lang.org/docs/syntax_and_semantics/the_program.html">https://crystal-lang.org/docs/syntax_and_semantics/the_program.html</a></li>
+</ul>
+
+</div>
+</div>
+
+
+  <br>
+    
+
+  
+    <span class="label label-info"><a href="https://mordsith.github.io/tags/crystal">Crystal</a></span>
+  
+    <span class="label label-info"><a href="https://mordsith.github.io/tags/programming">Programming</a></span>
+  
+
+<br><br><br>
+
+  <div class="panel panel-info">
+    <div class="panel-heading"><b>About Sam Ashkan</b></div>
+      <div class="panel-body"><img src="/img/avatar.png" alt="My Avatar" style="float: left; clear: left">
+      <p>I am a developer from Sweden, Programming is one of my favorite hobbies. I especially love compiled languages for there performance. I have never blogged before but i thought why not share what i have learned to anyone interested.</p>
+      </div>
+    </div>
+
+          
+    
+        <div class="row">
+            <div class="col-md-12 content-card">
+                <div id="disqus_thread"></div>
+                <script>
+                    (function() {
+                        if (window.location.hostname == "localhost") {
+                            document.write("Disqus comments are unavailable while serving on localhost or 127.0.0.1");
+                            return;
+                        }
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        var disqus_shortname = 'mord-sith';
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </div>
+        </div>
+    
+
+
+          </div>
+          <div class="col-md-4">
+          <script>
+  (function() {
+    var cx = '003471220390322062077:j5wxwe0wdfk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search linktarget="_parent"></gcse:search>
+<style type='text/css'>
+.gsc-above-wrapper-area { border-bottom: none; }
+.gsc-control-cse { border-color: red; }
+ table.gsc-branding td, table.gsc-branding, table.gcsc-branding td, table.gcsc-branding { display: none; }
+ td.gcsc-branding-text div.gcsc-branding-text { display: none; }
+.gsc-adBlock { display: none; }
+.cse input.gsc-input, input.gsc-input { background-image:none !important; }
+.cse input.gsc-search-button, input.gsc-search-button{
+  font-size: 14px;
+  height: 40px;
+  padding: 8px 12px;
+  min-width: 100px;
+  -webkit-border-radius: 2px;
+}
+td.gsc-clear-button { display: none; }
+.cse input.gsc-input, input.gsc-input { padding: 8px 6px; }
+.cse table.gsc-search-box td.gsc-input, table.gsc-search-box td.gsc-input{
+  padding-right: inherit;
+}
+.gs-no-results-result .gs-snippet, .gs-error-result .gs-snippet { border: none; background-color: transparent;}
+ </style>
+<br>
+
+          
+<div class="list-group">
+  <div class="list-group-item active">
+    <b>Recent Posts</b>
+  </div>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutoial-the-basics---methods/" class="list-group-item">Crystal Tutoial The Basics - Methods
+  </a>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---hash/" class="list-group-item">Crystal Tutorial The Basics - Hash
+  </a>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---array/" class="list-group-item">Crystal Tutorial The Basics - Array
+  </a>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---loops/" class="list-group-item">Crystal Tutorial The Basics - Loops
+  </a>
+
+  <a href="https://mordsith.github.io/2017/crystal-tutorial-the-basics---case/" class="list-group-item">Crystal Tutorial The Basics - Case
+  </a>
+
+</div>
+
+          
+
+          
+
+    
+<div class="list-group">
+  <div href="#" class="list-group-item active">
+    <b>categories</b>
+  </div>
+  
+    <a href="https://mordsith.github.io/categories/crystal" class="list-group-item">crystal</a>
+    
+  </a>
+</div>
+
+
+    
+
+
+          
+          </div>
+        </div>
+      <nav class="footer navbar-fixed-bottom" role="navigation">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4 col-xs-6">
+    <ul class="list-inline social-media">
+        
+        
+        
+            <li><a target="_blank" href="https://www.facebook.com/sam.inter"><i class="fa fa-facebook fa-lg"></i></a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </ul>
+</div>
+
+            <p>Copyleft &copy; 2017, Design by Sam Ashkan, All rights reversed!</p>
+        </div>
+    </div>
+</nav>
+
+      
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+    
+
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-91005792-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+
+
+      </div>
+  </body>
+</html>
